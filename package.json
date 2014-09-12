@@ -1,17 +1,23 @@
 {
-  "name": "mean-template",
+  "name": "enlighTN",
   "version": "0.0.0",
-  "description": "The MEAN Template",
+  "description": "There's more than music in Nashville's culture scene.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nss-cohort-2014-06-07/mean-template"
+    "url": "https://github.com/bchiatt/enlightTN"
   },
-  "author": "Chyld Medford <chyld.medford@gmail.com>",
+  "author": "Brian Hiatt <brian.hiatt41@gmail.com>",
+  "contributors": [
+    "Liza Carter <lizahcarter@gmail.com>",
+    "Kayla Jones <kaylalyne424@gmail.com>",
+    "Zoe Ames <zoeames@gmail.com>",
+    "Shruti Sharma <shrutijalewar@gmail.com>"
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nss-cohort-2014-06-07/mean-template/issues"
+    "url": "https://github.com/bchiatt/enlighTN/issues"
   },
-  "homepage": "https://github.com/nss-cohort-2014-06-07/mean-template",
+  "homepage": "https://github.com/bchiatt/enlighTN",
   "dependencies": {
     "async": "^0.9.0",
     "bcrypt": "^0.8.0",
