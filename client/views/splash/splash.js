@@ -1,8 +1,8 @@
 (function(){
   'use strict';
 
-  angular.module('enlighT')
-  .controller('HomeCtrl', ['$scope', 'Home', function($scope, Home){
+  angular.module('enlighTN')
+  .controller('SplashCtrl', ['$scope', 'Splash', function($scope, Splash){
   }]);
 })();
 

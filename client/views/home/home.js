@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('enlighT')
+  angular.module('enlighTN')
   .controller('HomeCtrl', ['$scope', 'Home', function($scope, Home){
   }]);
 })();
