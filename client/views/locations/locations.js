@@ -6,9 +6,9 @@
     $scope.title = 'Location Page!';
     $scope.locations = [];
 
-    //Location.all().then(function(response){
-      //$scope.locations = response.data.locations;
-    //});
+    Location.all().then(function(response){
+      $scope.locations = response.data.locations;
+    });
 
   }]);
 })();
