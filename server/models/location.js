@@ -19,4 +19,5 @@ Location.findById = function(id, cb){
       // need to async map to include getEvents, getReflections
 };
 
+module.exports = Location;
 
