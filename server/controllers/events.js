@@ -8,3 +8,8 @@ exports.index = function(req, res){
   });
 };
 
+exports.show = function(req, res){
+  Occasion.findById(req.params.eventId, function(err, event){
+    res.send({event:event});
+  });
+};
