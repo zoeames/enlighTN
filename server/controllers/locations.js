@@ -10,6 +10,8 @@ exports.index = function(req, res){
 
 exports.show = function(req, res){
   Location.findById(req.params.locationId, function(err, loc){
-    res.send({loc:loc});
+    loc.findEvents(function(err, occasions){
+      res.send({loc:loc, occasions:occasions});
+    });
   });
 };
