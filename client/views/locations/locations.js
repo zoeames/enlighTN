@@ -1,8 +1,15 @@
 (function(){
   'use strict';
 
-  angular.module('enlighT')
-  .controller('HomeCtrl', ['$scope', 'Home', function($scope, Home){
+  angular.module('enlighTN')
+  .controller('LocationCtrl', ['$scope', 'Location', function($scope, Location){
+    $scope.title = 'Location Page!';
+    $scope.locations = [];
+
+    //Location.all().then(function(response){
+      //$scope.locations = response.data.locations;
+    //});
+
   }]);
 })();
 

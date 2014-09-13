@@ -1,8 +1,8 @@
 (function(){
   'use strict';
 
-  angular.module('enlighT')
-  .controller('HomeCtrl', ['$scope', 'Home', function($scope, Home){
+  angular.module('enlighTN')
+  .controller('DashboardCtrl', ['$scope', 'Dashboard', function($scope, Dashboard){
   }]);
 })();
 
