@@ -2,8 +2,7 @@
   'use strict';
 
   angular.module('enlighTN')
-  .factory('Home', ['$http', function($http){
-
+  .controller('EventCtrl', ['$scope', 'Event', function($scope, Event){
   }]);
 })();
 

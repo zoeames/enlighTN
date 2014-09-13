@@ -1,20 +1,22 @@
 doctype html
-html(ng-app='mean-template', lang='en')
+html(ng-app='enlighTN', lang='en')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='viewport', content='width=device-width, initial-scale=1')
-    title MEAN Template
+    title enlighTN
     link(href='/vendor/bootstrap/dist/css/bootstrap.css', rel='stylesheet')
     link(href='/vendor/fontawesome/css/font-awesome.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
     link(href='/views/home/home.css', rel='stylesheet')
   body
     include nav
-    .container
+    .container-fluid
       .row
-        .col-xs-12
+        .col-xs-1
+        .col-xs-10
           #container(ng-view)
+        .col-xs-1
 
     script(src='/vendor/angular/angular.js')
     script(src='/vendor/angular-route/angular-route.js')
@@ -23,5 +25,14 @@ html(ng-app='mean-template', lang='en')
     script(src='/vendor/underscore/underscore.js')
     script(src='/index.js')
     script(src='/views/home/home.js')
+    script(src='/views/splash/splash.js')
+    script(src='/views/dashboard/dashboard.js')
+    script(src='/views/event/event.js')
+    script(src='/views/location/location.js')
+    script(src='/views/locations/locations.js')
     script(src='/components/home.js')
+    script(src='/components/location.js')
+    script(src='/components/reflection.js')
+    script(src='/components/event.js')
+    script(src='/components/user.js')
 
