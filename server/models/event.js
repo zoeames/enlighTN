@@ -22,3 +22,5 @@ Occasion.findById = function(id, cb){
 Occasion.all = function(cb){
   Occasion.collection.find().toArray(cb);
 };
+
+module.exports = Occasion;
