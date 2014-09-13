@@ -1,0 +1,300 @@
+{
+  "_id":{"$oid":"e00000000000000000000001"},
+  "name":"OZ Arts",
+  "group":"Civic",
+  "type":"theatre",
+  "address":"6172 Cockrill Bend Circle",
+  "lat":36.1795891,
+  "lng":-86.8909288,
+  "description":"OZ Arts is a destination for innovative contemporary art experiences. Housed in a newly-renovated former cigar warehouse in Nashville Tennessee, OZ’s modern, flexible performance and installation space enables leading artists from multiple disciplines to present brave new art in a non-traditional context.  OZ adds to the cultural landscape of the region and the world by offering a diverse program of performing and visual arts events, and by inspiring curious audiences of all ages.
+}
+{
+  "_id":{"$oid":"e00000000000000000000002"},
+  "name":"Art at the Arcade",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"398 5th Ave N, Nashville, TN 37219",
+  "lat":36.1640459,
+  "lng":-86.7807235,
+  "description":"Art at the Arcade is a group of individual artists, art galleries, and shops located in the Arcade Building in downtown Nashville Tennessee. The Group is solidifying the presence of art in Nashville and participating in the creation of a true art district. Until recently a cohesive art district was non existent, but thanks to Art at the Arcade people now have several art spaces to visit within one building. Art at the Arcade is working with other galleries and artists within downtown Nashville and surrounding areas to propel local arts to a level the city has not seen."
+}
+{
+  "_id":{"$oid":"e00000000000000000000003"},
+  "name":"Art & Invention Gallery",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"1106 Woodland Street, Nashville, TN 37206",
+  "lat":36.177036,
+  "lng":-86.749267,
+  "description":"Before the Five Points District of East Nashville became a hip, fun destination, they saw its potential. With that vision in mind, Bret and Meg converted an old garage at 1106 Woodland Street in 2000 into an artist’s studio, which they named the Garage Mahal. Three years later, the Art & Invention Gallery was born. Having five to six shows annually, including the signature Tomato Art Show in August and Holiday Artisan Show in December, Art & Invention Gallery focuses on inventiveness in fine art, craft and original furniture. Adult and Children Workshops are held throughout the year as an outlet for creative energy."
+}
+{
+  "_id":{"$oid":"e00000000000000000000004"},
+  "name":"The Arts Company",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"215 5th Avenue North, Nashville, TN 37219",
+  "lat":36.163474,
+  "lng":-86.7808177,
+  "description":"Established in December 1996, The Arts Company has become an arts cornerstone on 5th Avenue of the Arts in Downtown Nashville. Known as a prime destination for fresh, original, and contemporary artwork in photography, painting, and sculpture, by artists from emerging to legendary, The Arts Company offers a distinctive Nashville experience in a welcoming environment of over 6,000 square feet in a historic building. Our gallery mission is to maintain a presence of distinctively fresh, original, and contemporary artwork for individuals and businesses, offering an eclectic mix beyond the typical gallery model."
+}
+{
+  "_id":{"$oid":"e00000000000000000000005"},
+  "name":"Bennett Galleries",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"2104 Crestmoor Road, Nashville, TN 37215",
+  "lat":36.1088943,
+  "lng":-86.8131502,
+  "description":"Established in 1977, Bennett Galleries, houses a distinctive collection of contemporary fine art paintings, and sculpture by established and emerging artists."
+}
+{
+  "_id":{"$oid":"e00000000000000000000006"},
+  "name":"Carl Van Vechten Gallery",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"On the corner of Dr. D.B. Todd Jr. Blvd. and Jackson Ave. Fisk University Campus 1000 17th Ave North",
+  "lat":36.1640969,
+  "lng":-86.8017605,
+  "description":"The Carl Van Vechten Gallery houses a changing schedule of traveling exhibitions and temporary installations from Fisk University's permanent art collections. Every two years, the gallery features The Alfred Stieglitz Collection of Modern American and European Art, which includes works by Pablo Picasso, Paul Cezanne, Auguste-Pierre Renoir, Henri de Toulouse-Lautrec, Georgia O’Keeffe, Charles Demuth, Marsden Hartley, and Arthur Dove."
+}
+{
+  "_id":{"$oid":"e00000000000000000000007"},
+  "name":"Cheekwood Botanical Gardens & Museum",
+  "group":"Civic",
+  "type":"museum",
+  "address":"1200 Forrest Park Drive, Nashville, TN 37205",
+  "lat":36.0854942,
+  "lng":-86.8725615,
+  "description":"Cheekwood’s art collection was founded in 1959 upon the holdings of the former Nashville Museum of Art and is accredited by the American Alliance of Museums. The core holdings include broad collections of American art; American and British decorative arts; contemporary art, especially outdoor sculpture acquired for the Woodland Sculpture Trail. Cheekwood offers special events and programs for the young and old, singles and families, and everyone in between throughout the year.  From Easter egg hunts and Mariachi bands to highballs, music and art, there is something for everyone to enjoy at Cheekwood!"
+}
+{
+  "_id":{"$oid":"e00000000000000000000008"},
+  "name":"Cumberland Gallery",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"4107 Hillsboro Circle, Nashville, TN 37215",
+  "lat":36.1019139,
+  "lng":-86.8198507,
+  "description":"Established in 1980, Carol Stein's Cumberland Gallery exhibits well-established and promising emerging artists. Tennessee and the Southeast constitute the primary focus, but national-level artists are well represented in a variety of media including: painting, works on paper, photography and sculpture."
+}
+{
+  "_id":{"$oid":"e00000000000000000000009"},
+  "name":"Fine Arts Gallery at Vanderbilt",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"23rd Ave at West End Avenue, Nashville, TN 37203",
+  "lat":36.148809,
+  "lng":-86.804537,
+  "description":"The Vanderbilt University Fine Arts Gallery features a series of engaging exhibitions each year that represent the diversity of artistic production today, as well as throughout the history of Eastern and Western art. In addition to exhibitions drawn from the permanent collection and organized from public and private sources, a number of traveling exhibitions are presented as well. Additionally, a portion of the gallery space is frequently dedicated to the exhibition of selected works from the permanent collection."
+}
+{
+  "_id":{"$oid":"e00000000000000000000010"},
+  "name":"Frist Center for the Visual Arts",
+  "group":"Civic",
+  "type":"museum",
+  "address":"919 Broadway, Nashville, TN 37203",
+  "lat":36.1576303,
+  "lng":-86.7837643,
+  "description":"The Frist Center opened in April 2001, and since that time has hosted a spectacular array of art from the region, the country, and around the world. Unlike any traditional museum you’ve ever visited, the Frist Center for the Visual Arts has become a magnet for Nashville’s rapidly expanding visual arts scene. With an exhibitions schedule that has new art flowing through the magnificent Art Deco building every 6 to 8 weeks, no matter how often you visit, there is always something new and exciting to see in the spacious galleries."
+}
+{
+  "_id":{"$oid":"e00000000000000000000011"},
+  "name":"Gallery One",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"5133 Harding Pike, Nashville, TN 37205",
+  "lat":36.103654,
+  "lng":-86.8684619,
+  "description":"Gallery One is Nashville’s source for exceptional, contemporary fine art. Located on beautiful 3rd Avenue in the Downtown Arts District of Nashville, the spacious gallery features a broad range of original works by more than 30 talented artists from the Southeast and beyond - from emerging talent to the well established. Founded in 2005, the gallery has earned a strong reputation for its selection of fine art, which consists of contemporary paintings, works on paper, and small to medium scale sculpture, with exhibitions rotating monthly. We strive to provide the highest standards in art as well as in service."
+}
+{
+  "_id":{"$oid":"e00000000000000000000012"},
+  "name":"LeQuire Gallery",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"4304 Charlotte Avenue, Nashville, TN 37209",
+  "lat":36.152614,
+  "lng":-86.838926,
+  "description":"LeQuire Gallery represents a comprehensive stable of artists representing a great variety of contemporary painting and sculpture. Our 6000 sq. ft space also includes the studio of sculptor Alan LeQuire, best known for his monumental 'Athena' and 'Musica' statues."
+}
+{
+  "_id":{"$oid":"e00000000000000000000013"},
+  "name":"Lyzon",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"411 West Thompson Lane, Nashville, TN 37211",
+  "lat":36.110385,
+  "lng":-86.746924,
+  "description":"Welcome to Lyzon's, where the waft of linseed oil meets you at the door and tells you politely but emphatically that this is more than just an art gallery. In fact, it is an artist's gallery, where for the last 62 years art collectors have come to pore over the thousands of canvasses, etchings and sculptures lining the walls and tucked into every conceivable extra space. Our gallery displays the works of Sterling Strauser, Phillip Perkins, Tommy Allen, Bill Sawyer and Kasimir. Red Groom’s first job was at Lyzons in the 1950s and his first show was displayed here with the work of high school mate Walter Knestrick. So it has been with many others as well, including the neo-Impressionist Malva; folk sculptor William Edmondson; the American Van Gogh, David Burliuk; and Paul Lancaster whose gemstone-tinted etchings and painted wood carvings have made their way into international collections and the White House."
+}
+{
+  "_id":{"$oid":"e00000000000000000000014"},
+  "name":"The Parthenon Gallery",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"2500 West End Ave, Nashville, TN 37203",
+  "lat":36.1491527,
+  "lng":-86.8127731,
+  "description":"The Parthenon stands proudly as the centerpiece of Centennial Park, Nashville's premier urban park. The re-creation of the 42-foot statue Athena is the focus of the Parthenon just as it was in ancient Greece. The building and the Athena statue are both full-scale replicas of the Athenian originals. Originally built for Tennessee's 1897 Centennial Exposition, this replica of the original Parthenon in Athens serves as a monument to what is considered the pinnacle of classical architecture.The Parthenon also serves as the city of Nashville's art museum. The focus of the Parthenon's permanent collection is a group of 63 paintings by 19th and 20th century American artists donated by James M. Cowan. Additional gallery spaces provide a venue for a variety of temporary shows and exhibits."
+}
+{
+  "_id":{"$oid":"e00000000000000000000015"},
+  "name":"Plowhaus Artists Cooperative",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"#24 ARCADE LOWER LEVEL, 398 5th Ave N, Nashville, TN 37219",
+  "lat":36.1734721,
+  "lng":-86.7397014,
+  "description":"Plowhaus is an artist supported cooperative and gallery space dedicated to presenting new art work to the Nashville community. Plowhaus is a place where the process of creating art is valued and where artists can test new ideas and develp new skills. By encouraging the investigation of art-making and by supporting emerging artists, Plowhaus is committed to supporting, challenging and inspiring artistic growth among its members and to building, educating and sustaining audiences for contemporary art."
+}
+{
+  "_id":{"$oid":"e00000000000000000000016"},
+  "name":"Ruby Green Foundation",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"514 5th Avenue South, Nashville, TN 37203",
+  "lat":36.1548627,
+  "lng":-86.7747585,
+  "description":"RUBY GREEN promotes contemporary art by emerging and under-recognized artists to further the creative exchange of ideas."
+}
+{
+  "_id":{"$oid":"e00000000000000000000017"},
+  "name":"Sarratt Gallery at Vanderbilt University",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"207 Sarratt Student Center, Nashville, TN 37240",
+  "lat":36.145732,
+  "lng":-86.807509,
+  "description":"Sarratt Gallery is located in the main lobby of the Sarratt Student Center.All events are open to the public free of charge."
+}
+{
+  "_id":{"$oid":"e00000000000000000000018"},
+  "name":"Stanford Fine Art",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"6608-A Highway 100,Nashville, TN 37205",
+  "lat":36.0888758,
+  "lng":-86.8806046,
+  "description":"Stanford Fine Art specializes in American and European paintings, sculpture and works on paper from the 19th century to the present. We strive to maintain a diverse and varied inventory of carefully selected works, combining exemplary aesthetic standards, museum quality presentation and affordability."
+}
+{
+  "_id":{"$oid":"e00000000000000000000019"},
+  "name":"Take 121 Arts",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"3656 Trousdale Drive, Suite 112, Nashville, TN 37212",
+  "lat":36.091673,
+  "lng":-86.749562,
+  "description":""
+}
+{
+  "_id":{"$oid":"e00000000000000000000020"},
+  "name":"Zeitgeist Gallery",
+  "group":"Civic",
+  "type":"gallery",
+  "address":"1819 21st Avenue South, Nashville, TN 37214.",
+  "lat":36.1358429,
+  "lng":-86.8010988,
+  "description":"Founded in 1994, Zeitgeist is a beacon of art in the Nashville community. Started by owner Janice Zeitlin in Cummins Station it has served as a cultivation ground for new artists and a safe place for established artists to experiment and grow. Under the direction of Lain York, Zeitgeist maintains a firm place in the Nashville art scene today. Bridging the gap between collectors and creators, Zeitgeist provides a venue for world class shows in the south."
+}
+{
+  "_id":{"$oid":"e00000000000000000000021"},
+  "name":"Act 1, at the Dark Horse Theatre",
+  "group":"Civic",
+  "type":"theatre",
+  "address":"4610 Charlotte Avenue, Nashville, TN 37209",
+  "lat":36.1525294,
+  "lng":-86.8432987,
+  "description":"ACT 1 (Artists' Cooperative Theatre) is a non-profit organization dedicated to bringing theatrical gems, both classic and modern, to Nashville audiences. Now in its twenty-fifth season, ACT 1 has presented productions of more than a hundred of the world's greatest plays. ACT 1 continually receives high praise from critics and audience members alike, and its productions and performers are recipients of multiple prizes and awards. ACT 1 performs in the intimate Darkhorse Theater, a space which offers state-of-the-art sound and lighting."
+}
+{
+  "_id":{"$oid":"e00000000000000000000022"},
+  "name":"The Boiler Room Theatre",
+  "group":"Civic",
+  "type":"theatre",
+  "address":"230 Franklin Rd, Bldg 6, Franklin TN 37064",
+  "lat":35.9322403,
+  "lng":-86.8591192,
+  "description":"Located in the heart of Franklin, we are located within the bustling community of The Factory at Franklin. The heart of a the old bustling manufacturing company that is Boiler Room Theatre provides an intimate theater space. With inherent charm, natural acoustics, exposed brick and beams, and nearly 40-foot ceilings. We have 120 comfy, movie-theater style seats you'll be close enough to see every nuance of the performance, but not so close you feel you're in the show. Since our live theater is located at the Factory at Franklin, we are close to great restaurants and shopping along with plenty of free, well-lit parking."
+}
+{
+  "_id":{"$oid":"e00000000000000000000023"},
+  "name":"Chaffin's Barn Dinner Theatre",
+  "group":"Civic",
+  "type":"theatre",
+  "address":"8204 Hwy 100, Nashville, TN, 37221",
+  "lat":36.0433822,
+  "lng":-86.9595125,
+  "description":"The Barn was Nashville’s first professional dinner theatre and continues to produce top quality comedies, musicals and mysteries year round. The 1967 opening night crowd included local celebrities, Senators, and the Mayor. It was a thrilling time for the Nashville community hungry for entertainment offerings and the Barn has been fulfilling that need for 48 years as one of the most unique landmarks in Nashville. We continue to remain a favorite place for enjoying an evening or special occasion, but we also are a leader in facilitating fundraising events, birthday parties, tour groups, and office parties."
+}
+{
+  "_id":{"$oid":"e00000000000000000000024"},
+  "name":"Circle Players",
+  "group":"Civic",
+  "type":"theatre",
+  "address":"Nashville, TN 37204",
+  "lat":36.100419,
+  "lng":-86.771807,
+  "description":"Circle Players is proud of its distinction as not only one of the Tennessee’s oldest community theatre companies, but Nashville’s oldest non-profit volunteer arts organization. For 64 years, the company has produced more than 500 musicals, comedies, mysteries, historical dramas and classics, as well as cutting-edge social dramas and recent Broadway hits."
+}
+{
+  "_id":{"$oid":"e00000000000000000000025"},
+  "name":"Dark Horse Theatre",
+  "group":"Civic",
+  "type":"theatre",
+  "address":"4610 Charlotte Avenue, Nashville, TN 37209",
+  "lat":36.1525294,
+  "lng":-86.8432987,
+  "description":"Nashville's 24 year old Darkhorse Theater is an alternative theater with new works, classical theater, live music, dance and multimedia shows. This intimate and comfortable space has long been the home of many of Nashville's unique performing arts groups. Current companies at Darkhorse include ACT 1, Groundworks Theater, Real Life Players, Sista Style,  Dream 7, Destiny Theatre Experience, John Holleman and Co., P.G. 13 Players, KIrk/Burgess, Jene India Productions,  and others. Darkhorse is owned and managed by Shannon Wood and Peter Kurland. Our mission is to provide a home for indigenous theater and performing arts groups and artists."
+}
+{
+  "_id":{"$oid":"e00000000000000000000026"},
+  "name":"Nashville Children's Theatre",
+  "group":"civic",
+  "type":"theatre",
+  "address":"25 Middleton St., Nashville, TN 37210",
+  "lat":36.1541154,
+  "lng":-86.7688271,
+  "description":"Nashville Children’s Theatre is a professional theatre company providing the children, families and educators of Middle Tennessee with extraordinary shared theatrical experiences that inspire imagination, develop creativity, and build community."
+}
+{
+  "_id":{"$oid":"e00000000000000000000027"},
+  "name":"Tennessee Performing Arts Center (TPAC)",
+  "group":"civic",
+  "type":"theatre",
+  "address":"505 Deaderick St, Nashville, TN 37243",
+  "lat":36.1644861,
+  "lng":-86.7818122,
+  "description":"The Tennessee Performing Arts Center (TPAC) is a private, non-profit organization dedicated to providing and supporting the presentation of the performing arts to the citizens of Tennessee."
+}
+{
+  "_id":{"$oid":"e00000000000000000000028"},
+  "name":"Tennessee Repertory Theatre",
+  "group":"civic",
+  "type":"theatre",
+  "address":"161 Rains Avenue, Nashville, TN 37203",
+  "lat":36.134721,
+  "lng":-86.764966,
+  "description":"Tennessee Rep exists to serve through creating “Ah-ha!” moments that inspire empathy, prod intellectual and emotional engagement, and expand the creative capacity of audience and artists through the dynamic connection unique to live theatre."
+}
+{
+  "_id":{"$oid":"e00000000000000000000029"},
+  "name":"Tennessee Women's Theater Project",
+  "group":"civic",
+  "type":"theatre",
+  "address":"2301 Rosa L Parks Blvd, Nashville, TN 37228",
+  "lat":36.192876,
+  "lng":-86.807914,
+  "description":"TWTP is a professional, nonprofit theater company with a special focus on women. We seek to address the problems of gender inequity and gender discrimination through role parity for women as well as training and education in areas of professional theater that are currently male-dominated. We are committed to the highest artistic standards in professional theater."
+}
+{
+  "_id":{"$oid":"e00000000000000000000030"},
+  "name":"Theatre Ensemble of Nashville (TEN)",
+  "group":"civic",
+  "type":"theatre",
+  "address":"195 Omohundro Pl, Nashville, TN 37210",
+  "lat":36.157192,
+  "lng":-86.740489,
+  "description":"The Theatre Ensemble of Nashville is a small company with big dreams."
+}
