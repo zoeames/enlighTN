@@ -8,8 +8,8 @@
     .when('/home', {templateUrl:'/views/home/home.html', controller:'HomeCtrl'})
     .when('/dashboard', {templateUrl:'/views/dashboard/dashboard.html', controller:'DashboardCtrl'})
     .when('/events/:eventId', {templateUrl:'/views/event/event.html', controller:'EventCtrl'})
-    .when('/locations', {templateUrl:'/views/locations/locations.html', controller:'LocationCtrl'})
     .when('/locations/:locId', {templateUrl:'/views/location/location.html', controller:'LocationCtrl'})
+    .when('/locations', {templateUrl:'/views/locations/locations.html', controller:'LocationIndexCtrl'})
     .otherwise({redirectTo:'/'});
   }]);
 })();

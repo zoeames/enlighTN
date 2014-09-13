@@ -9,7 +9,7 @@ exports.index = function(req, res){
 };
 
 exports.show = function(req, res){
-  Location.findById(req.params.locationId, function(err, location){
-    res.send({location:location});
+  Location.findById(req.params.locationId, function(err, loc){
+    res.send({loc:loc});
   });
 };

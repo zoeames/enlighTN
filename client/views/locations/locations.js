@@ -2,8 +2,8 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('LocationCtrl', ['$scope', 'Location', function($scope, Location){
-    $scope.title = 'Location Page!';
+  .controller('LocationIndexCtrl', ['$scope', 'Location', function($scope, Location){
+    $scope.title = 'Locations Index Page!';
     $scope.locations = [];
 
     Location.all().then(function(response){

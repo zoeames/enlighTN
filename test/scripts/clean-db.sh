@@ -6,3 +6,4 @@ if [ -z "$1" ] ; then
     fi
 
     mongoimport --jsonArray --drop --db $1 --collection locations --file ../../db/test.json
+    mongoimport --jsonArray --drop --db $1 --collection events --file ../../db/events.json
