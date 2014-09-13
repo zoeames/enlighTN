@@ -27,3 +27,4 @@ Reflection.findAllByLocationId = function(locationId, cb){
   Reflection.collection.find({locationId:locationId}).toArray(cb);
 };
 
+module.exports = Reflection;
