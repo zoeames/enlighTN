@@ -1,10 +1,15 @@
 (function(){
   'use strict';
 
-  angular.module('mean-template', ['ngRoute'])
+  angular.module('enlighTN', ['ngRoute'])
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
-    .when('/', {templateUrl:'/views/home/home.html', controller:'HomeCtrl'})
+    .when('/', {templateUrl:'/views/splash/splash.html', controller:'SplashCtrl'})
+    .when('/home', {templateUrl:'/views/home/home.html', controller:'HomeCtrl'})
+    .when('/dashboard', {templateUrl:'/views/dashboard/dashboard.html', controller:'DashboardCtrl'})
+    .when('/events/:eventId', {templateUrl:'/views/event/event.html', controller:'EventCtrl'})
+    .when('/locations', {templateUrl:'/views/locations/locations.html', controller:'LocationCtrl'})
+    .when('/locations/:locId', {templateUrl:'/views/location/location.html', controller:'LocationCtrl'})
     .otherwise({redirectTo:'/'});
   }]);
 })();
