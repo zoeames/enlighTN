@@ -2,7 +2,7 @@
 
 var Mongo = require('mongodb');
 
-function Event(o){
+function Occasion(o){
   this.name       = o.name;
   this.locationId = Mongo.ObjectID(o.locationId);
   this.type       = o.type;
@@ -10,15 +10,17 @@ function Event(o){
   this.date       = new Date(o.date);
 }
 
-Object.defineProperty(Event, 'collection', {
+Object.defineProperty(Occasion, 'collection', {
   get: function(){return global.mongodb.collection('events');}
 });
 
-Event.findById = function(id, cb){
+Occasion.findById = function(id, cb){
   var _id = Mongo.ObjectID(id);
-  Event.collection.findOne({_id:_id}, cb);
+  Occasion.collection.findOne({_id:_id}, cb);
 };
 
-Event.all = function(cb){
-  Event.collection.find().toArray(cb);
+Occasion.all = function(cb){
+  Occasion.collection.find().toArray(cb);
 };
+
+module.exports = Occasion;
