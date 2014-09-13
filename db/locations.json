@@ -315,7 +315,7 @@
 
 {
   "_id":{"$oid":"e00000000000000000000001"},
-  "name":"OZ Arts",
+  "title":"OZ Arts",
   "group":"Civic",
   "type":"theatre",
   "address":"6172 Cockrill Bend Circle, Nashville TN 37209",
@@ -325,7 +325,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000002"},
-  "name":"Art at the Arcade",
+  "title":"Art at the Arcade",
   "group":"Civic",
   "type":"gallery",
   "address":"398 5th Ave N, Nashville, TN 37219",
@@ -335,7 +335,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000003"},
-  "name":"Art & Invention Gallery",
+  "title":"Art & Invention Gallery",
   "group":"Civic",
   "type":"gallery",
   "address":"1106 Woodland Street, Nashville, TN 37206",
@@ -345,7 +345,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000004"},
-  "name":"The Arts Company",
+  "title":"The Arts Company",
   "group":"Civic",
   "type":"gallery",
   "address":"215 5th Avenue North, Nashville, TN 37219",
@@ -355,7 +355,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000005"},
-  "name":"Bennett Galleries",
+  "title":"Bennett Galleries",
   "group":"Civic",
   "type":"gallery",
   "address":"2104 Crestmoor Road, Nashville, TN 37215",
@@ -365,7 +365,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000006"},
-  "name":"Carl Van Vechten Gallery",
+  "title":"Carl Van Vechten Gallery",
   "group":"Civic",
   "type":"gallery",
   "address":"On the corner of Dr. D.B. Todd Jr. Blvd. and Jackson Ave. Fisk University Campus 1000 17th Ave North",
@@ -375,7 +375,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000007"},
-  "name":"Cheekwood Botanical Gardens & Museum",
+  "title":"Cheekwood Botanical Gardens & Museum",
   "group":"Civic",
   "type":"museum",
   "address":"1200 Forrest Park Drive, Nashville, TN 37205",
@@ -385,7 +385,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000008"},
-  "name":"Cumberland Gallery",
+  "title":"Cumberland Gallery",
   "group":"Civic",
   "type":"gallery",
   "address":"4107 Hillsboro Circle, Nashville, TN 37215",
@@ -395,7 +395,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000009"},
-  "name":"Fine Arts Gallery at Vanderbilt",
+  "title":"Fine Arts Gallery at Vanderbilt",
   "group":"Civic",
   "type":"gallery",
   "address":"23rd Ave at West End Avenue, Nashville, TN 37203",
@@ -405,7 +405,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000010"},
-  "name":"Frist Center for the Visual Arts",
+  "title":"Frist Center for the Visual Arts",
   "group":"Civic",
   "type":"museum",
   "address":"919 Broadway, Nashville, TN 37203",
@@ -415,7 +415,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000011"},
-  "name":"Gallery One",
+  "title":"Gallery One",
   "group":"Civic",
   "type":"gallery",
   "address":"5133 Harding Pike, Nashville, TN 37205",
@@ -425,7 +425,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000012"},
-  "name":"LeQuire Gallery",
+  "title":"LeQuire Gallery",
   "group":"Civic",
   "type":"gallery",
   "address":"4304 Charlotte Avenue, Nashville, TN 37209",
@@ -435,7 +435,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000013"},
-  "name":"Lyzon",
+  "title":"Lyzon",
   "group":"Civic",
   "type":"gallery",
   "address":"411 West Thompson Lane, Nashville, TN 37211",
@@ -445,7 +445,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000014"},
-  "name":"The Parthenon Gallery",
+  "title":"The Parthenon Gallery",
   "group":"Civic",
   "type":"gallery",
   "address":"2500 West End Ave, Nashville, TN 37203",
@@ -455,7 +455,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000015"},
-  "name":"Plowhaus Artists Cooperative",
+  "title":"Plowhaus Artists Cooperative",
   "group":"Civic",
   "type":"gallery",
   "address":"#24 ARCADE LOWER LEVEL, 398 5th Ave N, Nashville, TN 37219",
@@ -465,7 +465,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000016"},
-  "name":"Ruby Green Foundation",
+  "title":"Ruby Green Foundation",
   "group":"Civic",
   "type":"gallery",
   "address":"514 5th Avenue South, Nashville, TN 37203",
@@ -475,7 +475,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000017"},
-  "name":"Sarratt Gallery at Vanderbilt University",
+  "title":"Sarratt Gallery at Vanderbilt University",
   "group":"Civic",
   "type":"gallery",
   "address":"207 Sarratt Student Center, Nashville, TN 37240",
@@ -485,7 +485,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000018"},
-  "name":"Stanford Fine Art",
+  "title":"Stanford Fine Art",
   "group":"Civic",
   "type":"gallery",
   "address":"6608-A Highway 100,Nashville, TN 37205",
@@ -495,7 +495,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000019"},
-  "name":"Take 121 Arts",
+  "title":"Take 121 Arts",
   "group":"Civic",
   "type":"gallery",
   "address":"3656 Trousdale Drive, Suite 112, Nashville, TN 37212",
@@ -505,7 +505,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000020"},
-  "name":"Zeitgeist Gallery",
+  "title":"Zeitgeist Gallery",
   "group":"Civic",
   "type":"gallery",
   "address":"1819 21st Avenue South, Nashville, TN 37214.",
@@ -515,7 +515,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000021"},
-  "name":"Act 1, at the Dark Horse Theatre",
+  "title":"Act 1, at the Dark Horse Theatre",
   "group":"Civic",
   "type":"theatre",
   "address":"4610 Charlotte Avenue, Nashville, TN 37209",
@@ -525,7 +525,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000022"},
-  "name":"The Boiler Room Theatre",
+  "title":"The Boiler Room Theatre",
   "group":"Civic",
   "type":"theatre",
   "address":"230 Franklin Rd, Bldg 6, Franklin TN 37064",
@@ -535,7 +535,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000023"},
-  "name":"Chaffin's Barn Dinner Theatre",
+  "title":"Chaffin's Barn Dinner Theatre",
   "group":"Civic",
   "type":"theatre",
   "address":"8204 Hwy 100, Nashville, TN, 37221",
@@ -545,7 +545,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000024"},
-  "name":"Circle Players",
+  "title":"Circle Players",
   "group":"Civic",
   "type":"theatre",
   "address":"Nashville, TN 37204",
@@ -555,7 +555,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000025"},
-  "name":"Dark Horse Theatre",
+  "title":"Dark Horse Theatre",
   "group":"Civic",
   "type":"theatre",
   "address":"4610 Charlotte Avenue, Nashville, TN 37209",
@@ -565,7 +565,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000026"},
-  "name":"Nashville Children's Theatre",
+  "title":"Nashville Children's Theatre",
   "group":"civic",
   "type":"theatre",
   "address":"25 Middleton St., Nashville, TN 37210",
@@ -575,7 +575,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000027"},
-  "name":"Tennessee Performing Arts Center (TPAC)",
+  "title":"Tennessee Performing Arts Center (TPAC)",
   "group":"civic",
   "type":"theatre",
   "address":"505 Deaderick St, Nashville, TN 37243",
@@ -585,7 +585,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000028"},
-  "name":"Tennessee Repertory Theatre",
+  "title":"Tennessee Repertory Theatre",
   "group":"civic",
   "type":"theatre",
   "address":"161 Rains Avenue, Nashville, TN 37203",
@@ -595,7 +595,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000029"},
-  "name":"Tennessee Women's Theater Project",
+  "title":"Tennessee Women's Theater Project",
   "group":"civic",
   "type":"theatre",
   "address":"2301 Rosa L Parks Blvd, Nashville, TN 37228",
@@ -605,7 +605,7 @@
 }
 {
   "_id":{"$oid":"e00000000000000000000030"},
-  "name":"Theatre Ensemble of Nashville (TEN)",
+  "title":"Theatre Ensemble of Nashville (TEN)",
   "group":"civic",
   "type":"theatre",
   "address":"195 Omohundro Pl, Nashville, TN 37210",
