@@ -6,7 +6,9 @@ var morgan         = require('morgan'),
     session        = require('express-session'),
     RedisStore     = require('connect-redis')(session),
     debug          = require('../lib/debug'),
-    home           = require('../controllers/home');
+    home           = require('../controllers/home'),
+    events         = require('../controllers/events'),
+    locations      = require('../controllers/locations');
 
 module.exports = function(app, express){
   app.use(morgan('dev'));
@@ -19,6 +21,10 @@ module.exports = function(app, express){
   app.use(debug.info);
 
   app.get('/home', home.index);
+  app.get('/locations', locations.index);
+  app.get('/locations/:locationId', locations.show);
+  app.get('/events', events.index);
+  app.get('/events/:eventId', events.show);
 
   console.log('Express: Routes Loaded');
 };
