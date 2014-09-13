@@ -2,14 +2,7 @@
 
 var Mongo = require('mongodb');
 
-function Location(o){
-  this.name = o.name;
-  this.type = o.type;
-  this.address = o.address;
-  this.lat = o.lat;
-  this.lng = o.lng;
-  this.description = o.description;
-  this.favorites = [];
+function Location(){
 }
 
 Object.defineProperty(Location, 'collection', {
