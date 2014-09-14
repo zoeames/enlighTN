@@ -1,3 +1,18 @@
-h3 {{title}}
-
-h4(ng-repeat='loc in locations'): a(href='/#/locations/{{loc._id}}') {{loc.title}} ({{loc.group}})
+h3.text-center {{title}}
+.row
+  #map
+.row
+  table.table.table-hover
+    thead
+      th Name
+      th Address
+      th Type
+      th Distance From You
+      th Popularity
+    tbody
+      tr(ng-repeat='loc in locations'): a(href='/#/locations/{{loc._id}}') 
+        td {{loc.title}}
+        td {{loc.address}}
+        td {{loc.group}}
+        td calculation here
+        td popularity
