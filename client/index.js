@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('enlighTN', ['ngRoute'])
+  angular.module('enlighTN', ['ngRoute', 'ui.bootstrap'])
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
     .when('/', {templateUrl:'/views/splash/splash.html', controller:'SplashCtrl'})
