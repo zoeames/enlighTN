@@ -566,7 +566,7 @@
 {
   "_id":{"$oid":"e00000000000000000000026"},
   "title":"Nashville Children's Theatre",
-  "group":"civic",
+  "group":"Civic",
   "type":"theatre",
   "address":"25 Middleton St., Nashville, TN 37210",
   "lat":36.1541154,
@@ -576,7 +576,7 @@
 {
   "_id":{"$oid":"e00000000000000000000027"},
   "title":"Tennessee Performing Arts Center (TPAC)",
-  "group":"civic",
+  "group":"Civic",
   "type":"theatre",
   "address":"505 Deaderick St, Nashville, TN 37243",
   "lat":36.1644861,
@@ -586,7 +586,7 @@
 {
   "_id":{"$oid":"e00000000000000000000028"},
   "title":"Tennessee Repertory Theatre",
-  "group":"civic",
+  "group":"Civic",
   "type":"theatre",
   "address":"161 Rains Avenue, Nashville, TN 37203",
   "lat":36.134721,
@@ -596,7 +596,7 @@
 {
   "_id":{"$oid":"e00000000000000000000029"},
   "title":"Tennessee Women's Theater Project",
-  "group":"civic",
+  "group":"Civic",
   "type":"theatre",
   "address":"2301 Rosa L Parks Blvd, Nashville, TN 37228",
   "lat":36.192876,
@@ -606,7 +606,7 @@
 {
   "_id":{"$oid":"e00000000000000000000030"},
   "title":"Theatre Ensemble of Nashville (TEN)",
-  "group":"civic",
+  "group":"Civic",
   "type":"theatre",
   "address":"195 Omohundro Pl, Nashville, TN 37210",
   "lat":36.157192,
