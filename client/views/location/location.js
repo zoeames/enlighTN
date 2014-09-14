@@ -5,6 +5,7 @@
   .controller('LocationCtrl', ['$scope', 'Location', '$routeParams', function($scope, Location, $routeParams){
     $scope.loc = {};
     $scope.occasions = [];
+    $scope.myInterval = 10000;
 
     Location.findById($routeParams.locId).then(function(response){
       $scope.loc = response.data.loc;
