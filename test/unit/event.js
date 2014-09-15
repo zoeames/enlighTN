@@ -7,7 +7,7 @@ var expect    = require('chai').expect,
     Event     = require('../../server/models/event'),
     dbConnect = require('../../server/lib/mongodb'),
     cp        = require('child_process'),
-    db        = 'enlighTN';
+    db        = 'enlighTN-test';
 
 describe('Event', function(){
   before(function(done){
