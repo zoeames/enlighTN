@@ -7,4 +7,3 @@ if [ -z "$1" ] ; then
 
     mongoimport --jsonArray --drop --db $1 --collection events --file ../../db/events.json
     mongoimport --jsonArray --drop --db $1 --collection locations --file ../../db/locations.json
-    mongoimport --jsonArray --drop --db $1 --collection venues --file ../../db/venues.json
