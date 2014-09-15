@@ -1,7 +1,7 @@
 ## name of project
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/bchiatt/enlighTN.svg)](https://travis-ci.org/bchiatt/enlighTN)
+[![Coverage Status](https://coveralls.io/repos/bchiatt/enlighTN/badge.png)](https://coveralls.io/r/bchiatt/enlighTN)
 
 ### Screenshots
 ![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/one.jpg)
