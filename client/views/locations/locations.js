@@ -10,6 +10,7 @@
       $scope.locations = response.data.locations;
     });
 
+
   }]);
 })();
 
