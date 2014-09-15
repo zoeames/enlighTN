@@ -11,11 +11,11 @@
       "startTime":"8PM"
     }
   ],
-  "description":"Academy Award winner Tim Robbins and his critically acclaimed LA-based theatre company, The Actors’ Gang, illuminate the forest of William Shakespeare’s A Midsummer Night’s Dream with original music and a fervent approach to the language. Relying on the bard’s extraordinary text and the creative imagination of fourteen talented and versatile actors, Robbins’ irreverent and bawdy adaptation of this surreal world is expertly represented with minimal costumes, props, and scenery. Founded in 1981 by a group of renegade theatre artists led by Robbins, The Actors’ Gang creates bold, original works and daring reinterpretations of the classics. In the last 31 years, the company has produced over 100 plays in Los Angeles, in forty US states, and on five continents."
-  "locationId":{"$oid":"100000000000000000000001"}
+  "description":"Academy Award winner Tim Robbins and his critically acclaimed LA-based theatre company, The Actors’ Gang, illuminate the forest of William Shakespeare’s A Midsummer Night’s Dream with original music and a fervent approach to the language. Relying on the bard’s extraordinary text and the creative imagination of fourteen talented and versatile actors, Robbins’ irreverent and bawdy adaptation of this surreal world is expertly represented with minimal costumes, props, and scenery. Founded in 1981 by a group of renegade theatre artists led by Robbins, The Actors’ Gang creates bold, original works and daring reinterpretations of the classics. In the last 31 years, the company has produced over 100 plays in Los Angeles, in forty US states, and on five continents.",
+  "locationId":{"$oid":"e00000000000000000000001"}
 }
 {
-  "name":"BANDALOOP: Look Up Nashville!, Harboring"
+  "name":"BANDALOOP: Look Up Nashville!, Harboring",
   "type":"Performance Art",
   "dates":[
     {
@@ -27,8 +27,8 @@
       "startTime":"7PM"
     }
   ],
-  "description":"A pioneer in vertical dance performance, BANDALOOP seamlessly weaves dynamic physicality and intricate choreography to create graceful weightlessness in dance.As a precursor to full-length performances at OZ, BANDALOOP presents Look Up Nashville! – a one-of-a-kind spectacle with the Nashville skyline as a backdrop. Take a picnic to work on October 6th and witness BANDALOOP dancers’ stunning response to the architecture of a Music City skyscraper. Lookout for special Look Up Nashville Announcement soon! BANDALOOP reimagines Harboring, their evening length work of sweeping drama and athletic grace, in three surprising locations at OZ. Set to original music, dancers perform eight distinct scenes as a “chorus” of local artists guide the audience from one performance site to another. Each vignette offers a different and breathtaking perspective from the company’s signature, interactive, and unconventional approach to the art of dance."
-  "locationId":{"$oid":"100000000000000000000001"}
+  "description":"A pioneer in vertical dance performance, BANDALOOP seamlessly weaves dynamic physicality and intricate choreography to create graceful weightlessness in dance.As a precursor to full-length performances at OZ, BANDALOOP presents Look Up Nashville! – a one-of-a-kind spectacle with the Nashville skyline as a backdrop. Take a picnic to work on October 6th and witness BANDALOOP dancers’ stunning response to the architecture of a Music City skyscraper. Lookout for special Look Up Nashville Announcement soon! BANDALOOP reimagines Harboring, their evening length work of sweeping drama and athletic grace, in three surprising locations at OZ. Set to original music, dancers perform eight distinct scenes as a “chorus” of local artists guide the audience from one performance site to another. Each vignette offers a different and breathtaking perspective from the company’s signature, interactive, and unconventional approach to the art of dance.",
+  "locationId":{"$oid":"e00000000000000000000001"}
 }
 {
   "name":"VIJAY IYER: Music of Transformation",
@@ -43,8 +43,8 @@
       "startTime":"2PM"
     }
   ],
-  "description":"Music by Vijay Iyer Film by Prashant Bhargava International Contemporary Ensemble / Conducted by David Fulmer Pianist and composer Vijay Iyer, recently awarded a 2013 MacArthur fellowship, a 2012 Doris Duke Performing Artist Award and an unprecedented “quintuple crown” in the 2012 Down Beat International Critics Poll, is known for his fresh, vitalizing approach to modern music. OZ Arts is proud to present a unique two-part program celebrating Iyer’s collaborations with an extraordinary collection of world-class artists."
-  "locationId":{"$oid":"100000000000000000000001"}
+  "description":"Music by Vijay Iyer Film by Prashant Bhargava International Contemporary Ensemble / Conducted by David Fulmer Pianist and composer Vijay Iyer, recently awarded a 2013 MacArthur fellowship, a 2012 Doris Duke Performing Artist Award and an unprecedented “quintuple crown” in the 2012 Down Beat International Critics Poll, is known for his fresh, vitalizing approach to modern music. OZ Arts is proud to present a unique two-part program celebrating Iyer’s collaborations with an extraordinary collection of world-class artists.",
+  "locationId":{"$oid":"e00000000000000000000001"}
 }
 {
   "name":"13 MOST BEAUTIFUL… SONGS FOR ANDY WARHOL’S SCREEN TESTS Featuring Dean and Britta",
@@ -55,8 +55,8 @@
       "startTime":"8PM"
     }
   ],
-  "description":"Andy Warhol is widely regarded as one of the most important artists of the second half of the 20th century. His Screen Tests are revealing portraits of hundreds of different individuals—both famous and anonymous—who were visitors to his studio, the Factory, between 1964 and 1966. Each subject was asked to pose, lit with a strong keylight, and filmed by Warhol with his stationary 16mm Bolex camera. Each screen test lasted only as long as the 100-foot roll of film. 13 Most Beautiful is a selection of Warhol’s four-minute, silent film portraits set to music performed by Dean Wareham and Britta Phillips, both formerly of the indie NYC downtown band, Luna. The multimedia performance incorporates a large-scale video projection of Warhol’s Screen Tests above the musicians performing live on stage. 13 Most Beautiful…Songs for Andy Warhol’s Screen Tests is a project jointly commissioned by The Andy Warhol Museum and Pittsburgh Cultural Trust for the Pittsburgh International Festival of Firsts 2008."
-  "locationId":{"$oid":"100000000000000000000001"}
+  "description":"Andy Warhol is widely regarded as one of the most important artists of the second half of the 20th century. His Screen Tests are revealing portraits of hundreds of different individuals—both famous and anonymous—who were visitors to his studio, the Factory, between 1964 and 1966. Each subject was asked to pose, lit with a strong keylight, and filmed by Warhol with his stationary 16mm Bolex camera. Each screen test lasted only as long as the 100-foot roll of film. 13 Most Beautiful is a selection of Warhol’s four-minute, silent film portraits set to music performed by Dean Wareham and Britta Phillips, both formerly of the indie NYC downtown band, Luna. The multimedia performance incorporates a large-scale video projection of Warhol’s Screen Tests above the musicians performing live on stage. 13 Most Beautiful…Songs for Andy Warhol’s Screen Tests is a project jointly commissioned by The Andy Warhol Museum and Pittsburgh Cultural Trust for the Pittsburgh International Festival of Firsts 2008.",
+  "locationId":{"$oid":"e00000000000000000000001"}
 }
 {
   "name":"LAURIE ANDERSON The Language of the Future",
@@ -71,8 +71,8 @@
       "startTime":"8PM"
     }
   ],
-  "description":"Laurie Anderson is one of America’s most renowned – and daring – creative pioneers. She is globally recognized as a groundbreaking leader in the use of technology in the arts. While known primarily for her multimedia presentations, Anderson has also cast herself in roles as varied as visual artist, composer, poet, photographer, filmmaker, electronics whiz, vocalist, and instrumentalist. The Language of the Future is a collection of songs and stories about contemporary culture andthe latest chapter in Anderson’s ongoing exploration of the American narrative.Anderson’s work continues to evolve as she strives to reimagine and redefinethe relationship between reality and dreams, sparking thoughtful discourseamong her audiences worldwide."
-  "locationId":{"$oid":"100000000000000000000001"}
+  "description":"Laurie Anderson is one of America’s most renowned – and daring – creative pioneers. She is globally recognized as a groundbreaking leader in the use of technology in the arts. While known primarily for her multimedia presentations, Anderson has also cast herself in roles as varied as visual artist, composer, poet, photographer, filmmaker, electronics whiz, vocalist, and instrumentalist. The Language of the Future is a collection of songs and stories about contemporary culture andthe latest chapter in Anderson’s ongoing exploration of the American narrative.Anderson’s work continues to evolve as she strives to reimagine and redefinethe relationship between reality and dreams, sparking thoughtful discourseamong her audiences worldwide.",
+  "locationId":{"$oid":"e00000000000000000000001"}
 }
 {
   "name":"PI DAY Roy Wooten, Laurie Anderson, Cano Ozgener, Ben Davis (ISHKY), Mark Hanf, Bryce McCloud and more",
@@ -83,8 +83,8 @@
       "startTime":"TBD"
     }
   ],
-  "description":"On Pi Day 2015, OZ Arts brings together visual art, live performance, and discussion with a focus on the connections of science, technology, engineering, art, and math. OZ Arts will showcase the conceptual artworks of multiple visual artists including its founder, Cano Ozgener, whose Pi Synesthesia uses color to express the mathematical constant. OZ Arts will also display photographs from Ben Davis’s Pi in the Sky, the world’s largest ephemeral installation of pi. Five-time Grammy-winning percussionist Roy Wooten, with an ensemble, will perform his score for the constant, and artists and scholars, including Laurie Anderson, will come to OZ Arts from across the country to discuss the intersection of mathematics and art."
-  "locationId":{"$oid":"100000000000000000000001"}
+  "description":"On Pi Day 2015, OZ Arts brings together visual art, live performance, and discussion with a focus on the connections of science, technology, engineering, art, and math. OZ Arts will showcase the conceptual artworks of multiple visual artists including its founder, Cano Ozgener, whose Pi Synesthesia uses color to express the mathematical constant. OZ Arts will also display photographs from Ben Davis’s Pi in the Sky, the world’s largest ephemeral installation of pi. Five-time Grammy-winning percussionist Roy Wooten, with an ensemble, will perform his score for the constant, and artists and scholars, including Laurie Anderson, will come to OZ Arts from across the country to discuss the intersection of mathematics and art.",
+  "locationId":{"$oid":"e00000000000000000000001"}
 }
 {
   "name":"TRISHA BROWN DANCE COMPANY A Retrospective in Three Parts",
@@ -99,8 +99,8 @@
       "startTime":"7:30PM"
     }
   ],
-  "description":"Trisha Brown is recognized as an avant-garde and postmodernist choreographer whose more than forty-year contribution to contemporary dance has made a significant impact on the field. OZ Arts is proud to present two distinct evenings of performance by Trisha Brown Dance Company (TBDC), with works from the late 1960’s to 2011. Program A features multiple, iconic works created for the proscenium theatre. Program B employs the manicured grounds of OZ for a series of Brown’s “Early Works,” then moves into the Grand Salon, which will be transformed into a performance space with seating on two sides of the stage. In between these two main stage performance evenings, OZ Arts brings a live performance installation, Planes, to Nashville in collaboration with local contemporary dance collective New Dialect and Zeitgeist Gallery. Zeitgeist Gallery will host the multi-media installation from May 2 – 30, 2015, with weekly performances in the installation by New Dialect. A special performance evening featuring both New Dialect and TBDC dancers takes place on May 15, 2015."
-  "locationId":{"$oid":"100000000000000000000001"}
+  "description":"Trisha Brown is recognized as an avant-garde and postmodernist choreographer whose more than forty-year contribution to contemporary dance has made a significant impact on the field. OZ Arts is proud to present two distinct evenings of performance by Trisha Brown Dance Company (TBDC), with works from the late 1960’s to 2011. Program A features multiple, iconic works created for the proscenium theatre. Program B employs the manicured grounds of OZ for a series of Brown’s “Early Works,” then moves into the Grand Salon, which will be transformed into a performance space with seating on two sides of the stage. In between these two main stage performance evenings, OZ Arts brings a live performance installation, Planes, to Nashville in collaboration with local contemporary dance collective New Dialect and Zeitgeist Gallery. Zeitgeist Gallery will host the multi-media installation from May 2 – 30, 2015, with weekly performances in the installation by New Dialect. A special performance evening featuring both New Dialect and TBDC dancers takes place on May 15, 2015.",
+  "locationId":{"$oid":"e00000000000000000000001"}
 }
 {
   "name":"PHANTOM LIMB COMPANY Memory Rings",
@@ -113,12 +113,12 @@
     {
       "date":{"$date":1434690000000},
       "startTime":"7PM"
-    }
+    },
     {
       "date":{"$date":1434690000000},
       "startTime":"7PM"
     }
   ],
-  "description":"Known for their unconventional approach to storytelling and use of marionette puppetry, New York City-based Phantom Limb Company combines multi-media production design and installation to create a three-dimensional visual landscape on stage. In July 2014, Phantom Limb puppeteers, designers, composers, choreographers, and makers land in Nashville for a two-week residency. Utilizing OZ’s 9,000-square-foot warehouse, the company begins the final phase of development for Memory Rings, their second work in a three-part series focused on humanity’s relationship to the environment. In June 2015, OZ is honored to present the WORLD PREMIERE of Phantom Limb Company’s Memory Rings. Told from the perspective of the world’s oldest living tree, this theatrical presentation tells the story of 5,000 years of human and environmental change."
-  "locationId":{"$oid":"100000000000000000000001"}
+  "description":"Known for their unconventional approach to storytelling and use of marionette puppetry, New York City-based Phantom Limb Company combines multi-media production design and installation to create a three-dimensional visual landscape on stage. In July 2014, Phantom Limb puppeteers, designers, composers, choreographers, and makers land in Nashville for a two-week residency. Utilizing OZ’s 9,000-square-foot warehouse, the company begins the final phase of development for Memory Rings, their second work in a three-part series focused on humanity’s relationship to the environment. In June 2015, OZ is honored to present the WORLD PREMIERE of Phantom Limb Company’s Memory Rings. Told from the perspective of the world’s oldest living tree, this theatrical presentation tells the story of 5,000 years of human and environmental change.",
+  "locationId":{"$oid":"e00000000000000000000001"}
 }

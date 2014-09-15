@@ -8,7 +8,11 @@
       return $http.get('/locations');
     }
 
-    return {all:all};
+    function findById(locId){
+      return $http.get('/locations/' + locId);
+    }
+
+    return {all:all, findById:findById};
   }]);
 })();
 

@@ -1,6 +1,8 @@
 'use strict';
 
-var Mongo = require('mongodb');
+var Mongo      = require('mongodb'),
+    Occasion   = require('./event'),
+    underscore = require('underscore');
 
 function Location(){
 }
@@ -15,8 +17,15 @@ Location.all = function(cb){
 
 Location.findById = function(id, cb){
   var _id = Mongo.ObjectID(id);
-  Location.collection.findOne({_id:_id}, cb);
-      // need to async map to include getEvents, getReflections
+  Location.collection.findOne({_id:_id}, function(err, obj){
+    var loc = Object.create(Location.prototype);
+    loc = underscore.extend(loc, obj);
+    cb(err, loc);
+  });
+};
+
+Location.prototype.findEvents = function(cb){
+  Occasion.collection.find({locationId:this._id}).toArray(cb);
 };
 
 module.exports = Location;

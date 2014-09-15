@@ -2,7 +2,8 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('DashboardCtrl', ['$scope', 'Dashboard', function($scope, Dashboard){
+  .controller('DashboardCtrl', ['$scope', function($scope){
+    $scope.title = 'User Dashboard';
   }]);
 })();
 

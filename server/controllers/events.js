@@ -3,13 +3,13 @@
 var Occasion = require('../models/event');
 
 exports.index = function(req, res){
-  Occasion.all(function(err, events){
-    res.send({events:events});
+  Occasion.all(function(err, occasions){
+    res.send({occasions:occasions});
   });
 };
 
 exports.show = function(req, res){
-  Occasion.findById(req.params.eventId, function(err, event){
-    res.send({event:event});
+  Occasion.findById(req.params.eventId, function(err, occasion){
+    res.send({occasion:occasion});
   });
 };

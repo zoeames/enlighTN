@@ -9,6 +9,7 @@ html(ng-app='enlighTN', lang='en')
     link(href='/vendor/fontawesome/css/font-awesome.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
     link(href='/views/home/home.css', rel='stylesheet')
+    link(href='/views/location/location.css', rel='stylesheet')
   body
     include nav
     .container-fluid
@@ -22,7 +23,9 @@ html(ng-app='enlighTN', lang='en')
     script(src='/vendor/angular-route/angular-route.js')
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.js')
+    script(src='/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js')
     script(src='/vendor/underscore/underscore.js')
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANcr_9Ku36Y9xZ3UoISclGCKhIW7p-0bc&sensor=true&v=3&libraries=geometry')
     script(src='/index.js')
     script(src='/views/home/home.js')
     script(src='/views/splash/splash.js')

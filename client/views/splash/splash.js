@@ -2,7 +2,8 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('SplashCtrl', ['$scope', 'Splash', function($scope, Splash){
+  .controller('SplashCtrl', ['$scope', 'User', function($scope, User){
+    $scope.title = 'Login crap.';
   }]);
 })();
 
