@@ -1,7 +1,7 @@
 'use strict';
 
 //var bcrypt = require('bcrypt'),
-var Mongo  = require('mongodb');
+//var Mongo  = require('mongodb');
 
 function User(){
 }

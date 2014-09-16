@@ -7,15 +7,19 @@ html(ng-app='enlighTN', lang='en')
     title enlighTN
     link(href='/vendor/bootstrap/dist/css/bootstrap.css', rel='stylesheet')
     link(href='/vendor/fontawesome/css/font-awesome.css', rel='stylesheet')
+    link(href='/vendor/snapjs/snap.css', rel='stylesheet')
+    link(href='/vendor/angular-snap/angular-snap.min.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
+    link(href='/nav.css', rel='stylesheet')
     link(href='/views/home/home.css', rel='stylesheet')
     link(href='/views/location/location.css', rel='stylesheet')
   body
     include nav
-    .container-fluid
+    snap-content.container-fluid
       .row
         .col-xs-1
         .col-xs-10
+          button.btn.btn-default#menu(snap-toggle=''): i.fa.fa-fw.fa-bars.fa-2x
           #container(ng-view)
         .col-xs-1
 
@@ -25,8 +29,12 @@ html(ng-app='enlighTN', lang='en')
     script(src='/vendor/bootstrap/dist/js/bootstrap.js')
     script(src='/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js')
     script(src='/vendor/underscore/underscore.js')
+    script(src='/vendor/snapjs/snap.js')
+    script(src='/vendor/angular-snap/angular-snap.js')
+    script(src='/vendor/underscore/underscore.js')
     script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANcr_9Ku36Y9xZ3UoISclGCKhIW7p-0bc&sensor=true&v=3&libraries=geometry')
     script(src='/index.js')
+    script(src='/nav.js')
     script(src='/views/home/home.js')
     script(src='/views/splash/splash.js')
     script(src='/views/dashboard/dashboard.js')
