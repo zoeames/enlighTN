@@ -1,9 +1,9 @@
 'use strict';
 
 var expect    = require('chai').expect,
-    User      = require('../../app/models/user'),
-    dbConnect = require('../../app/lib/mongodb'),
-    //cp        = require('child_process'),
+    User      = require('../../server/models/reflection'),
+    dbConnect = require('../../server/lib/mongodb'),
+    cp        = require('child_process'),
     db        = 'enlighTN-test';
 
 describe('Reflection', function(){
@@ -19,7 +19,7 @@ describe('Reflection', function(){
     });
   });
 
-  describe('constructor', function(){
+  /*describe('constructor', function(){
     it('should create a new User object', function(){
       var o = {
         authorId :'000000000000000000000002',
@@ -27,7 +27,6 @@ describe('Reflection', function(){
         text : 'It is amazing and i love it.',
         date : {"$date":1409184000000},
         }
-      },
       r = new Reflection(o);
       expect(r).to.be.instanceof(Reflection);
     });
@@ -42,5 +41,5 @@ describe('Reflection', function(){
         });
       });
     });
-  });
+  });*/
 });
