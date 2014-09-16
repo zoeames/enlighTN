@@ -6,8 +6,8 @@ h3.text-center {{title}}
     form.form#change-zip(name='changeZipForm', role='form', novalidate)
       .form-group
         label(for='zip') Need a different Zip code?
-          input.form-control.col-xs-2#zip(ng-model='zip', ng-pattern='/^[0-9]{5}$/', type='text', name='zip')
-
+          input.form-control#zip(ng-model='zip', ng-pattern='/^[0-9]{5}$/', type='text', name='zip')
+          button.btn.btn-success Change
 
 .row
   table.table.table-hover
@@ -18,7 +18,7 @@ h3.text-center {{title}}
       th Distance From You
       th Popularity
     tbody
-      tr(ng-repeat='loc in locations'): a(href='/#/locations/{{loc._id}}') 
+      tr(ng-repeat='loc in locations'): a(href='/#/locations/{{loc._id}}')
         td {{loc.title}}
         td {{loc.address}}
         td {{loc.group}}
