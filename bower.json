@@ -18,6 +18,7 @@
     "fontawesome": "~4.2.0",
     "underscore": "~1.7.0",
     "jquery": "~2.1.1",
-    "angular-bootstrap": "~0.11.0"
+    "angular-bootstrap": "~0.11.0",
+    "angular-snap": "~1.6.0"
   }
 }

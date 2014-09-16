@@ -1,19 +1,20 @@
-.navbar.navbar-default(role='navigation')
-  .container
-    .navbar-header
-      button.navbar-toggle(data-toggle='collapse', data-target='#bs-navbar-collapse')
-        span.sr-only Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      a.navbar-brand(href='/') enlighTN
-
-    .collapse.navbar-collapse#bs-navbar-collapse
-      ul.nav.navbar-nav.navbar-right
-        li: a(href='/#/') Splash
-        li: a(href='/#/home') Home
-        li: a(href='/#/dashboard') Dashboard
-        li: a(href='/#/events/541499095ffde801d2311eaa') Event Example
-        li: a(href='/#/locations') Locations
-        li: a(href='/#/locations/a00000000000000000000001') Location Example
-
+.snap-drawer
+  ul.nav.navbar-nav#navigation
+    li
+      a(href='javascript.void(0)') {{email}}
+    li
+      a(href='/') enlighTN
+    li
+      a(href='/#/logout') Login
+    li
+      a(href='/#/splash') Splash
+    li
+      a(href='/#/home') Home
+    li
+      a(href='/#/dashboard') Dashboard
+    li
+      a(href='/#/locations') Locations
+    li
+      a(href='/#/events/541499095ffde801d2311eaa') Event Example
+    li
+      a(href='/#/locations/a00000000000000000000001') Location example
