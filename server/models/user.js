@@ -3,7 +3,14 @@
 var bcrypt = require('bcrypt'),
     Mongo  = require('mongodb');
 
-function User(){
+function User(o){
+  if(o._id){this._id = o._id;}
+  this.email = o.email;
+  this.name = o.name;
+  this.password = o.password;
+  this.favoriteLocations = [];
+  this.RSVP = [];
+  this.upVote = [];
 }
 
 Object.defineProperty(User, 'collection', {
@@ -12,7 +19,9 @@ Object.defineProperty(User, 'collection', {
 
 User.findById = function(id, cb){
   var _id = Mongo.ObjectID(id);
-  User.collection.findOne({_id:_id}, cb);
+  User.collection.findOne({_id:_id}, function(err, user){
+    cb(user);
+  });
 };
 
 User.register = function(o, cb){
@@ -26,18 +35,16 @@ User.register = function(o, cb){
 User.login = function(o, cb){
   User.collection.findOne({username:o.username}, function(err, user){
     if(!user){return cb();}
-    var isOk = bcrypt.compareSync(o.password, user.password);
+    var isOk = bcrypt.compareSync(this.password, user.password);
     if(!isOk){return cb();}
     cb(null, user);
   });
 };
 
-User.prototype.update = function(o, cb){
-  this.username = o.username;
-  this.phone   = o.phone;
-  this.zip = o.zip;
-
-  User.collection.save(this, cb);
+User.save = function(o, cb){
+  User.collection.save(o, function(err, user){
+    cb(err, user);
+  });
 };
 
 module.exports = User;

@@ -1,15 +1,17 @@
-.snap-drawer
-  ul.nav.navbar-nav#navigation
+.snap-drawer(ng-controller='NavCtrl')
+  ul.nav.navbar-nav#navigation(ng-hide='email', role=navigation)
     li
-      a(href='javascript.void(0)') {{email}}
+      a(href='/') Home
     li
-      a(href='/') enlighTN
+      a(href='/#/login') Login
     li
-      a(href='/#/logout') Login
+      a(href='/#/register') Register
+
+  ul.nav.navbar-nav#navigation(ng-show='email')
     li
-      a(href='/#/splash') Splash
+      a(href='/') Home
     li
-      a(href='/#/home') Home
+      a(href='/#/logout') Logout
     li
       a(href='/#/dashboard') Dashboard
     li
