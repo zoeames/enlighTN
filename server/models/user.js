@@ -19,9 +19,7 @@ Object.defineProperty(User, 'collection', {
 
 User.findById = function(id, cb){
   var _id = Mongo.ObjectID(id);
-  User.collection.findOne({_id:_id}, function(err, user){
-    cb(null, user);
-  });
+  User.collection.findOne({_id:_id}, cb);
 };
 
 User.register = function(o, cb){
@@ -42,9 +40,8 @@ User.login = function(o, cb){
 };
 
 User.save = function(o, cb){
-  User.collection.save(o, function(err, user){
-    cb(err, user);
-  });
+  console.log('Model:', o);
+  User.collection.save(o, cb);
 };
 
 module.exports = User;

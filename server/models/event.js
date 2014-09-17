@@ -17,10 +17,12 @@ Object.defineProperty(Occasion, 'collection', {
 });
 
 Occasion.findById = function(id, cb){
+  console.log(id);
   var _id = Mongo.ObjectID(id);
   Occasion.collection.findOne({_id:_id}, function(err, occasion){
     async.map(occasion.attendees, iterator, function(err, attendees){
       occasion.attendees = attendees;
+      console.log('Model:',occasion);
       cb(null, occasion);
     });
   });
