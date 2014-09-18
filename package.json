@@ -2,6 +2,7 @@
   "name": "enlighTN",
   "version": "0.0.0",
   "description": "There's more than music in Nashville's culture scene.",
+  "main": "server/index.js",
   "directories": {
     "test": "test"
   },
