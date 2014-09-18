@@ -2,6 +2,7 @@
 
 var Mongo      = require('mongodb'),
     Occasion   = require('./event'),
+    Reflection = require('./reflection'),
     underscore = require('underscore');
 
 function Location(){
@@ -26,6 +27,10 @@ Location.findById = function(id, cb){
 
 Location.prototype.findEvents = function(cb){
   Occasion.collection.find({locationId:this._id}).toArray(cb);
+};
+
+Location.prototype.findReflections = function(cb){
+  Reflection.collection.find({locationId:this._id}).toArray(cb);
 };
 
 module.exports = Location;
