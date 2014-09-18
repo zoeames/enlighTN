@@ -10,6 +10,11 @@ Object.defineProperty(User, 'collection', {
   get: function(){return global.mongodb.collection('users');}
 });
 
+User.findById = function(id, cb){
+  var _id = Mongo.ObjectID(id);
+  User.collection.findOne({_id:_id}, cb);
+};
+
 User.register = function(o, cb){
   User.collection.findOne({email:o.email}, function(err, user){
     if(user || o.password.length < 3){return cb();}
@@ -25,10 +30,6 @@ User.login = function(o, cb){
     if(!isOk){return cb();}
     cb(null, user);
   });
-};
-User.findById = function(id, cb){
-  var _id = Mongo.ObjectID(id);
-  User.collection.findOne({_id:_id}, cb);
 };
 
 

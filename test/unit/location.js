@@ -1,9 +1,11 @@
 'use strict';
 
 var expect    = require('chai').expect,
-    User      = require('../../app/models/user'),
-    dbConnect = require('../../app/lib/mongodb'),
-    //cp        = require('child_process'),
+    Location  = require('../../server/models/location'),
+    Reflection = require('../../server/models/reflection'),
+    dbConnect = require('../../server/lib/mongodb'),
+    cp        = require('child_process'),
+    Mongo     = require('mongodb'),
     db        = 'enlighTN-test';
 
 describe('Location', function(){
@@ -20,18 +22,31 @@ describe('Location', function(){
   });
 
   describe('constructor', function(){
-    it('should create a new User object', function(){
-      expect(r).to.be.instanceof(Reflection);
+    it('should create a new Location object', function(){
+      var l = new Location();
+      expect(l).to.be.instanceof(Location);
     });
   });
 
-  describe('#update', function(){
-    it('should update an item', function(done){
-      Location.findById('a0000000000000000000002', function(location){
-          expect(location.title).to.include('');
+  describe('#findEvents', function(){
+    it('should find all events', function(done){
+      Location.findById('e00000000000000000000001', function(err, loc){
+        loc.findEvents(function(err, events){
+          expect(events.length).to.equal(8);
           done();
         });
       });
     });
   });
+  describe('#findReflections', function(){
+    it('should find all reflections', function(done){
+      Location.findById('e00000000000000000000001', function(err, loc){
+        loc.findReflections(function(err, reflections){
+          expect(reflections.length).to.equal(6);
+          done();
+        });
+      });
+    });
+  });
+//Last braces
 });
