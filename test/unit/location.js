@@ -1,12 +1,11 @@
-/* jshint expr:true */
-/* global describe, it, before, beforeEach */
-
 'use strict';
 
 var expect    = require('chai').expect,
     Location  = require('../../server/models/location'),
+    Reflection = require('../../server/models/reflection'),
     dbConnect = require('../../server/lib/mongodb'),
     cp        = require('child_process'),
+    Mongo     = require('mongodb'),
     db        = 'enlighTN-test';
 
 describe('Location', function(){
@@ -29,13 +28,34 @@ describe('Location', function(){
     });
   });
 
-  describe('.all', function(){
-    it('should get all stops', function(done){
-      Location.all(function(err, locs){
-        console.log(locs.length);
-        //expect(locs).to.have.length(2);
-        done();
+  describe('#findEvents', function(){
+    it('should find all events', function(done){
+      Location.findById('e00000000000000000000001', function(err, loc){
+        loc.findEvents(function(err, events){
+          expect(events.length).to.equal(8);
+          done();
+        });
       });
     });
   });
+  describe('#findReflections', function(){
+    it('should find all reflections', function(done){
+      Location.findById('e00000000000000000000001', function(err, loc){
+        loc.findReflections(function(err, reflections){
+          expect(reflections.length).to.equal(6);
+          done();
+        });
+      });
+    });
+  });
+
+  describe('.all', function(){
+    it('should find all locations', function(done){
+      Location.all(function(err, locations){
+        expect(locations).to.have.length(342);
+        done();
+      });
+    });
+  })
+//Last braces
 });

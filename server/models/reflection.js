@@ -26,6 +26,7 @@ Reflection.create = function(o, id, cb){
 Reflection.findAllByLocationId = function(locationId, cb){
   Reflection.collection.find({locationId:locationId}).toArray(cb);
 };
+
 Reflection.prototype.update = function(o, cb){
   this.text = o.text;
   this.date   = new Date();
