@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('enlighTN', ['ngRoute','LocalForageModule', 'ui.bootstrap', 'snap'])
+  angular.module('enlighTN', ['ngRoute','LocalForageModule', 'ui.bootstrap', 'snap', 'ngTable'])
   .config(['$routeProvider','$httpProvider','$localForageProvider', function($routeProvider, $httpProvider, $localForageProvider){
     $routeProvider
     .when('/', {templateUrl:'/views/splash/splash.html', controller:'SplashCtrl'})
