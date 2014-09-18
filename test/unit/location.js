@@ -48,5 +48,14 @@ describe('Location', function(){
       });
     });
   });
+
+  describe('.all', function(){
+    it('should find all locations', function(done){
+      Location.all(function(err, locations){
+        expect(locations).to.have.length(342);
+        done();
+      });
+    });
+  })
 //Last braces
 });
