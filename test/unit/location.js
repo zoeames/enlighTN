@@ -1,9 +1,12 @@
+/* jshint expr:true */
+/* global describe, it, before, beforeEach */
+
 'use strict';
 
 var expect    = require('chai').expect,
-    User      = require('../../app/models/user'),
-    dbConnect = require('../../app/lib/mongodb'),
-    //cp        = require('child_process'),
+    Location  = require('../../server/models/location'),
+    dbConnect = require('../../server/lib/mongodb'),
+    cp        = require('child_process'),
     db        = 'enlighTN-test';
 
 describe('Location', function(){
@@ -20,17 +23,18 @@ describe('Location', function(){
   });
 
   describe('constructor', function(){
-    it('should create a new User object', function(){
-      expect(r).to.be.instanceof(Reflection);
+    it('should create a new Location object', function(){
+      var l = new Location();
+      expect(l).to.be.instanceof(Location);
     });
   });
 
-  describe('#update', function(){
-    it('should update an item', function(done){
-      Location.findById('a0000000000000000000002', function(location){
-          expect(location.title).to.include('');
-          done();
-        });
+  describe('.all', function(){
+    it('should get all stops', function(done){
+      Location.all(function(err, locs){
+        console.log(locs.length);
+        //expect(locs).to.have.length(2);
+        done();
       });
     });
   });

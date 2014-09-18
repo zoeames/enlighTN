@@ -1,9 +1,12 @@
+/* jshint expr:true */
+/* global describe, it, before, beforeEach */
+
 'use strict';
 
 var expect    = require('chai').expect,
-    User      = require('../../app/models/user'),
-    dbConnect = require('../../app/lib/mongodb'),
-    //cp        = require('child_process'),
+    Event     = require('../../server/models/event'),
+    dbConnect = require('../../server/lib/mongodb'),
+    cp        = require('child_process'),
     db        = 'enlighTN-test';
 
 describe('Event', function(){
@@ -21,26 +24,16 @@ describe('Event', function(){
 
   describe('constructor', function(){
     it('should create a new Event object', function(){
-      var o = {
-        name :'000000000000000000000002',
-        locationId :'a00000000000000000000001',
-        type : 'It is amazing and i love it.',
-        date : {"$date":1409184000000},
-        attendees : [],
-        }
-      },
-      e = new Occasion(o);
-      expect(e).to.be.instanceof(Occasion);
+      //var e = new Event();
+      //expect(e).to.be.instanceof(Event);
     });
   });
 
-  describe('#update', function(){
-    it('should update an item', function(done){
-      Event.findById('e00000000000000000000002', function(occasion){
-        ocassion.update(ocassion, function(){
-          expect(ocassion.type).to.include('');
-          done();
-        });
+  describe('.all', function(){
+    it('should get all events', function(done){
+      Event.all(function(err, events){
+        //expect(events).to.have.length(2);
+        done();
       });
     });
   });
