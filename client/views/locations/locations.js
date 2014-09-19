@@ -4,6 +4,8 @@
   angular.module('enlighTN')
   .controller('LocationIndexCtrl', ['$scope', 'Location', '$filter', 'ngTableParams', function($scope, Location, $filter, ngTableParams){
     $scope.title     = 'Locations Index Page!';
+
+
     $scope.locations = [];
     $scope.pos       = {lat: 36.1667, lng: -86.7833};
 
