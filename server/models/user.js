@@ -1,7 +1,6 @@
 'use strict';
 
 var bcrypt = require('bcrypt'),
-
     Mongo  = require('mongodb');
 
 function User(o){
@@ -33,7 +32,7 @@ User.register = function(o, cb){
   });
 };
 
-User.authenticate = function(o, cb){
+User.login = function(o, cb){
   User.collection.findOne({username:o.username}, function(err, user){
     if(!user){return cb();}
     var isOk = bcrypt.compareSync(this.password, user.password);
