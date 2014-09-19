@@ -26,6 +26,8 @@
     o.link        = function(scope, element, attrs){
     };
     o.controller  = ['$scope', 'MapService', function($scope, MapService){
+      MapService.initMap('map', $scope.lat * 1, $scope.lng * 1, $scope.zoom * 1);
+
       $scope.$on('position', function(event, pos){
         $scope.lat = pos.coords.latitude;
         $scope.lng = pos.coords.longitude;
