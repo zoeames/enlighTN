@@ -1,27 +1,17 @@
-.snap-drawer
-  ul.nav.navbar-nav#navigation(ng-hide='email', ng-controller='NavCtrl', role=navigation)
+.snap-drawer(ng-controller='NavCtrl')
+  ul.nav.navbar-nav#navigation(ng-hide='email', role=navigation)
     li
       a(href='/') Home
     li
       a(href='/#/login') Login
     li
       a(href='/#/register') Register
-    li
-      a(href='/#/dashboard') Dashboard
-    li
-      a(href='/#/locations') Locations
-    li
-      a(href='/#/events/541499095ffde801d2311eaa') Event Example
-    li
-      a(href='/#/locations/a00000000000000000000001') Location example
 
   ul.nav.navbar-nav#navigation(ng-show='email')
     li
       a(href='/') Home
     li
-      a(href='/#/login') Login
-    li
-      a(href='/#/register') Register
+      a(href='/#/logout') Logout
     li
       a(href='/#/dashboard') Dashboard
     li
