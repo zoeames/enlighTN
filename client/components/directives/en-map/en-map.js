@@ -1,7 +1,7 @@
 /* global google */
 (function(){
   'use strict';
-
+  var map;
   angular.module('enMapModule', [])
   .factory('MapService', [function(){
     function initMap(selector, lat, lng, zoom){
@@ -10,8 +10,12 @@
           map        = new google.maps.Map(document.getElementById(selector), mapOptions);
       return map;
     }
+    function addMarker(lat, lng, name){
+      var latLng = new google.maps.LatLng(lat, lng);
+      new google.maps.Marker({map: map, position: latLng, title: name, animation: google.maps.Animation.DROP});
+    }
 
-    return{initMap:initMap};
+    return{initMap:initMap, addMarker:addMarker};
   }])
   .directive('enMap', ['MapService', function(MapService){
     var o = {};

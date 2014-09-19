@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('LocationIndexCtrl', ['$scope', 'Location', '$filter', 'ngTableParams', function($scope, Location, $filter, ngTableParams){
+  .controller('LocationIndexCtrl', ['$scope', 'Location', '$filter', 'ngTableParams','$interval', function($scope, Location, $filter, ngTableParams, $interval){
     $scope.title     = 'Locations Index Page!';
 
 
@@ -14,6 +14,7 @@
       $scope.locations = response.data.locations;
     });
 
+    $scope.id = $interval(Location.getPositions, 1000);
 
     $scope.tableParams = new ngTableParams({
       page: 1,            // show first page
