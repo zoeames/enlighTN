@@ -25,7 +25,7 @@
     o.scope       = {};
     o.link        = function(scope, element, attrs){
     };
-    o.controller  = ['$scope', '$rootScope', function($scope, $rootScope){
+    o.controller  = ['$scope', '$rootScope','LocationService', function($scope, $rootScope, $locationService){
       $scope.findMe = function(){
         LocationService.locate().then(success, error);
       };
