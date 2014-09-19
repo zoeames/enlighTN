@@ -43,6 +43,7 @@ describe('Event', function(){
       var id = 'eee000000000000000000001';
       Occasion.findById(id, function(err, occ){
         expect(occ.name).to.include('Midsummer');
+        expect(occ.attendees[0].name).to.equal('Bob Smith');
         done();
       });
     });
