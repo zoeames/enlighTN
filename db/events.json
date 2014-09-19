@@ -2,6 +2,7 @@
   "_id" : {"$oid":"eee000000000000000000001"},
   "name":"THE ACTORS’ GANG A Midsummer Night’s Dream Directed by Tim Robbins",
   "type":"Performance Art",
+  "attendees":["000000000000000000000001", "000000000000000000000002"],
   "dates":[
     {
       "date":{"$date":1410498000000},
