@@ -1,14 +1,24 @@
 h3.text-center {{title}}
 .row
-  #map(en-map, lat='{{pos.lat}}', lng='{{pos.lng}}', zoom=8)
-  div(en-locate)
+  #map(en-map, lat='{{pos.lat}}', lng='{{pos.lng}}', zoom=6)
 .row
+  .col-xs-12
+    form.form#change-zip(name='changeZipForm', role='form', novalidate)
+      .form-group
+        label(for='zip') Need a different Zip code?
+          input.form-control#zip(ng-model='zip', ng-pattern='/^[0-9]{5}$/', type='text', name='zip')
+          button.btn.btn-success Change
+
+.row
+  .clearfix
+    button.btn.btn-default.pull-right(ng-click="tableParams.sorting({})") Clear Sorting
+    button.btn.btn-default.pull-right(ng-click="tableParams.filter({})") Clear Filtering
   table.table(ng-table='tableParams', show-filter='true')
     tbody
-      tr(ng-repeat='loc in locs'): a(href='/#/locations/{{loc._id}}')
-        td(data-title="'Title'" filter="{ 'title': 'text' }") {{loc.title}}
+      tr(ng-repeat='loc in locs', data-lat= '{{loc.lat}}', data-lng='{{loc.lng}}')
+        td(data-title="'Title'" filter="{ 'title': 'text' }"): a(href='/#/locations/{{loc._id}}') {{loc.title}}
         td(data-title="'Address'") {{loc.address}}
-        td(data-title="'Type'", filter="{'type': 'text'}") {{loc.group}}
-        td(data-title="'Distance'") calculation here
-        td(data-title="'Popularity'") popularity
+        td(data-title="'Type'", name="status", filter="{ 'name': 'select' }", filter-data="types($column)"){{loc.group}}
+        td(data-title="'Distance'", sortable="'distance'") calculation here
+        td(data-title="'Popularity'", sortable="'favorites'") {{loc.favorites.length}}
 
