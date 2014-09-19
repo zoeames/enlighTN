@@ -5,8 +5,8 @@ h3.text-center {{title}}
 .row
   table.table(ng-table='tableParams', show-filter='true')
     tbody
-      tr(ng-repeat='loc in locs'): a(href='/#/locations/{{loc._id}}')
-        td(data-title="'Title'" filter="{ 'title': 'text' }") {{loc.title}}
+      tr(ng-repeat='loc in locs', data-lat= '{{loc.lat}}', data-lng='{{loc.lng}}')
+        td(data-title="'Title'" filter="{ 'title': 'text' }"): a(href='/#/locations/{{loc._id}}') {{loc.title}}
         td(data-title="'Address'") {{loc.address}}
         td(data-title="'Type'", filter="{'type': 'text'}") {{loc.group}}
         td(data-title="'Distance'") calculation here
