@@ -1,8 +1,9 @@
 'use strict';
 
 var expect    = require('chai').expect,
-    User      = require('../../server/models/reflection'),
+    Reflection = require('../../server/models/reflection'),
     dbConnect = require('../../server/lib/mongodb'),
+    Mongo     = require('mongodb'),
     cp        = require('child_process'),
     db        = 'enlighTN-test';
 
@@ -19,27 +20,50 @@ describe('Reflection', function(){
     });
   });
 
-  /*describe('constructor', function(){
-    it('should create a new User object', function(){
+  describe('constructor', function(){
+    it('should create a new reflection object', function(){
       var o = {
         authorId :'000000000000000000000002',
         locationId :'a00000000000000000000001',
         text : 'It is amazing and i love it.',
-        date : {"$date":1409184000000},
-        }
-      r = new Reflection(o);
+        date : {"$date":1409184000000}
+        },
+          r = new Reflection(o);
       expect(r).to.be.instanceof(Reflection);
     });
   });
 
-  describe('#update', function(){
-    it('should update an item', function(done){
-      Reflection.findById('aa0000000000000000000002', function(reflection){
-        reflection.update(reflection, function(){
-          expect(reflection.text).to.include('amazing');
+  describe('.save', function(){
+    it('should create a reflection', function(done){
+      var s = {
+        "authorId" : "000000000000000000000002", "locationId" : "e00000000000000000000001",
+        "text" : "Cookie",
+        };
+
+      Reflection.save(s, function(err, sobj){
+        expect(sobj._id).to.be.instanceof(Mongo.ObjectID);
           done();
-        });
       });
     });
-  });*/
+  });
+  describe('.findById', function(){
+    it('should find a reflection by id', function(done){
+      var _id = Mongo.ObjectID('aa0000000000000000000002');
+      Reflection.findById(_id, function(err, refl){
+        expect(refl.text).to.include('loved');
+        done();
+      });
+    });
+  });
+  describe('.findAllByLocationId', function(){
+    it('should find all reflections for a location', function(done){
+      var locationId = Mongo.ObjectID('e00000000000000000000001');
+      Reflection.findAllByLocationId(locationId, function(err, reflections){
+        console.log(reflections);
+        expect(reflections).to.have.length(6);
+        done();
+      });
+    });
+  });
+// Last braces
 });
