@@ -33,7 +33,7 @@ User.register = function(o, cb){
 User.login = function(o, cb){
   User.collection.findOne({username:o.username}, function(err, user){
     if(!user){return cb();}
-    var isOk = bcrypt.compareSync(this.password, user.password);
+    var isOk = bcrypt.compareSync(o.password, user.password);
     if(!isOk){return cb();}
     cb(null, user);
   });
