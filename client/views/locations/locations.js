@@ -23,7 +23,7 @@
         title: ''
       },
       sort: {
-        popularity: 'asc'
+        favorites: 'desc'
       }
     },{
       total: $scope.locations.length, // length of data
@@ -53,20 +53,21 @@
         }
         return -1;
       };
-    $scope.types = function(column){
+    $scope.groups = function(column){
       var def = $q.defer(),
         arr = [],
-        types = [];
+        groups = [];
       angular.forEach($scope.locations, function(item){
-        if(inArray(item.type, arr) === -1){
-          arr.push(item.type);
-          types.push({
-            'id': item.type,
-            'title': item.type
+        debugger;
+        if(inArray(item.group, arr) === -1){
+          arr.push(item.group);
+          groups.push({
+            'id': item.group,
+            'title': item.group
           });
         }
       });
-      def.resolve(types);
+      def.resolve(groups);
       return def;
     };
   }]);
