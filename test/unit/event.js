@@ -42,7 +42,9 @@ describe('Event', function(){
     it('should find an event by id', function(done){
       var id = 'eee000000000000000000001';
       Occasion.findById(id, function(err, occ){
+        console.log('Test', occ);
         expect(occ.name).to.include('Midsummer');
+        expect(occ.attendees[0].name).to.equal('Bob Smith');
         done();
       });
     });

@@ -4,6 +4,7 @@ var expect    = require('chai').expect,
     User      = require('../../server/models/user'),
     dbConnect = require('../../server/lib/mongodb'),
     cp        = require('child_process'),
+    Mongo     = require('mongodb'),
     db        = 'enlighTN-test';
 
 describe('User', function(){
@@ -24,23 +25,25 @@ describe('User', function(){
       var o = {
         username : 'sue',
         password : 'abcd',
-        zip : '37215',
-        phone : '+15005550006',
         },
       u = new User(o);
       expect(u).to.be.instanceof(User);
     });
   });
 
-  /*describe('#update', function(){
-    it('should update an item', function(done){
-      User.findById('000000000000000000000002', function(user){
-        user.update(user, function(){
-          expect(user.zip).to.equal('37215');
-          expect(user.phone).to.equal('+15005550006');
-          done();
+  describe('.save', function(){
+    it('should save a user', function(done){
+      var id = '000000000000000000000002';
+      User.findById(id, function(err, user){
+        console.log('test1', user);
+        user.email='zoea@aol.com';
+        console.log('test2', user);
+
+        User.save(user, function(err, sobj){
+          expect(user._id).to.be.instanceof(Mongo.ObjectID);
+            done();
         });
       });
     });
-  });*/
+  });
 });

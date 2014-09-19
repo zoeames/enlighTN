@@ -1,6 +1,8 @@
 'use strict';
 
-var Mongo = require('mongodb');
+var Mongo = require('mongodb'),
+    async = require('async'),
+    User  = require('./user');
 
 function Occasion(o){
   this.name       = o.name;
@@ -15,8 +17,15 @@ Object.defineProperty(Occasion, 'collection', {
 });
 
 Occasion.findById = function(id, cb){
+  console.log(id);
   var _id = Mongo.ObjectID(id);
-  Occasion.collection.findOne({_id:_id}, cb);
+  Occasion.collection.findOne({_id:_id}, function(err, occasion){
+    async.map(occasion.attendees, iterator, function(err, attendees){
+      occasion.attendees = attendees;
+      console.log('Model:',occasion);
+      cb(null, occasion);
+    });
+  });
 };
 
 Occasion.all = function(cb){
@@ -24,3 +33,11 @@ Occasion.all = function(cb){
 };
 
 module.exports = Occasion;
+
+//HELPER FUNCTIONS
+
+function iterator(attendee, cb){
+  User.findById(attendee, function(err, user){
+    cb(null, user);
+  });
+}
