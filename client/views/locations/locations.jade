@@ -3,17 +3,12 @@ h3.text-center {{title}}
   #map(en-map, lat='{{pos.lat}}', lng='{{pos.lng}}', zoom=8)
   div(en-locate)
 .row
-  table.table.table-hover
-    thead
-      th Name
-      th Address
-      th Type
-      th Distance From You
-      th Popularity
+  table.table(ng-table='tableParams', show-filter='true')
     tbody
-      tr(ng-repeat='loc in locations'): a(href='/#/locations/{{loc._id}}')
-        td {{loc.title}}
-        td {{loc.address}}
-        td {{loc.group}}
-        td calculation here
-        td popularity
+      tr(ng-repeat='loc in locs'): a(href='/#/locations/{{loc._id}}')
+        td(data-title="'Title'" filter="{ 'title': 'text' }") {{loc.title}}
+        td(data-title="'Address'") {{loc.address}}
+        td(data-title="'Type'", filter="{'type': 'text'}") {{loc.group}}
+        td(data-title="'Distance'") calculation here
+        td(data-title="'Popularity'") popularity
+
