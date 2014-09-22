@@ -22,6 +22,10 @@
     o.link        = function(scope, element, attrs){
     };
     o.controller  = ['$scope', 'MapService', '$rootScope', function($scope, MapService, $rootScope){
+      $scope.$on('position', function(even, pos){
+        $rootScope.map = MapService.initMap('map', pos.coords.latitude * 1, pos.coords.longitude * 1, $scope.zoom * 1);
+      });
+
       $rootScope.map = MapService.initMap('map', $scope.lat * 1, $scope.lng * 1, $scope.zoom * 1);
     }];
 
