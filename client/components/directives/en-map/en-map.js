@@ -1,7 +1,7 @@
 /* global google */
 (function(){
   'use strict';
-  var map;
+
   angular.module('enMapModule', [])
   .factory('MapService', [function(){
     function initMap(selector, lat, lng, zoom){
@@ -10,12 +10,8 @@
           map        = new google.maps.Map(document.getElementById(selector), mapOptions);
       return map;
     }
-    function addMarker(lat, lng, name){
-      var latLng = new google.maps.LatLng(lat, lng);
-      new google.maps.Marker({map: map, position: latLng, title: name, animation: google.maps.Animation.DROP});
-    }
 
-    return{initMap:initMap, addMarker:addMarker};
+    return{initMap:initMap};
   }])
   .directive('enMap', ['MapService', function(MapService){
     var o = {};
@@ -25,14 +21,8 @@
     o.scope       = {lat:'@', lng:'@', zoom:'@'};
     o.link        = function(scope, element, attrs){
     };
-    o.controller  = ['$scope', 'MapService', function($scope, MapService){
-      MapService.initMap('map', $scope.lat * 1, $scope.lng * 1, $scope.zoom * 1);
-
-      $scope.$on('position', function(event, pos){
-        $scope.lat = pos.coords.latitude;
-        $scope.lng = pos.coords.longitude;
-        MapService.initMap('map', $scope.lat * 1, $scope.lng * 1, $scope.zoom * 1);
-      });
+    o.controller  = ['$scope', 'MapService', '$rootScope', function($scope, MapService, $rootScope){
+      $rootScope.map = MapService.initMap('map', $scope.lat * 1, $scope.lng * 1, $scope.zoom * 1);
     }];
 
     return o;
