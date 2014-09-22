@@ -94,7 +94,6 @@
     }
 
     function clearMarkers(){
-      console.log($scope.markers);
       for (var i = 0; i < $scope.markers.length; i++) {
         $scope.markers[i].setMap(null);
       }
