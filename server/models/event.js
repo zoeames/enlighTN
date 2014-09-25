@@ -1,8 +1,8 @@
 'use strict';
 
-var Mongo = require('mongodb'),
-    async = require('async'),
-    User  = require('./user');
+var Mongo = require('mongodb');
+    //async = require('async'),
+    //User  = require('./user');
 
 function Occasion(o){
   this.name       = o.name;
@@ -16,7 +16,7 @@ Object.defineProperty(Occasion, 'collection', {
   get: function(){return global.mongodb.collection('events');}
 });
 
-Occasion.findById = function(id, cb){
+/*Occasion.findById = function(id, cb){
   console.log(id);
   var _id = Mongo.ObjectID(id);
   Occasion.collection.findOne({_id:_id}, function(err, occasion){
@@ -26,7 +26,7 @@ Occasion.findById = function(id, cb){
       cb(null, occasion);
     });
   });
-};
+};*/
 
 Occasion.all = function(cb){
   Occasion.collection.find().toArray(cb);
@@ -36,8 +36,8 @@ module.exports = Occasion;
 
 //HELPER FUNCTIONS
 
-function iterator(attendee, cb){
+/*function iterator(attendee, cb){
   User.findById(attendee, function(err, user){
     cb(null, user);
   });
-}
+}*/

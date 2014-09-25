@@ -1,14 +1,9 @@
 h3.text-center Upcoming Events
 .col-xs-1
 .col-xs-10
-  .events
-    h4 Today
-    .todays-events
-      p This is a totally cool event
-    h4 Later this week
-    .weekly-events
-      p This is also really cool, yo!
-      p But I also want to go to this!
+  .events(ng-repeat='event in events')
+    p {{event.name}}
+      p {{event.type}}
 .col-xs-1
 .row.trending
   .col-xs-6.twitter

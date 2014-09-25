@@ -4,6 +4,7 @@ var Occasion = require('../models/event');
 
 exports.index = function(req, res){
   Occasion.all(function(err, occasions){
+    console.log(occasions);
     res.send({occasions:occasions});
   });
 };
