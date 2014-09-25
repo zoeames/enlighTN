@@ -1,21 +1,21 @@
 .snap-drawer(ng-controller='NavCtrl')
   ul.nav.navbar-nav#navigation(ng-hide='email', role=navigation)
     li
-      a(href='/') Home
+      a(href='/'): i.fa.fa-fw.fa-home.fa-2x &nbsp home
     li
-      a(href='/#/login') Login
+      a(href='/#/login'): i.fa.fa-fw.fa-sign-in.fa-2x &nbsp login
     li
-      a(href='/#/register') Register
+      a(href='/#/register'): i.fa.fa-fw.fa-hand-o-right.fa-2x &nbsp register
 
   ul.nav.navbar-nav#navigation(ng-show='email')
     li
-      a(href='/home') Home
+      a(href='/home'): i.fa.fa-fw.fa-home.fa-2x &nbsp home
     li
-      a(href='/#/logout') Logout
+      a(href='/#/logout'): i.fa.fa-fw.fa-sign-out.fa-2x &nbsp logout
     li
-      a(href='/#/dashboard') Dashboard
+      a(href='/#/dashboard'): i.fa.fa-fw.fa-dashboard.fa-2x &nbsp dashboard
     li
-      a(href='/#/locations') Locations
+      a(href='/#/locations'): i.fa.fa-fw.fa-location-arrow.fa-2x &nbsp location
     li
       a(href='/#/events/541499095ffde801d2311eaa') Event Example
     li
