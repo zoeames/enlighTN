@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('SplashCtrl', ['$scope', 'User', '$location', function($scope, User, $location){
+  .controller('SplashCtrl', ['$scope', 'User', '$location', 'Home', '$interval', function($scope, User, $location, Home, $interval){
     //login------------------------------------------
     $scope.user = {};
 
@@ -35,6 +35,24 @@
     $scope.register = function(){
       User.register($scope.regUser).then(regSuccess, regFailure);
     };
+    //---------------------------------------------------
+
+    Home.getMessage().then(function(response){
+      $scope.theArts = response.data.creativeList;
+
+      $interval(function(){
+        $scope.art = _.shuffle($scope.theArts)[0];
+      }, 1000);
+    });
+  //-------------Toggle forms----------------------------
+    $scope.toggleRegister = function(){
+      $scope.showRegister = !!!$scope.showRegister;
+    };
+
+    $scope.toggleLogin = function(){
+      $scope.showLogin = !!!$scope.showLogin;
+    };
+
   }]);
 })();
 

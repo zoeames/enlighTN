@@ -2,7 +2,16 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('HomeCtrl', ['$scope', 'Home', function($scope, Home){
+  .controller('HomeCtrl', ['$scope', 'Home', '$interval', function($scope, Home, $interval){
+
+    Home.getMessage().then(function(response){
+      $scope.theArts = response.data.creativeList;
+
+      $interval(function(){
+        $scope.art = _.shuffle($scope.theArts)[0];
+      }, 1000);
+    });
+
   }]);
 })();
 
