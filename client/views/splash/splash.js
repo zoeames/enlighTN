@@ -7,7 +7,7 @@
     $scope.user = {};
 
     function success(response){
-      toastr.success('Successful login.');
+      toastr.success('Welcome Back!');
       $location.path('/home');
     }
 
@@ -23,7 +23,7 @@
     $scope.regUser = {};
 
     function regSuccess(response){
-      toastr.success('User successfully registered.');
+      toastr.success('Welcome to EnlighTN!');
       $location.path('/login');
     }
 

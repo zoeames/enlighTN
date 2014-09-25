@@ -4,7 +4,7 @@
   angular.module('enlighTN')
   .controller('LogoutCtrl', ['$location', 'User', function($location, User){
     User.logout().then(function(){
-      toastr.success('Successful logout.');
+      toastr.info('You have successfully logged out.');
       $location.path('/');
     });
   }]);
