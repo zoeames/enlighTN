@@ -20,8 +20,6 @@ img{
 .slide {
   height: 400px;
 }
-.glyphicon {
-}
 .carousel-control:hover, .carousel-control:focus {
   opacity:.5;
   color: inherit;
@@ -47,7 +45,7 @@ a.carousel-control.left, a.carousel-control.right {
   margin: 0 auto;
 }
 #info {
-  padding: 40px;
+  padding: 20px 40px;
 }
 #events-list {
   padding: 60px;
@@ -69,25 +67,34 @@ a.carousel-control.left, a.carousel-control.right {
   margin: 0 auto;
   border: 1px dotted black;
 }
-.fake-nav{
-  h3 {
-    width: 100%;
-    padding-left: 13%;
-    background-color: steelblue;
-    color: white;
-    margin: 0;
-  }
-  .favoritebar {
-    float: right;
-    list-style: none;
-    margin-top: -15px;
+.loc-title {
+  width: 100%;
+  padding-left: 40px;
+  color: steelblue;
+  margin: 0;
+}
+.interact-btns {
+  list-style: none;
+  display: inline;
 
-    li a {
-      color: white;
-    }
-    li a:hover {
-      color: lighten(red, 10%);
-      background-color: transparent;
-    }
+  li a {
+    color: steelblue;
+  }
+  li a:hover, li a:active {
+    color: lighten(red, 10%);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  #favorite {
+    position: relative;
+    left: 290px;
+    top: -44px;
+    z-index: 90;
+  }
+  #comment {
+    left: 315px;
+    position: relative;
+    top: -65px;
+    z-index: 100;
   }
 }

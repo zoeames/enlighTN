@@ -11,16 +11,13 @@
           input.form-control#newPassword(type='password', name='newPassword', ng-model='regUser.password', required, ng-minlength='3')
         button.btn.btn-primary.pull-right(ng-show='regUserForm.$valid', ng-click='register()') Register
     .login.pull-left.col-xs-6
-      .row
-        .col-xs-12
-          h3(ng-click='toggleLogin()') Login
-          form(role='form', novalidate, name='userForm', ng-show='showLogin')
-            .form-group
-              label(for='email') Email
-              input.form-control#email(type='email', name='email', ng-model='user.email', autofocus, required)
-            .form-group
-              label(for='password') Password
-              input.form-control#password(type='password', name='password', ng-model='user.password', required, ng-minlength='3')
-            button.btn.btn-primary(ng-show='userForm.$valid', ng-click='login()') Login
-  .map-img
+      h3(ng-click='toggleLogin()') Login
+      form(role='form', novalidate, name='userForm', ng-show='showLogin')
+        .form-group
+          label(for='email') Email
+          input.form-control#email(type='email', name='email', ng-model='user.email', autofocus, required)
+        .form-group
+          label(for='password') Password
+          input.form-control#password(type='password', name='password', ng-model='user.password', required, ng-minlength='3')
+        button.btn.btn-primary(ng-show='userForm.$valid', ng-click='login()') Login
 

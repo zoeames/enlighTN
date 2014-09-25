@@ -1,17 +1,19 @@
-h3.text-center {{title}}
-.row
-  #map(en-map, lat='{{pos.lat}}', lng='{{pos.lng}}', zoom=12)
-  div(en-locate)
-.row
-  .clearfix
-    button.btn.btn-default.pull-right(ng-click="tableParams.sorting({})") Clear Sorting
-    button.btn.btn-default.pull-right(ng-click="tableParams.filter({})") Clear Filtering
-  table.table(ng-table='tableParams', show-filter='true')
-    tbody
-      tr(ng-repeat='loc in locs', data-lat= '{{loc.lat}}', data-lng='{{loc.lng}}', data-title='{{loc.title}}')
-        td(data-title="'Title'" filter="{ 'title': 'text' }"): a(href='/#/locations/{{loc._id}}') {{loc.title}}
-        td(data-title="'Address'") {{loc.address}}
-        td(data-title="'Type'", name="group", filter="{ 'group': 'select' }", filter-data="groups($column)"){{loc.group}}
-        td(data-title="'Distance'", sortable="'distance'") calculation here
-        td(data-title="'Popularity'", sortable="'favorites'") {{loc.favorites.length}}
+#locations
+  h3 {{title}}
+  div.find-me(en-locate)
+  .row
+    .col-xs-12
+      #map(en-map, lat='{{pos.lat}}', lng='{{pos.lng}}', zoom=12)
+  .row
+    .clearfix
+      button.btn.btn-default.pull-right(ng-click="tableParams.sorting({})") Clear Sorting
+      button.btn.btn-default.pull-right(ng-click="tableParams.filter({})") Clear Filtering
+    table.table(ng-table='tableParams', show-filter='true')
+      tbody
+        tr(ng-repeat='loc in locs', data-lat= '{{loc.lat}}', data-lng='{{loc.lng}}', data-title='{{loc.title}}')
+          td(data-title="'Title'" filter="{ 'title': 'text' }"): a(href='/#/locations/{{loc._id}}') {{loc.title}}
+          td(data-title="'Address'") {{loc.address}}
+          td(data-title="'Type'", name="group", filter="{ 'group': 'select' }", filter-data="groups($column)"){{loc.group}}
+          td(data-title="'Distance'", sortable="'distance'") calculation here
+          td(data-title="'Popularity'", sortable="'favorites'") {{loc.favorites.length}}
 
