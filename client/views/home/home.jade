@@ -1,9 +1,9 @@
 h3.text-center Upcoming Events
 .col-xs-1
-.col-xs-10
+.col-xs-10.current
   .events(ng-repeat='event in events')
     p {{event.name}}
-      p {{event.type}}
+    p {{event.type}}
 .col-xs-1
 .row.trending
   .col-xs-6.twitter

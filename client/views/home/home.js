@@ -10,7 +10,7 @@
 
       $interval(function(){
         $scope.art = _.shuffle($scope.theArts)[0];
-      }, 1000);
+      }, 3000);
     });
 
     Home.getCurrentEvents().then(function(response){
