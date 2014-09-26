@@ -10,15 +10,23 @@ html(ng-app='enlighTN', lang='en')
     link(href='/vendor/snapjs/snap.css', rel='stylesheet')
     link(href='/vendor/angular-snap/angular-snap.min.css', rel='stylesheet')
     link(href='/vendor/ng-table/ng-table.min.css', rel='stylesheet')
+    link(href='/vendor/toastr/toastr.min.css', rel='stylesheet')
     link(href='/index.css', rel='stylesheet')
     link(href='/nav.css', rel='stylesheet')
     link(href='/components/directives/en-map/en-map.css', rel='stylesheet')
     link(href='/components/directives/en-locate/en-locate.css', rel='stylesheet')
     link(href='/views/home/home.css', rel='stylesheet')
     link(href='/views/location/location.css', rel='stylesheet')
+    link(href='/views/locations/locations.css', rel='stylesheet')
+    link(href='/views/splash/splash.css', rel='stylesheet')
   body
     include nav
     snap-content.container-fluid
+      .row.header-container(ng-controller='HomeCtrl')
+        .col-xs-10.header
+          h1.title {{art}} City, USA
+          h5.subtitle There is more to Nashville than Music.
+        .col-xs-2
       .row
         .col-xs-1
         .col-xs-10
@@ -32,11 +40,11 @@ html(ng-app='enlighTN', lang='en')
     script(src='/vendor/bootstrap/dist/js/bootstrap.js')
     script(src='/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js')
     script(src='/vendor/underscore/underscore.js')
-    script(src='/vendor/snapjs/snap.min.js')
+    script(src='/vendor/snapjs/snap.js')
     script(src='/vendor/angular-snap/angular-snap.min.js')
     script(src='/vendor/ng-table/ng-table.min.js')
     script(src='/vendor/underscore/underscore.js')
-    script(src='/vendor/toastr/toastr.js')
+    script(src='/vendor/toastr/toastr.min.js')
     script(src='/vendor/localforage/dist/localforage.js')
     script(src='/vendor/angular-localforage/dist/angular-localForage.js') 
     script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyANcr_9Ku36Y9xZ3UoISclGCKhIW7p-0bc&sensor=true&v=3&libraries=geometry')

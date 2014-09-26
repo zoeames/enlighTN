@@ -5,7 +5,7 @@
 
   angular.module('enlighTN')
   .controller('LocationIndexCtrl', ['$scope', 'Location', '$filter', 'ngTableParams','$interval', '$q', '$rootScope', function($scope, Location, $filter, ngTableParams, $interval, $q, $rootScope){
-    $scope.title     = 'Locations Index Page!';
+    $scope.title     = 'Locations';
     $scope.locations = [];
     $scope.positions = [];
     $scope.types     = ['Metro Installations', 'Historic Marker', 'Civic', 'Metro Galleries'];

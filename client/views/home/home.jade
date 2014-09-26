@@ -1,19 +1,17 @@
-h3.text-center Upcoming Events
-.col-xs-1
-.col-xs-10
-  .events
-    h4 Today
-    .todays-events
-      p This is a totally cool event
-    h4 Later this week
-    .weekly-events
-      p This is also really cool, yo!
-      p But I also want to go to this!
-.col-xs-1
+#home
+  h1 Upcoming Events
+.row
+  .col-xs-1
+  .col-xs-10.current
+    .events(ng-repeat='event in events')
+      h4 {{event.name}}
+      p {{event.type}}
+  .col-xs-1
 .row.trending
-  .col-xs-6.twitter
-    h4.text-center Twitter Feed Here!
-  .col-xs-6.rss-feed
-    h4.text-center RSS Feed Here!
+  .col-xs-5.twitter
+    h2.text-center Twitter
+  .col-xs-2
+  .col-xs-5.rss-feed.pull-right
+    h2.text-center RSS Feed
 
 

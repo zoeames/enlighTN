@@ -5,11 +5,11 @@ var Mongo = require('mongodb'),
     User  = require('./user');
 
 function Occasion(o){
-  this.name       = o.name;
+ /* this.name       = o.name;
   this.locationId = Mongo.ObjectID(o.locationId);
   this.type       = o.type;
   this.attendees  = [];
-  this.date       = new Date(o.date);
+  this.date       = new Date(o.date);*/
 }
 
 Object.defineProperty(Occasion, 'collection', {

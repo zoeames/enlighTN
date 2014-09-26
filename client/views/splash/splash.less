@@ -1,0 +1,49 @@
+
+#splash {
+  //background-image: url('/assets/map.png');
+  width: 1000px;
+  height: 800px;
+  background-repeat: no-repeat;
+
+  .hidden-forms {
+    overflow: visible;
+    height: 40px;
+    bottom: 50px;
+
+    .register{
+      h3 {
+        position: relative;
+        bottom: 15px;
+        text-align: right;
+        font-size: 40px;
+        font-weight: lighter;
+      }
+      h3 > form {
+        background-color: white;
+        padding: 0 20px;
+      }
+      h3:hover, h3:active {
+        cursor: pointer;
+      }
+    }
+    .login{
+      h3 {
+        position: relative;
+        bottom: 15px;
+        text-align: left;
+        font-size: 40px;
+        font-weight: lighter;
+      }
+      h3:hover, h3:active {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .map-img {
+    width: 100%;
+    height: 800px;
+    border: 1px solid black;
+    background-color: lightblue;
+  }
+}

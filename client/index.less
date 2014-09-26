@@ -1,16 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200,600,800);
+
+@bold-wt: 800;
+@semi-wt: 600;
+@norm-wt: 400;
+@lite-wt: 300;
+
 body{
-  background-color: #ffffff;
+  background-color: whitesmoke;
+  font-family: 'Raleway', sans-serif;
 }
 .container-fluid {
-  background-color: #eee;
-}
-.snippet{
-  background-color: #aaaaaa;
+  background-color: #fff;
 }
 #menu.btn, #menu.btn:hover, #menu.btn:focus {
   background-color: transparent;
   border: none;
-  margin-left: -117px;
+  position: relative;
+  left: -117px;
+  bottom: 180px;
   outline: none;
   z-index: 100;
+}
+#menu p {
+  font-size: 18px;
+  font-weight: lighter;
+}
+.header-container {
+    border-bottom: 2px solid grey;
+
+  .header {
+    height: 150px;
+    margin-bottom: 40px;
+
+    .title {
+      font-size: 6em;
+      text-align: right;
+      color: dimgrey;
+    }
+    .subtitle {
+      font-size: 30px;
+      text-align: right;
+      color: grey;
+      font-weight: lighter;
+    }
+  }
 }
