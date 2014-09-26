@@ -1,100 +1,96 @@
-#slides_control > div{
-  height: 200px;
-}
-img{
-  margin:auto;
-  width: 400px;
-}
-#slides_control {
-  margin: 0 auto;
-}
-.reflection {
-  width: 33.3333%;
-  float: left;
-  height: 400px;
-  padding: 40px;
-  text-align: left;
-  border-left: 1px solid #eee;
-  border-right: 1px solid #eee;
-}
-.slide {
-  height: 400px;
-}
-.carousel-control:hover, .carousel-control:focus {
-  opacity:.5;
-  color: inherit;
-}
+#location {
 
-a.carousel-control.left {
-  margin-left: -115px;
-}
+  .left-column {
 
-a.carousel-control.right {
-  margin-right: -115px;
-}
+    .loc-title {
+      width: 100%;
+      padding-left: 40px;
+      color: steelblue;
+      margin: 0;
+      font-size: 3em;
+    }
+    .interact-btns {
 
-a.carousel-control.left, a.carousel-control.right {
-  background-image: none;
-  //left: 1090px
-}
-.reflection-badge {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
-}
-#info {
-  padding: 20px 40px;
-}
-#events-list {
-  padding: 60px;
-  margin: 0 auto;
+      list-style: none;
+      display: inline;
 
-  ul {
+      li a {
+        color: steelblue;
+        font-size: 2em;
+      }
+      li a:hover, li a:active {
+        color: lighten(red, 10%);
+        background-color: transparent;
+        text-decoration: none;
+        font-size: 2em;
+      }
+      #favorite {
+        position: relative;
+        left: 360px;
+        bottom: 60px;
+        z-index: 90;
+      }
+      #comment {
+        left: 400px;
+        position: relative;
+        bottom: 102px;
+        z-index: 100;
+      }
+    }
+    #info {
+      padding: 0 40px;
+      margin-top: -100px;
+    }
+    #description {
+      padding: 60px 20px;
+    }
   }
-  li {
-    list-style: none;
-  }
-}
-#description {
-  padding: 60px 20px;
-}
-#street-shot {
-  width: 250px;
-  height: 250px;
-  display: block;
-  margin: 0 auto;
-  border: 1px dotted black;
-}
-.loc-title {
-  width: 100%;
-  padding-left: 40px;
-  color: steelblue;
-  margin: 0;
-}
-.interact-btns {
-  list-style: none;
-  display: inline;
 
-  li a {
-    color: steelblue;
-  }
-  li a:hover, li a:active {
-    color: lighten(red, 10%);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  #favorite {
-    position: relative;
-    left: 290px;
-    top: -44px;
-    z-index: 90;
-  }
-  #comment {
-    left: 315px;
-    position: relative;
-    top: -65px;
-    z-index: 100;
+  #slides_control > div{
+    height: 200px;
+    img{
+      margin:auto;
+      width: 400px;
+    }
+    #slides_control {
+      margin: 0 auto;
+    }
+    .glyphicon{}
+    .reflection {
+      width: 33.3333%;
+      float: left;
+      height: 400px;
+      padding: 40px;
+      text-align: left;
+      border-left: 1px solid #eee;
+      border-right: 1px solid #eee;
+    }
+    .slide {
+      height: 400px;
+    }
+    .carousel-control:hover, .carousel-control:focus {
+      opacity:.5;
+      color: inherit;
+    }
+
+    a.carousel-control.left {
+      margin-left: -115px;
+    }
+
+    a.carousel-control.right {
+      margin-right: -115px;
+    }
+
+    a.carousel-control.left, a.carousel-control.right {
+      background-image: none;
+      //left: 1090px
+    }
+    .reflection-badge {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto;
+    }
   }
 }
