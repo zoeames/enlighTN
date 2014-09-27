@@ -15,3 +15,9 @@ exports.show = function(req, res){
     });
   });
 };
+
+exports.favorite = function(req, res){
+  console.log(req.body);
+};
+
+
