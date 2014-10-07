@@ -1,33 +1,35 @@
+@import '../../variables.less';
+
 #home {
   h1 {
     font-size: 3em;
-    margin-top: -10px;
-    color: rgba(128, 0, 128, 0.53);
+    color: @lite-red;
+    margin-left: 220px;
   }
 }
 .current {
-  border: 7px solid #E4A9E4;
-  background-color: rgb(238, 201, 238);
+  border: 7px solid @border;
+  background-color: @white;
   height: 300px;
-  width: 100%;
-  overflow: auto;
 
   .events {
-    padding: 20px;
+    padding: 0 10px;
   }
 }
 
 .trending {
+
   .twitter, .rss-feed {
     height: 300px;
-    border: 5px solid rgb(236, 224, 132);
-    background-color: rgb(244, 255, 185);
+    border: 5px solid @border;
+    background-color: @white;
     padding: 20px;
     margin: 40px 0;
+    position: relative;
     overflow: scroll;
   }
   .twitter h2, .rss-feed h2 {
-    font-weight: lighter;
+    font-weight: @lite-wt;
     transform: rotate(270deg);
     -webkit-transform: rotate(270deg);
     -moz-transform: rotate(270deg);
@@ -35,17 +37,17 @@
     -ms-transform: rotate(270deg);
     z-index: 1000;
     margin: 20px;
-    position: relative;
+    position: absolute;
     font-size: 3.5em;
   }
   .twitter h2 {
     bottom: -30px;
     left: 250px;
-    color: rgba(202, 35, 35, 0.55);
+    color: @lite-red;
   }
   .rss-feed h2 {
     bottom: -75px;
     right: 175px;
-    color: rgba(202, 35, 35, 0.55);
+    color: @lite-red;
   }
 }
