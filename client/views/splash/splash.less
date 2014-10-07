@@ -1,3 +1,4 @@
+@import '../../variables.less';
 
 #splash {
   background-image: url('/assets/art.jpg');
@@ -19,7 +20,7 @@
         text-align: right;
         font-size: 40px;
         font-weight: lighter;
-        color: #96418B;
+        color: @purple;
       }
       h3 > form {
         background-color: white;
@@ -30,6 +31,7 @@
       }
       label {
         font-size: 20px;
+        font-weight: @norm-wt;
       }
     }
     .login{
@@ -38,22 +40,17 @@
         bottom: 15px;
         text-align: left;
         font-size: 40px;
-        font-weight: lighter;
-        color: #96418B;
+        font-weight: @lite-wt;
+        color: @purple;
       }
       h3:hover, h3:active {
         cursor: pointer;
       }
       label {
         font-size: 20px;
+        font-weight: @norm-wt;
       }
     }
   }
 
-  .map-img {
-    width: 100%;
-    height: 800px;
-    border: 1px solid black;
-    background-color: lightblue;
-  }
 }
