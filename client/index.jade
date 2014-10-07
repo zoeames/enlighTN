@@ -27,12 +27,9 @@ html(ng-app='enlighTN', lang='en')
         .col-xs-10.header
           h1.title {{art}} City, USA
           h5.subtitle There is more to Nashville than Music.
-        .col-xs-2
-      .row
-        .col-xs-1
-        .col-xs-10
           button.btn.btn-default#menu(snap-toggle=''): i.fa.fa-fw.fa-bars.fa-2x
-          #container(ng-view)
+        .col-xs-2
+      .row#container(ng-view)
         .col-xs-1
 
     script(src='/vendor/angular/angular.js')

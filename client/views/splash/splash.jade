@@ -1,6 +1,7 @@
 #splash
   .hidden-forms
-    .register.pull-left.col-xs-6
+    .col-xs-2
+    .register.pull-left.col-xs-4
       h3(ng-click='toggleRegister()') Register
       form(role='form', novalidate, name='regUserForm', ng-show='showRegister')
         .form-group
@@ -10,7 +11,7 @@
           label(for='newPassword') Password
           input.form-control#newPassword(type='password', name='newPassword', ng-model='regUser.password', required, ng-minlength='3')
         button.btn.btn-primary.pull-right(ng-show='regUserForm.$valid', ng-click='register()') Register
-    .login.pull-left.col-xs-6
+    .login.pull-left.col-xs-4
       h3(ng-click='toggleLogin()') Login
       form(role='form', novalidate, name='userForm', ng-show='showLogin')
         .form-group
@@ -20,4 +21,5 @@
           label(for='password') Password
           input.form-control#password(type='password', name='password', ng-model='user.password', required, ng-minlength='3')
         button.btn.btn-primary(ng-show='userForm.$valid', ng-click='login()') Login
+    .col-xs-2
 
