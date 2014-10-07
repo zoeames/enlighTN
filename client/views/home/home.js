@@ -4,7 +4,10 @@
   angular.module('enlighTN')
   .controller('HomeCtrl', ['$scope', 'Home', '$interval', function($scope, Home, $interval){
 
-
+    $scope.feeds = [
+      'http://www.nashvillescene.com/nashville/Rss.xml?section=1178035',
+      'http://nashvillearts.com/feed/'
+    ];
     Home.getMessage().then(function(response){
       $scope.theArts = response.data.creativeList;
 
