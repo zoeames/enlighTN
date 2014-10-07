@@ -1,3 +1,5 @@
+@import '../../variables.less';
+
 #location {
 
   .left-column {
@@ -5,8 +7,8 @@
     .loc-title {
       width: 100%;
       padding-left: 40px;
-      color: steelblue;
-      margin: 0;
+      color: @lite-red;
+      margin: 20px 0 0;
       font-size: 3em;
     }
     .interact-btns {
@@ -15,25 +17,25 @@
       display: inline;
 
       li a {
-        color: steelblue;
+        color: @lite-red;
         font-size: 2em;
       }
       li a:hover, li a:active {
-        color: lighten(red, 10%);
+        color: lighten(@purple, 5%);
         background-color: transparent;
         text-decoration: none;
         font-size: 2em;
       }
       #favorite {
         position: relative;
-        left: 360px;
-        bottom: 60px;
+        left: 465px;
+        bottom: 20px;
         z-index: 90;
       }
       #comment {
-        left: 400px;
+        left: 510px;
         position: relative;
-        bottom: 102px;
+        bottom: 62px;
         z-index: 100;
       }
     }
