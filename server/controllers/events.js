@@ -13,3 +13,7 @@ exports.show = function(req, res){
     res.send({occasion:occasion});
   });
 };
+
+exports.rsvp = function(req, res){
+  console.log(req.body);
+};
