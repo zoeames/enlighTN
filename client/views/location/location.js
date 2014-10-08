@@ -10,10 +10,19 @@
     $scope.slides = [{},{},{},{},{},{}];
 
     Location.findById($routeParams.locId).then(function(response){
-      $scope.loc = response.data.loc;
+      $scope.loc       = response.data.loc;
+      $scope.fav       = response.data.fav;
       $scope.occasions = response.data.occasions;
-      $scope.title = $scope.loc.title;
+      $scope.title     = $scope.loc.title;
     });
+
+    $scope.favorite = function(){
+      Location.favorite($routeParams.locId).then(function(response){
+        $scope.loc = response.data.loc;
+        $scope.fav = response.data.fav;
+      });
+    };
+
   }]);
 })();
 

@@ -2,7 +2,7 @@
   .col-xs-6.left-column
     h2.loc-title {{title}}
     ul.interact-btns
-      li: a#favorite(href='javascript:void(0)'): i.fa.fa-fw.fa-heart
+      li: a#favorite(href='javascript:void(0)', ng-click='favorite()'): i.fa.fa-fw(ng-class='{\'fa-heart\': fav === true, \'fa-heart-o\': fav === false}')
       li: a#comment(href='javascript:void(0)'): i.fa.fa-fw.fa-comment
     #info
       h3 {{loc.address}}

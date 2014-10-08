@@ -24,10 +24,15 @@
       return positions;
     }
 
+    function favorite(locId){
+      return $http.post('/locations/' + locId + '/favorite');
+    }
+
     return {
       all:all,
       findById:findById,
-      getPositions:getPositions
+      getPositions:getPositions,
+      favorite:favorite
     };
   }]);
 })();
