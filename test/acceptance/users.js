@@ -154,4 +154,14 @@ describe('users', function(){
       });
     });
   });
+  describe('delete /logout', function(){
+    it('should log a user out', function(done){
+      request(app)
+      .delete('/logout')
+      .end(function(err, res){
+        expect(res.status).to.equal(401);
+        done();
+      });
+    });
+  }); 
 });
