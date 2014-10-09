@@ -5,6 +5,7 @@ var Mongo = require('mongodb');
 function Reflection(o){
   if(o._id){this._id = o._id;}
   this.authorId = Mongo.ObjectID(o.authorId);
+  this.title = o.title;
   this.text = o.text;
   this.locationId = Mongo.ObjectID(o.locationId);
   this.date = new Date(o.date);
