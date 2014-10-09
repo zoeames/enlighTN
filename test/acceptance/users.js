@@ -97,4 +97,52 @@ describe('users', function(){
       });
     });
   });
+  describe('get /locations', function(){
+    it('should take a user to the locations page', function(done){
+      request(app)
+      .get('/locations')
+      .set('cookie', cookie)
+      .end(function(req,res){
+        expect(res.status).to.equal(200);
+        expect(res.text).to.include('STATION');
+        done();
+      });
+    });
+  });
+  describe('get /locations/a00000000000000000000001', function(){
+    it('should take a user to a specific location page', function(done){
+      request(app)
+      .get('/locations/a00000000000000000000001')
+      .set('cookie', cookie)
+      .end(function(req,res){
+        expect(res.status).to.equal(200);
+        expect(res.text).to.include('STATION');
+        done();
+      });
+    });
+  });
+  describe('get /events', function(){
+    it('should take a user to the events page', function(done){
+      request(app)
+      .get('/events')
+      .set('cookie', cookie)
+      .end(function(req,res){
+        expect(res.status).to.equal(200);
+        expect(res.text).to.include('Performance');
+        done();
+      });
+    });
+  });
+  describe('get /events/eee000000000000000000001', function(){
+    it('should take a user to a specific location page', function(done){
+      request(app)
+      .get('/events/eee000000000000000000001')
+      .set('cookie', cookie)
+      .end(function(req,res){
+        expect(res.status).to.equal(200);
+        expect(res.text).to.include('Midsummer');
+        done();
+      });
+    });
+  });
 });
