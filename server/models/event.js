@@ -39,7 +39,6 @@ Occasion.all = function(cb){
 
 Occasion.rsvp = function(userId, eventId, cb){
   Occasion.findById(eventId, function(err, occasion){
-    //occasion.attendees = occasion.attendees.map(unIterator);
     var rsvp = RSVP(occasion.attendees, userId);
 
     if(rsvp === true){
@@ -71,10 +70,6 @@ function iterator(attendee, cb){
     cb(null, info);
   });
 }
-
-//function unIterator(attendee){
- // return attendee._id.toString();
-//}
 
 function RSVP(array, userId){
   if(!underscore.find(array, function(id){
