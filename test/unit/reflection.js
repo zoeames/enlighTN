@@ -58,8 +58,9 @@ describe('Reflection', function(){
   });
   describe('.findAllByLocationId', function(){
     it('should find all reflections for a location', function(done){
-      var locationId = Mongo.ObjectID('e00000000000000000000001');
-      Reflection.findAllByLocationId(locationId, function(err, reflections){
+      var locationId = Mongo.ObjectID('e00000000000000000000001'),
+          userId     = Mongo.ObjectID('000000000000000000000001');
+      Reflection.findAllByLocationId(userId, locationId, function(err, reflections){
         console.log(reflections);
         expect(reflections).to.have.length(6);
         done();
