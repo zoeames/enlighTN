@@ -36,7 +36,7 @@ exports.logout = function(req, res){
 };
 
 exports.show = function(req, res){
-  console.log(req.body);
+
 };
 
 exports.update = function(req, res){
