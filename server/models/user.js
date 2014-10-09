@@ -1,7 +1,8 @@
 'use strict';
 
-var bcrypt = require('bcrypt'),
-    Mongo  = require('mongodb');
+var bcrypt     = require('bcrypt'),
+    Mongo      = require('mongodb'),
+    underscore = require('underscore');
 
 function User(o){
   if(o._id){this._id = o._id;}
@@ -42,6 +43,19 @@ User.login = function(o, cb){
 User.save = function(o, cb){
   console.log('Model:', o);
   User.collection.save(o, cb);
+};
+
+User.favoriteLoc = function(userId, locId, cb){
+  User.findById(userId, function(err, user){
+    if(!underscore.find(user.favoriteLocations, function(id){
+      return id === locId;
+    })){
+      user.favoriteLocations.push(locId);
+    }else{
+      user.favoriteLocations = underscore.without(user.favoriteLocations, locId);
+    }
+    User.collection.save(user,cb);
+  });
 };
 
 module.exports = User;

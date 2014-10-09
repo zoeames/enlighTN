@@ -2,6 +2,7 @@
 
 var Mongo      = require('mongodb'),
     Occasion   = require('./event'),
+    User       = require('./user'),
     Reflection = require('./reflection'),
     underscore = require('underscore');
 
@@ -25,6 +26,31 @@ Location.findById = function(id, cb){
   });
 };
 
+Location.retrieve = function(userId, locId, cb){
+  Location.findById(locId, function(err, loc){
+    var fav = isFav(loc.favorites, userId);
+    cb(err, loc, fav);
+  });
+};
+
+Location.favorite = function(userId, locId, cb){
+  Location.findById(locId, function(err, loc){
+    var fav = isFav(loc.favorites, userId);
+
+    if(fav === true){
+      loc.favorites = underscore.without(loc.favorites, userId);
+    }else{
+      loc.favorites.push(userId);
+    }
+
+    Location.collection.save(loc, function(){
+      User.favoriteLoc(userId, locId, function(){
+        cb(null, loc, !fav);
+      });
+    });
+  });
+};
+
 Location.prototype.findEvents = function(cb){
   Occasion.collection.find({locationId:this._id}).toArray(cb);
 };
@@ -35,3 +61,13 @@ Location.prototype.findReflections = function(cb){
 
 module.exports = Location;
 
+//helper function
+function isFav(array, userId){
+  if(!underscore.find(array, function(id){
+    return id === userId;
+  })){
+    return false;
+  }else{
+    return true;
+  }
+}
