@@ -47,6 +47,15 @@ User.save = function(o, cb){
   User.collection.save(o, cb);
 };
 
+User.update = function(id, o, cb){
+  var _id = Mongo.ObjectID(id);
+
+  console.log(_id, o.name, o.email);
+  User.collection.findAndModify({_id:_id}, {}, {$set: {name: o.name, email: o.email}}, function(a, b, c){
+    cb();
+  });
+};
+
 User.getUserData = function(id, cb){
   User.findById(id, function(err, user){
     delete user.password;

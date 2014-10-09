@@ -35,6 +35,17 @@
       $scope.showReflect[index] = !!!$scope.showReflect[index];
     };
 
+    $scope.editProfile = function(){
+      var user = {
+        name: $scope.user.name,
+        email: $scope.user.email
+      };
+      User.update(user).then(function(response){
+        toastr.success('Your info has been updated.');
+        $scope.toggleEdit();
+      });
+    };
+
   }]);
 })();
 
