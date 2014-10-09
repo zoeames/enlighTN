@@ -144,5 +144,14 @@ describe('users', function(){
         done();
       });
     });
+    it('should not take a user to a specific location page if user is not logged in', function(done){
+      request(app)
+      .get('/events/eee000000000000000000001')
+      .set('cookie')
+      .end(function(req,res){
+        expect(res.status).to.equal(401);
+        done();
+      });
+    });
   });
 });
