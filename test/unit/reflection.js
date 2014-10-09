@@ -23,12 +23,12 @@ describe('Reflection', function(){
   describe('constructor', function(){
     it('should create a new reflection object', function(){
       var o = {
-        authorId :'000000000000000000000002',
         locationId :'a00000000000000000000001',
         text : 'It is amazing and i love it.',
         date : {"$date":1409184000000}
         },
-          r = new Reflection(o);
+          id = '000000000000000000000002',
+          r = new Reflection(id, o);
       expect(r).to.be.instanceof(Reflection);
     });
   });
@@ -36,11 +36,12 @@ describe('Reflection', function(){
   describe('.save', function(){
     it('should create a reflection', function(done){
       var s = {
-        "authorId" : "000000000000000000000002", "locationId" : "e00000000000000000000001",
+        "authorId" : "", "locationId" : "e00000000000000000000001",
         "text" : "Cookie",
-        };
+        },
+          id = '000000000000000000000002';
 
-      Reflection.save(s, function(err, sobj){
+      Reflection.save(id, s, function(err, sobj){
         expect(sobj._id).to.be.instanceof(Mongo.ObjectID);
           done();
       });

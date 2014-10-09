@@ -3,7 +3,6 @@
 var Mongo = require('mongodb');
 
 function Reflection(id, o){
-  if(o._id){this._id = o._id;}
   this.authorId   = Mongo.ObjectID(id);
   this.title      = o.title;
   this.text       = o.text;
