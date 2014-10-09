@@ -107,7 +107,13 @@
         var marker = addMarker($rootScope.map, pos.lat, pos.lng, pos.name);
         $scope.markers.push(marker);
       });
+      console.log($scope.markers);
     }
+
+    $scope.$on('map', function(){
+      getPositions($scope.locs);
+      changeMarkers();
+    });
   }]);
 })();
 
