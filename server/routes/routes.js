@@ -10,7 +10,8 @@ var morgan         = require('morgan'),
     home           = require('../controllers/home'),
     users          = require('../controllers/users'),
     events         = require('../controllers/events'),
-    locations      = require('../controllers/locations');
+    locations      = require('../controllers/locations'),
+    reflections    = require('../controllers/reflections');
 
 module.exports = function(app, express){
   app.use(morgan('dev'));
@@ -26,13 +27,21 @@ module.exports = function(app, express){
   app.get('/home', home.index);
   app.post('/register', users.register);
   app.post('/login', users.login);
+  app.get('/dashboard', users.show);
+  app.put('/dashboard/profile', users.update);
+  app.put('/dashboard/reflection', reflections.update);
 
   app.use(security.bounce);
   app.delete('/logout', users.logout);
-  app.get('/locations', locations.index);
+  app.post('/locations/:locationId/favorite', locations.favorite);
+  app.post('/locations/:locationId/reflect/:reflectId', reflections.upvote);
+  app.post('/locations/:locationId/reflect', reflections.create);
   app.get('/locations/:locationId', locations.show);
+  app.get('/locations', locations.index);
+  app.post('/events/:eventId/rsvp', events.rsvp);
   app.get('/events', events.index);
   app.get('/events/:eventId', events.show);
+
 
   console.log('Express: Routes Loaded');
 };

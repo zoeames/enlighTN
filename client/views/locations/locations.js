@@ -108,6 +108,11 @@
         $scope.markers.push(marker);
       });
     }
+
+    $scope.$on('map', function(){
+      getPositions($scope.locs);
+      changeMarkers();
+    });
   }]);
 })();
 

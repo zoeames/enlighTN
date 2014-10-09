@@ -11,6 +11,7 @@
     function findById(locId){
       return $http.get('/locations/' + locId);
     }
+
     function getPositions(pos){
       var positions = $('table tbody tr').toArray().map(function(tr){
           var name =  $(tr).attr('data-title'),
@@ -23,10 +24,15 @@
       return positions;
     }
 
+    function favorite(locId){
+      return $http.post('/locations/' + locId + '/favorite');
+    }
+
     return {
       all:all,
       findById:findById,
-      getPositions:getPositions
+      getPositions:getPositions,
+      favorite:favorite
     };
   }]);
 })();
