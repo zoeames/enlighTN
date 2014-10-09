@@ -163,5 +163,17 @@ describe('users', function(){
         done();
       });
     });
-  }); 
+  });
+  describe('confirm logout', function(){
+    it('should confirm a user is logged out', function(done){
+      request(app)
+      .get('/events/eee000000000000000000001')
+      .set('cookie')
+      .end(function(req,res){
+        expect(res.status).to.equal(401);
+        expect(res.headers).to.have.property('x-authenticated-user', 'anonymous');
+        done();
+      });
+    });
+  });
 });
