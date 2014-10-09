@@ -22,7 +22,11 @@ Occasion.findById = function(id, cb){
   Occasion.collection.findOne({_id:_id}, cb);
 };
 
-Occasion.retrieve = function(userId, eventId, cb){
+Occasion.mapRsvps = function(array, cb){
+  cb(null, array);
+};
+
+Occasion.retrieveLoc = function(userId, eventId, cb){
   Occasion.findById(eventId, function(err, occasion){
     var rsvp = RSVP(occasion.attendees, userId);
     occasion.attendees = occasion.attendees || [];

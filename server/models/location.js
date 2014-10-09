@@ -26,6 +26,10 @@ Location.findById = function(id, cb){
   });
 };
 
+Location.mapFav = function(array, cb){
+  cb(null, array);
+};
+
 Location.retrieve = function(userId, locId, cb){
   Location.findById(locId, function(err, loc){
     var fav = isFav(loc.favorites, userId);

@@ -26,6 +26,12 @@ Reflection.save = function(userId, obj, cb){
   Reflection.collection.save(r, cb);
 };
 
+Reflection.findAllByUserId = function(authorId, cb){
+  authorId = Mongo.ObjectID(authorId);
+
+  Reflection.collection.find({authorId:authorId}).toArray(cb);
+};
+
 Reflection.findAllByLocationId = function(userId, locId, cb){
   var _id = Mongo.ObjectID(locId);
 

@@ -2,7 +2,11 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('DashboardCtrl', ['$scope', function($scope){
+  .controller('DashboardCtrl', ['$scope', 'User', function($scope, User){
+    User.show().then(function(response){
+      console.log(response.data.user);
+    });
+
     $scope.quotes = [
       {body: 'You can\'t just give someone a creativity injection. You have to create an environment for curiosity and a way to encourage people and get the best out of them.', author:'Ken Robinson'},
       {body: 'Creativity involves breaking out of established patterns in order to look at things in a different way.', author: 'Edward de Bono'},
@@ -12,6 +16,7 @@
       {body: 'The tantalizing discomfort of perplexity is what inspires otherwise ordinary men and women to extraordinary feats of ingenuity and creativity; nothing quite focuses the mind like dissonant details awaiting harmonious resolution.', author:'Brian Greene'},
       {body: 'Creativity is piercing the mundane to find the marvelous.', author: 'Bill Moyers'}
     ];
+
     $scope.user= {
       name: 'Stella Bella',
       email: 'stella@gmail.com'
