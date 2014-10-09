@@ -1,18 +1,22 @@
 #home
-  h1 Upcoming Events
-  .row
+  .row.bkgrd-img.opacity
+    h1 Upcoming Events
     .col-xs-1
     .col-xs-10.current
       .col-xs-1
       .events.col-xs-10
         h4(ng-repeat='event in events') {{event.name}}
+          p {{event.dates.date}}
+          p {{event.dates.startTime}}
+          //THESE ^^^ dont show up :(
       .col-xs-1
     .col-xs-1
   .row.trending
     .col-xs-1
       h2.twitter-header Twitter
     .col-xs-4.twitter
-    .col-xs-2
+    .col-xs-2.middle
+      i.fa.fa-fw.fa-paint-brush.fa-5x.paint-brush
       h2.rss-header RSS&nbspFeed
     .col-xs-4.rss-feed
       kj-parse(feeds='feeds')
