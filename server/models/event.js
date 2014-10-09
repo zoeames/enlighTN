@@ -2,7 +2,6 @@
 
 var Mongo = require('mongodb'),
     async = require('async'),
-    User  = require('./user'),
     underscore = require('underscore');
 
 function Occasion(o){
@@ -23,10 +22,12 @@ Occasion.findById = function(id, cb){
 };
 
 Occasion.mapRsvps = function(array, cb){
-  cb(null, array);
+  async.map(array, attachEvent, function(err, array){
+    cb(null, array);
+  });
 };
 
-Occasion.retrieveLoc = function(userId, eventId, cb){
+Occasion.retrieve = function(userId, eventId, cb){
   Occasion.findById(eventId, function(err, occasion){
     var rsvp = RSVP(occasion.attendees, userId);
     occasion.attendees = occasion.attendees || [];
@@ -42,6 +43,7 @@ Occasion.all = function(cb){
 };
 
 Occasion.rsvp = function(userId, eventId, cb){
+  var User = require('./user');
   Occasion.findById(eventId, function(err, occasion){
     var rsvp = RSVP(occasion.attendees, userId);
 
@@ -64,6 +66,8 @@ module.exports = Occasion;
 //HELPER FUNCTIONS
 
 function iterator(attendee, cb){
+  var User = require('./user');
+
   if(attendee.toString() === this.toString()){cb(); return;}
   User.findById(attendee, function(err, user){
     var info = {
@@ -72,6 +76,26 @@ function iterator(attendee, cb){
     };
 
     cb(null, info);
+  });
+}
+
+function attachEvent(id, cb){
+  var Location = require('./location');
+
+  Occasion.findById(id, function(err, obj){
+    Location.findById(obj.locationId, function(err, loc){
+      var occasion = {
+        _id: obj._id,
+        name: obj.name,
+        date: {
+          date: obj.dates[0].date,
+          startTime: obj.dates[0].startTime
+        },
+        loc: loc.title
+      };
+
+      cb(null, occasion);
+    });
   });
 }
 

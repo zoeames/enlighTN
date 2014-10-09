@@ -10,7 +10,7 @@ exports.index = function(req, res){
 };
 
 exports.show = function(req, res){
-  Location.retrieveLoc(req.session.userId, req.params.locationId, function(err, loc, fav){
+  Location.retrieve(req.session.userId, req.params.locationId, function(err, loc, fav){
     loc.findEvents(function(err, occasions){
       Reflection.findAllByLocationId(req.session.userId, req.params.locationId, function(err, reflections){
         res.send({loc:loc, occasions:occasions, fav:fav, reflections:reflections});

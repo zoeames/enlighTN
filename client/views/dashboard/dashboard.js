@@ -5,8 +5,11 @@
   .controller('DashboardCtrl', ['$scope', 'User', function($scope, User){
     User.show().then(function(response){
       console.log(response.data.user);
+      $scope.user = response.data.user;
+      $scope.reflections = $scope.user.reflections;
     });
 
+// Quote Shuffler-------------------------------------------
     $scope.quotes = [
       {body: 'You can\'t just give someone a creativity injection. You have to create an environment for curiosity and a way to encourage people and get the best out of them.', author:'Ken Robinson'},
       {body: 'Creativity involves breaking out of established patterns in order to look at things in a different way.', author: 'Edward de Bono'},
@@ -17,19 +20,19 @@
       {body: 'Creativity is piercing the mundane to find the marvelous.', author: 'Bill Moyers'}
     ];
 
-    $scope.user= {
-      name: 'Stella Bella',
-      email: 'stella@gmail.com'
-    };
-
     $scope.init = function(){
       var shuffledQuotes = _.shuffle($scope.quotes),
       quote = _.sample(shuffledQuotes, [1]);
       $scope.quote = quote[0];
+      $scope.showReflect = {};
     };
-
+// Toggle forms---------------------------------------------
     $scope.toggleEdit = function(){
       $scope.showEdit = !!!$scope.showEdit;
+    };
+
+    $scope.toggleReflect = function(index){
+      $scope.showReflect[index] = !!!$scope.showReflect[index];
     };
 
   }]);
