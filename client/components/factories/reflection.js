@@ -13,7 +13,7 @@
     }
 
     function castVote(locId, reflectId){
-      return $http.post('/location/' + locId + '/reflect/' + reflectId);
+      return $http.post('/locations/' + locId + '/reflect/' + reflectId);
     }
 
     return {create:create, update:update, castVote:castVote};

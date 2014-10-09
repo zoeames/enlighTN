@@ -13,5 +13,7 @@ exports.update = function(req, res){
 };
 
 exports.vote = function(req, res){
-  console.log(req.body);
+  Reflection.vote(req.session.userId, req.params.reflectId, function(){
+    res.status(200).end();
+  });
 };
