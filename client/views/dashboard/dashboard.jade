@@ -1,2 +1,16 @@
-h3 {{title}}
+#dashboard
+  .row.bkgrd-img.opacity
+    .col-xs-2
+    .col-xs-5
+      .quote(data-ng-init='init()')
+        h4 Quote of the Day:
+        h2 {{quote.body}}
+        p {{quote.author}}
+
+    .col-xs-4
+      .info
+        i.fa.fa-pencil.fa-fw.fa-2x.pull-right
+        h3 {{user.name}} Stella Bella
+        h4 {{user.email}} stella@gmail.com
+    .col-xs-1
 
