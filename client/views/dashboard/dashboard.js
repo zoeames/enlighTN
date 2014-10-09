@@ -16,11 +16,9 @@
 
     $scope.init = function(){
       var shuffledQuotes = _.shuffle($scope.quotes),
-          quote = _.sample(shuffledQuotes, [1]);
-          console.log(shuffledQuotes);
-          console.log(quote);
-          $scope.quote = quote[0];
-    }
+      quote = _.sample(shuffledQuotes, [1]);
+      $scope.quote = quote[0];
+    };
 
 
   }]);
