@@ -85,4 +85,16 @@ describe('users', function(){
       });
     });
   });
+  describe('get /home', function(){
+    it('should take a user to the home page', function(done){
+      request(app)
+      .get('/home')
+      .set('cookie', cookie)
+      .end(function(req,res){
+        expect(res.status).to.equal(200);
+        expect(res.text).to.include('Music');
+        done();
+      });
+    });
+  });
 });
