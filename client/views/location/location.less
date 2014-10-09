@@ -1,3 +1,5 @@
+@import '../../variables.less';
+
 #location {
 
   .left-column {
@@ -5,8 +7,8 @@
     .loc-title {
       width: 100%;
       padding-left: 40px;
-      color: steelblue;
-      margin: 0;
+      color: @lite-red;
+      margin: 20px 0 0;
       font-size: 3em;
     }
     .interact-btns {
@@ -15,25 +17,25 @@
       display: inline;
 
       li a {
-        color: steelblue;
+        color: @lite-red;
         font-size: 2em;
       }
       li a:hover, li a:active {
-        color: lighten(red, 10%);
+        color: lighten(@purple, 5%);
         background-color: transparent;
         text-decoration: none;
         font-size: 2em;
       }
       #favorite {
         position: relative;
-        left: 360px;
-        bottom: 60px;
+        left: 465px;
+        bottom: 20px;
         z-index: 90;
       }
       #comment {
-        left: 400px;
+        left: 510px;
         position: relative;
-        bottom: 102px;
+        bottom: 62px;
         z-index: 100;
       }
     }
@@ -42,18 +44,33 @@
       margin-top: -100px;
     }
     #description {
-      padding: 60px 20px;
+      padding: 60px 40px;
+    }
+  }
+  .events {
+    h2 {
+      color: @lite-red;
+      margin: 40px 5px 0;
+      font-weight: @lite-wt;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+
+      li {
+        font-size: 18px;
+      }
     }
   }
 
   #slides_control > div{
     height: 200px;
+    width: 90%;
+    margin: 0 auto;
     img{
       margin:auto;
       width: 400px;
-    }
-    #slides_control {
-      margin: 0 auto;
     }
     .glyphicon{}
     .reflection {
@@ -74,16 +91,15 @@
     }
 
     a.carousel-control.left {
-      margin-left: -115px;
+      margin-left: -100px;
     }
 
     a.carousel-control.right {
-      margin-right: -115px;
+      margin-right: -100px;
     }
 
     a.carousel-control.left, a.carousel-control.right {
       background-image: none;
-      //left: 1090px
     }
     .reflection-badge {
       width: 50px;

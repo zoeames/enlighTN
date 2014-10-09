@@ -1,8 +1,19 @@
+@import './variables.less';
+
+.snap-drawer{
+  background-color: @tray-color;
+}
 ul#navigation {
   width: 100%;
 }
 #navigation > li {
   float: none;
+}
+#navigation a {
+  color: @white !important;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: lighten(@tray-color, 7%);
 }
 .fa {
   display: inline !important;

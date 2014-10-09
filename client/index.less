@@ -1,32 +1,31 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,200,600,800);
-
-@bold-wt: 800;
-@semi-wt: 600;
-@norm-wt: 400;
-@lite-wt: 300;
+@import './variables.less';
 
 body{
-  background-color: whitesmoke;
+  background-color: @white;
   font-family: 'Raleway', sans-serif;
 }
 .container-fluid {
-  background-color: #fff;
+  background-color: @white;
+  overflow-x: hidden;
 }
 #menu.btn, #menu.btn:hover, #menu.btn:focus {
   background-color: transparent;
   border: none;
   position: relative;
-  left: -117px;
-  bottom: 180px;
+  left: -10px;
+  bottom: 160px;
   outline: none;
   z-index: 100;
+  color: white;
 }
 #menu p {
   font-size: 18px;
-  font-weight: lighter;
+  font-weight: @lite-wt;
 }
 .header-container {
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid @dkturquiose;
+    background-color: @turquiose;
 
   .header {
     height: 150px;
@@ -35,13 +34,13 @@ body{
     .title {
       font-size: 6em;
       text-align: right;
-      color: dimgrey;
+      color: @white;
     }
     .subtitle {
       font-size: 30px;
       text-align: right;
-      color: grey;
-      font-weight: lighter;
+      color: @white;
+      font-weight: @lite-wt;
     }
   }
 }

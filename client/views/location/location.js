@@ -7,7 +7,7 @@
     $scope.occasions = [];
     $scope.myInterval = 10000;
 
-    $scope.slides = [{},{},{}];
+    $scope.slides = [{},{},{},{},{},{}];
 
     Location.findById($routeParams.locId).then(function(response){
       $scope.loc = response.data.loc;
