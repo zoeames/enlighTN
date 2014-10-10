@@ -37,6 +37,7 @@
       $scope.showReflect[index] = !!!$scope.showReflect[index];
     };
 
+    $('.reflect-edit-form').addClass('animated flip');
   }]);
 })();
 
