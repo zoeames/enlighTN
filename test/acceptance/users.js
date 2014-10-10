@@ -186,6 +186,7 @@ describe('users', function(){
       .delete('/logout')
       .end(function(err, res){
         expect(res.status).to.equal(401);
+        expect(res.headers).to.have.property('x-authenticated-user', 'anonymous');
         done();
       });
     });
