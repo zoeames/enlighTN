@@ -61,7 +61,7 @@
             p.text-right {{reflection.date}}
             h3 {{reflection.title}}
             h4 {{reflection.body}}
-        .reflect-edit-form(ng-show ='showReflect[$index]')
+        .reflect-edit-form.flipInX(ng-show ='showReflect[$index]')
           form.form(role='form', novalidate)
             .form-group
               label(for='name') Title
