@@ -50,7 +50,7 @@ describe('Reflection', function(){
     it('should find a reflection by id', function(done){
       var _id = Mongo.ObjectID('aa0000000000000000000002');
       Reflection.findById(_id, function(err, refl){
-        expect(refl.text).to.include('loved');
+        expect(refl.title).to.include('loved');
         done();
       });
     });
