@@ -44,7 +44,7 @@
       margin-top: -70px;
     }
     #description {
-      padding: 60px 40px;
+      padding: 40px;
       font-size: 20px;
     }
   }
@@ -61,7 +61,11 @@
 
       li {
         font-size: 18px;
-        color: @dkturquiose;
+        a {
+          display: inline-block;
+          color: @dkturquiose;
+          padding: 10px 5px;
+        }
       }
     }
   }
@@ -70,11 +74,15 @@
     height: 200px;
     width: 90%;
     margin: 0 auto;
+
+    .carousel {
+      height: 400px;
+      margin-top: 600px;
+    }
     img{
       margin:auto;
       width: 400px;
     }
-    .glyphicon{}
     .reflection {
       width: 33.3333%;
       float: left;
