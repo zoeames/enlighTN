@@ -24,6 +24,8 @@
               h3 {{slide.title}}
               .think
                 p {{slide.body}}
+              .vote
+                a(href='javascript:void(0)', ng-click='castVote(slide._id'): i.fa.fa-fw.fa-5x(ng-class='{\'fa-star\': vote === true, \'fa-star-o\': vote === false}')
             //
               .reflection
                 img.reflection-badge(src='/assets/avatars/yellow-glasses.png')

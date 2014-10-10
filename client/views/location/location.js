@@ -6,6 +6,7 @@
     $scope.loc = {};
     $scope.occasions = [];
     $scope.myInterval = 10000;
+    $scope.vote = false;
 
     //add convert loc.responses to slides method
     $scope.slides = [{
