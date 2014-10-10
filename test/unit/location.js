@@ -56,6 +56,30 @@ describe('Location', function(){
         done();
       });
     });
-  })
+  });
+  describe('.retrieve', function(){
+    it('should retrieve the favorites for a location', function(done){
+      Location.retrieve('000000000000000000000001','a00000000000000000000001', function(err, loc){
+        expect(loc.favorites).to.have.length(0);
+        done();
+      });
+    });
+  });
+  describe('.favorite', function(){
+    it('should favorite a location that has not yet been favorited by the user', function(done){
+      Location.favorite('000000000000000000000001','a00000000000000000000001', function(err, loc, fav){
+        expect(loc.favorites).to.have.length(1);
+        done();
+      });
+    });
+    it('should not favorite a location that has already been favorited by the user', function(done){
+      Location.favorite('000000000000000000000001','a00000000000000000000001', function(err, loc, fav){
+        Location.favorite('000000000000000000000001','a00000000000000000000001', function(err, obj, favorite){
+          expect(obj.favorites).to.have.length(0);
+          done();
+        });
+      });
+    });
+  });
 //Last braces
 });
