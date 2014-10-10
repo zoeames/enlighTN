@@ -121,6 +121,19 @@ describe('users', function(){
       });
     });
   });
+  describe('post /locations/a00000000000000000000002/favorite', function(){
+    it('should allow a user to favorite a location', function(done){
+      request(app)
+      .post('/locations/a00000000000000000000002/favorite')
+      .send('userId=000000000000000000000001')
+      .send('locationId=a00000000000000000000002')
+      .set('cookie', cookie)
+      .end(function(req,res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  });
   describe('get /events', function(){
     it('should take a user to the events page', function(done){
       request(app)
