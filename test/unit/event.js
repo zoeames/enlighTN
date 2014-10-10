@@ -44,7 +44,21 @@ describe('Event', function(){
       Occasion.findById(id, function(err, occ){
         console.log('Test', occ);
         expect(occ.name).to.include('Midsummer');
-        expect(occ.attendees[0].name).to.equal('Bob Smith');
+        expect(occ.attendees).to.have.length(2);
+        done();
+      });
+    });
+  });
+  describe('.rsvp', function(){
+    it('should allow a user to rsvp to an event', function(done){
+      Occasion.rsvp('000000000000000000000001', 'eee000000000000000000003', function(err, obj){
+        expect(obj).to.be.true;
+        done();
+      });
+    });
+    it('should not allow a user to rsvp to an event if already rsvped', function(done){
+      Occasion.rsvp('000000000000000000000001', 'eee000000000000000000001', function(err, obj){
+        expect(obj).to.be.false;
         done();
       });
     });
