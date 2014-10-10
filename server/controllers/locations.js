@@ -11,7 +11,6 @@ exports.index = function(req, res){
 exports.show = function(req, res){
   Location.retrieve(req.session.userId, req.params.locationId, function(err, loc, fav){
     loc.findEvents(function(err, occasions){
-      console.log(fav);
       res.send({loc:loc, occasions:occasions, fav:fav});
     });
   });

@@ -18,14 +18,17 @@ Object.defineProperty(Occasion, 'collection', {
 });
 
 Occasion.findById = function(id, cb){
-  console.log(id);
   var _id = Mongo.ObjectID(id);
-  Occasion.collection.findOne({_id:_id}, function(err, occasion){
-    occasion.attendees=occasion.attendees || [];
-    async.map(occasion.attendees, iterator, function(err, attendees){
+  Occasion.collection.findOne({_id:_id}, cb);
+};
+
+Occasion.retrieve = function(userId, eventId, cb){
+  Occasion.findById(eventId, function(err, occasion){
+    var rsvp = RSVP(occasion.attendees, userId);
+    occasion.attendees = occasion.attendees || [];
+    async.map(occasion.attendees, iterator.bind(userId), function(err, attendees){
       occasion.attendees = attendees;
-      console.log('Model:',occasion);
-      cb(null, occasion);
+      cb(null, occasion, rsvp);
     });
   });
 };
@@ -34,16 +37,9 @@ Occasion.all = function(cb){
   Occasion.collection.find().toArray(cb);
 };
 
-Occasion.retrieve = function(userId, eventId, cb){
-  Occasion.findById(eventId, function(err, occasion){
-    var rsvp = RSVP(occasion.attendees, userId);
-    cb(err, occasion, rsvp);
-  });
-};
-
 Occasion.rsvp = function(userId, eventId, cb){
   Occasion.findById(eventId, function(err, occasion){
-    occasion.attendees=occasion.attendees.map(unIterator);
+    //occasion.attendees = occasion.attendees.map(unIterator);
     var rsvp = RSVP(occasion.attendees, userId);
 
     if(rsvp === true){
@@ -65,14 +61,20 @@ module.exports = Occasion;
 //HELPER FUNCTIONS
 
 function iterator(attendee, cb){
+  if(attendee.toString() === this.toString()){cb(); return;}
   User.findById(attendee, function(err, user){
-    cb(null, user);
+    var info = {
+      _id  : user._id,
+      name : user.name
+    };
+
+    cb(null, info);
   });
 }
 
-function unIterator(attendee){
-  return attendee._id.toString();
-}
+//function unIterator(attendee){
+ // return attendee._id.toString();
+//}
 
 function RSVP(array, userId){
   if(!underscore.find(array, function(id){

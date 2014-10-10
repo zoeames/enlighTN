@@ -15,7 +15,7 @@ exports.show = function(req, res){
 };
 
 exports.rsvp = function(req, res){
-  Occasion.rsvp(req.session.userId, req.params.eventId, function(err, occasion, rsvp){
+  Occasion.rsvp(req.session.userId, req.params.eventId, function(err, rsvp){
     res.send({rsvp:rsvp});
   });
 };
