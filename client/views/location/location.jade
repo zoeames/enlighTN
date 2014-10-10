@@ -6,16 +6,13 @@
       li: a#comment(href='javascript:void(0)'): i.fa.fa-fw.fa-comment
     #info
       h3 {{loc.address}}
-      h4 coolwebsite.com
-      h5 Hours
-      h6 Mon- Fri 10-8
     #description
       p {{loc.description}}
   .col-xs-6.events
       h2 Events
       #events-list(ng-repeat='event in occasions')
         ul
-          li {{event.name}}
+          li: a(href='/#/events/{{event._id}}') {{event.name}}
   .row
     #slides_control
       div
