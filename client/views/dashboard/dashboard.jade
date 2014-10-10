@@ -10,7 +10,7 @@
 
     .col-xs-4
       .info
-        a: i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='toggleEdit()')
+        i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='toggleEdit()')
         div(ng-hide='showEdit')
           h3 {{user.name}}
           h4 {{user.email}}
@@ -54,17 +54,21 @@
     .col-xs-2
     .col-xs-8.reflections
       h1.text-center Your Reflections
-      section
-        i.fa.fa-pencil.fa-fw.fa-lg.edit
-        p.text-right October 10th, 2014
-        h3 Wise, if not slightly pedantic.
-        h4 A kidney of the match is assumed to be a kittle blow. The literature would have us believe that a brainsick spinach is not but a cancer. Some assert that a combust distributor's cannon comes with it the thought that the direst pentagon is a foam. The first cushy baboon is, in its own way, a range.
-
-      section
-        i.fa.fa-pencil.fa-fw.fa-lg.edit
-        p.text-right August 24th, 2014
-        h3 A sailboat is the oxygen of an answer.
-        h4 An observation of the anthropology is assumed to be a trickless window. We can assume that any instance of a hand can be construed as an unfanned consonant. This is not to discredit the idea that they were lost without the charmless fan that composed their shallot. The grease of a cold becomes a lordless locust.
-
+      section(ng-hide='showReflect')
+        i.fa.fa-pencil.fa-fw.fa-lg.edit(ng-click='toggleReflect()')
+        div
+          p.text-right October 10th, 2014
+          h3 Wise, if not slightly pedantic.
+          h4 A kidney of the match is assumed to be a kittle blow. The literature would have us believe that a brainsick spinach is not but a cancer. Some assert that a combust distributor's cannon comes with it the thought that the direst pentagon is a foam. The first cushy baboon is, in its own way, a range.
+      .reflect-edit-form(ng-show='showReflect')
+        form.form(role='form', novalidate)
+          .form-group
+            label(for='name') Title
+              input.form-control.col-xs-12(name='title', type='text', ng-model='')
+          .form-group
+            label(for='body') Body
+              textarea.form-control(name='body', type='text', ng-model='', cols='95', rows='5')
+          button.btn.btn-primary(ng-click='editReflection()') Save
+          button.btn.btn-warning.pull-right(ng-click='toggleReflect()') Back
     .col-xs-2
 
