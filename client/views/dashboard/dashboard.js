@@ -12,7 +12,10 @@
       {body: 'The tantalizing discomfort of perplexity is what inspires otherwise ordinary men and women to extraordinary feats of ingenuity and creativity; nothing quite focuses the mind like dissonant details awaiting harmonious resolution.', author:'Brian Greene'},
       {body: 'Creativity is piercing the mundane to find the marvelous.', author: 'Bill Moyers'}
     ];
-
+    $scope.user= {
+      name: 'Stella Bella',
+      email: 'stella@gmail.com'
+    };
 
     $scope.init = function(){
       var shuffledQuotes = _.shuffle($scope.quotes),
@@ -20,6 +23,9 @@
       $scope.quote = quote[0];
     };
 
+    $scope.toggleEdit = function(){
+      $scope.showEdit = !!!$scope.showEdit;
+    };
 
   }]);
 })();
