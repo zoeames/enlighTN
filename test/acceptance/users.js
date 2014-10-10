@@ -121,6 +121,19 @@ describe('users', function(){
       });
     });
   });
+  describe('post /locations/a00000000000000000000002/favorite', function(){
+    it('should allow a user to favorite a location', function(done){
+      request(app)
+      .post('/locations/a00000000000000000000002/favorite')
+      .send('userId=000000000000000000000001')
+      .send('locationId=a00000000000000000000002')
+      .set('cookie', cookie)
+      .end(function(req,res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  });
   describe('get /events', function(){
     it('should take a user to the events page', function(done){
       request(app)
@@ -154,12 +167,27 @@ describe('users', function(){
       });
     });
   });
+  describe('post /events/eee000000000000000000003/rsvp', function(){
+    it('should allow a user to rsvp to an event', function(done){
+      request(app)
+      .post('/events/eee000000000000000000003/rsvp')
+      .send('userId=000000000000000000000001')
+      .send('eventId=eee000000000000000000003')
+      .set('cookie', cookie)
+      .end(function(req,res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  });
   describe('delete /logout', function(){
     it('should log a user out', function(done){
       request(app)
       .delete('/logout')
+      .set('cookie', cookie)
       .end(function(err, res){
-        expect(res.status).to.equal(401);
+        expect(res.status).to.equal(200);
+        expect(res.headers).to.have.property('x-authenticated-user', 'anonymous');
         done();
       });
     });
