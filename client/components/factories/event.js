@@ -8,7 +8,11 @@
       return $http.get('/events/' + eventId);
     }
 
-    return {findById:findById};
+    function rsvp(eventId){
+      return $http.post('/events/' + eventId + '/rsvp');
+    }
+
+    return {findById:findById, rsvp:rsvp};
   }]);
 })();
 

@@ -40,6 +40,7 @@
         params.total(orderedData.length); // set total for recalc pagination
 
         getPositions($scope.locs);
+        getDirections();
         changeMarkers();
 
         $defer.resolve($scope.locs);
@@ -109,10 +110,43 @@
       });
     }
 
+    $scope.$on('position', function(event, pos){
+      $scope.pos.lat = pos.coords.latitude;
+      $scope.pos.lng = pos.coords.longitude;
+    });
+
     $scope.$on('map', function(){
       getPositions($scope.locs);
+      getDirections($scope.locs);
       changeMarkers();
     });
+
+    function getDirections(){
+      var directionsService = new google.maps.DirectionsService(),
+          requests          = [],
+          destinations      = $scope.positions.map(function(loc){
+            return new google.maps.LatLng(loc.lat, loc.lng);
+          });
+
+      $scope.origin         = new google.maps.LatLng($scope.pos.lat, $scope.pos.lng);
+      $scope.distances      = [];
+
+      destinations.map(function(destination){
+        requests.push({
+          origin      : $scope.origin,
+          destination : destination,
+          travelMode  : google.maps.TravelMode.DRIVING
+        });
+      });
+
+      requests.map(function(request){
+        directionsService.route(request, function(response, status){
+          if(status === google.maps.DirectionsStatus.OK){
+            $scope.distances.push(response.routes[0].legs[0].distance.text);
+          }
+        });
+      });
+    }
   }]);
 })();
 

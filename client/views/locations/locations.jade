@@ -15,6 +15,6 @@
             td(data-title="'Title'" filter="{ 'title': 'text' }"): a(href='/#/locations/{{loc._id}}') {{loc.title}}
             td(data-title="'Address'") {{loc.address}}
             td(data-title="'Type'", name="group", filter="{ 'group': 'select' }", filter-data="groups($column)"){{loc.group}}
-            td(data-title="'Distance'", sortable="'distance'") calculation here
+            td(data-title="'Distance'") {{distances[$index]}}
             td(data-title="'Popularity'", sortable="'favorites'") {{loc.favorites.length}}
 

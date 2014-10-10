@@ -10,49 +10,58 @@
       p {{loc.description}}
   .col-xs-6.events
       h2 Events
-      #events-list(ng-repeat='event in occasions')
+      #events-list
         ul
-          li: a(href='/#/events/{{event._id}}') {{event.name}}
+          li: a(href='/#/events/{{event._id}}', ng-repeat='event in occasions') {{event.name}}
   .row
     #slides_control
       div
-        carousel(interval='myInterval')
-          slide.slide(ng-repeat='slide in slides', active='slide.active')
+        carousel.carousel(interval='myInterval')
+          slide.slide(ng-repeat='slide in slides')
             .reflection
-              img.reflection-badge(src='/assets/avatars/yellow-glasses.png')
-              p.text-center himynameis
-              h3 This is what I think.
+              img.reflection-badge(src='{{slide.img}}')
+              p.text-center {{slide.user}}
+              h3 {{slide.title}}
               .think
-                p The literature would have us believe that a nimbused fold is not but a drama. The competition of a yarn becomes a zonate samurai. Few can name a neuter ear that isn't an outsize loaf. However, their kale was, in this moment, a grainy dinosaur.
-            .reflection
-              img.reflection-badge(src='/assets/avatars/pink-glasses.png')
-              p.text-center dudette
-              h3 This is what I think.
-              .think
-                p Their lycra was, in this moment, a tempered hat. A caitiff panther is a defense of the mind. If this was somewhat unclear, the activity is a salmon. Unfortunately, that is wrong; on the contrary, a freckle is a toe from the right perspective.
-            .reflection
-              img.reflection-badge(src='/assets/avatars/purple-glasses.png')
-              p.text-center youwish
-              h3 This is what I think.
-              .think
-                p A siamese can hardly be considered a dirty whip without also being a paul. The prepared of an afterthought becomes a guileless work. An arrow is a fifth from the right perspective. They were lost without the presto sphere that composed their creator.
-            // for some reason this will not take more than three reflections
-            .reflection
-              img.reflection-badge(src='/assets/avatars/blue-glasses.png')
-              p.text-center himynameis
-              h3 This is what I think.
-              .think
-                p The literature would have us believe that a nimbused fold is not but a drama. The competition of a yarn becomes a zonate samurai. Few can name a neuter ear that isn't an outsize loaf. However, their kale was, in this moment, a grainy dinosaur.
-            .reflection
-              img.reflection-badge(src='/assets/avatars/green-glasses.png')
-              p.text-center dudette
-              h3 This is what I think.
-              .think
-                p Their lycra was, in this moment, a tempered hat. A caitiff panther is a defense of the mind. If this was somewhat unclear, the activity is a salmon. Unfortunately, that is wrong; on the contrary, a freckle is a toe from the right perspective.
-            .reflection
-              img.reflection-badge(src='/assets/avatars/orange-glasses.png')
-              p.text-center youwish
-              h3 This is what I think.
-              .think
-                p A siamese can hardly be considered a dirty whip without also being a paul. The prepared of an afterthought becomes a guileless work. An arrow is a fifth from the right perspective. They were lost without the presto sphere that composed their creator.
+                p {{slide.body}}
+              .vote
+                a(href='javascript:void(0)', ng-click='castVote(slide._id'): i.fa.fa-fw.fa-5x(ng-class='{\'fa-star\': vote === true, \'fa-star-o\': vote === false}')
+            //
+              .reflection
+                img.reflection-badge(src='/assets/avatars/yellow-glasses.png')
+                p.text-center himynameis
+                h3 This is what I think.
+                .think
+                  p The literature would have us believe that a nimbused fold is not but a drama. The competition of a yarn becomes a zonate samurai. Few can name a neuter ear that isn't an outsize loaf. However, their kale was, in this moment, a grainy dinosaur.
+              .reflection
+                img.reflection-badge(src='/assets/avatars/pink-glasses.png')
+                p.text-center dudette
+                h3 This is what I think.
+                .think
+                  p Their lycra was, in this moment, a tempered hat. A caitiff panther is a defense of the mind. If this was somewhat unclear, the activity is a salmon. Unfortunately, that is wrong; on the contrary, a freckle is a toe from the right perspective.
+              .reflection
+                img.reflection-badge(src='/assets/avatars/purple-glasses.png')
+                p.text-center youwish
+                h3 This is what I think.
+                .think
+                  p A siamese can hardly be considered a dirty whip without also being a paul. The prepared of an afterthought becomes a guileless work. An arrow is a fifth from the right perspective. They were lost without the presto sphere that composed their creator.
+              // for some reason this will not take more than three reflections
+              .reflection
+                img.reflection-badge(src='/assets/avatars/blue-glasses.png')
+                p.text-center himynameis
+                h3 This is what I think.
+                .think
+                  p The literature would have us believe that a nimbused fold is not but a drama. The competition of a yarn becomes a zonate samurai. Few can name a neuter ear that isn't an outsize loaf. However, their kale was, in this moment, a grainy dinosaur.
+              .reflection
+                img.reflection-badge(src='/assets/avatars/green-glasses.png')
+                p.text-center dudette
+                h3 This is what I think.
+                .think
+                  p Their lycra was, in this moment, a tempered hat. A caitiff panther is a defense of the mind. If this was somewhat unclear, the activity is a salmon. Unfortunately, that is wrong; on the contrary, a freckle is a toe from the right perspective.
+              .reflection
+                img.reflection-badge(src='/assets/avatars/orange-glasses.png')
+                p.text-center youwish
+                h3 This is what I think.
+                .think
+                  p A siamese can hardly be considered a dirty whip without also being a paul. The prepared of an afterthought becomes a guileless work. An arrow is a fifth from the right perspective. They were lost without the presto sphere that composed their creator.
 
