@@ -11,12 +11,12 @@
     .col-xs-5
       .rsvp(ng-click='attend()')
         .fa.fa-fw.fa-calendar.fa-5x.calendar
-        h2.pull-right.rsvp-btn I will be attending this!
+        h2.pull-right.rsvp-btn(ng-hide='rsvp') I will be attending this!
+        h2.pull-right.rsvp-btn(ng-show='rsvp') No longer attending.
       section.venue
           h2 Location of Event Here
       section.usersAttending
           h3 Attending This Event
-          h4 Frank
-          h4 Jill
-          h4 Bubba
+          h4(ng-show='rsvp') Me
+          h4(ng-repeat='attendee in occasion.attendees') {{attendee.name}}
     .col-xs-1
