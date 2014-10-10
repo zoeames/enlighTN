@@ -58,4 +58,19 @@ User.favoriteLoc = function(userId, locId, cb){
   });
 };
 
+User.rsvp = function(userId, eventId, cb){
+  console.log('MODEL RSVP USERID ', userId);
+  User.findById(userId, function(err, user){
+    if(!underscore.find(user.RSVP, function(id){
+      return id === eventId;
+    })){
+      user.RSVP.push(eventId);
+    }else{
+      user.RSVP = underscore.without(user.RSVP, eventId);
+    }
+    User.collection.save(user,cb);
+  });
+};
+
+
 module.exports = User;

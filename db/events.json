@@ -20,6 +20,7 @@
   "_id" : {"$oid":"eee000000000000000000002"},
   "name":"BANDALOOP: Look Up Nashville!, Harboring",
   "type":"Performance Art",
+  "attendees":[],
   "dates":[
     {
       "date":{"$date":1412917200000},
@@ -37,6 +38,7 @@
   "_id" : {"$oid":"eee000000000000000000003"},
   "name":"VIJAY IYER: Music of Transformation",
   "type":"Performance Art",
+  "attendees":[],
   "dates":[
     {
       "date":{"$date":1415426400000},
@@ -54,6 +56,7 @@
   "_id" : {"$oid":"eee000000000000000000004"},
   "name":"13 MOST BEAUTIFUL… SONGS FOR ANDY WARHOL’S SCREEN TESTS Featuring Dean and Britta",
   "type":"Performance Art",
+  "attendees":[],
   "dates":[
     {
       "date":{"$date":1421474400000},
@@ -67,6 +70,7 @@
   "_id" : {"$oid":"eee000000000000000000005"},
   "name":"LAURIE ANDERSON The Language of the Future",
   "type":"Performance Art",
+  "attendees":[],
   "dates":[
     {
       "date":{"$date":1426136400000},
@@ -84,6 +88,7 @@
   "_id" : {"$oid":"eee000000000000000000006"},
   "name":"PI DAY Roy Wooten, Laurie Anderson, Cano Ozgener, Ben Davis (ISHKY), Mark Hanf, Bryce McCloud and more",
   "type":"Performance Art",
+  "attendees":[],
   "dates":[
     {
       "date":{"$date":1415426400000},
@@ -97,6 +102,7 @@
   "_id" : {"$oid":"eee000000000000000000007"},
   "name":"TRISHA BROWN DANCE COMPANY A Retrospective in Three Parts",
   "type":"Performance Art",
+  "attendees":[],
   "dates":[
     {
       "date":{"$date":1431579600000},
@@ -114,6 +120,7 @@
   "_id" : {"$oid":"eee000000000000000000008"},
   "name":"PHANTOM LIMB COMPANY Memory Rings",
   "type":"Performance Art",
+  "attendees":[],
   "dates":[
     {
       "date":{"$date":1434603600000},

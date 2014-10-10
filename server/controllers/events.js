@@ -9,11 +9,13 @@ exports.index = function(req, res){
 };
 
 exports.show = function(req, res){
-  Occasion.findById(req.params.eventId, function(err, occasion){
-    res.send({occasion:occasion});
+  Occasion.retrieve(req.session.userId, req.params.eventId, function(err, occasion, rsvp){
+    res.send({occasion:occasion, rsvp:rsvp});
   });
 };
 
 exports.rsvp = function(req, res){
-  console.log(req.body);
+  Occasion.rsvp(req.session.userId, req.params.eventId, function(err, occasion, rsvp){
+    res.send({rsvp:rsvp});
+  });
 };
