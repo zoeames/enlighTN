@@ -8,12 +8,13 @@ body{
 .container-fluid {
   background-color: @white;
   overflow-x: hidden;
+  padding: 0;
 }
 #menu.btn, #menu.btn:hover, #menu.btn:focus {
   background-color: transparent;
   border: none;
   position: relative;
-  left: -10px;
+  left: 0;
   bottom: 160px;
   outline: none;
   z-index: 100;
@@ -45,3 +46,12 @@ body{
   }
 }
 
+#footer {
+  height: 100px;
+  padding: 40px;
+  width: 100%;
+  background-color: @border;
+  margin-top: 80px;
+  color: white;
+
+}
