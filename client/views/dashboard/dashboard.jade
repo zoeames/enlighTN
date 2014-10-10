@@ -10,9 +10,19 @@
 
     .col-xs-4
       .info
-        i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit
-        h3 {{user.name}} Stella Bella
-        h4 {{user.email}} stella@gmail.com
+        a: i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='toggleEdit()')
+        div(ng-hide='showEdit')
+          h3 {{user.name}}
+          h4 {{user.email}}
+        div#editForm(ng-show='showEdit')
+          form.form(role='form', novalidate)
+            .form-group
+              label(for='name') Name
+                input.form-control(name='name', type='text', ng-model='user.name')
+            .form-group
+              label(for='email') Email
+                input.form-control(name='email', type='text', ng-model='user.email', required)
+            button.btn.btn-primary(ng-click='editProfile()') Save
     .col-xs-1
   .row
     .col-xs-1
