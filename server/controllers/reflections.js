@@ -9,7 +9,9 @@ exports.create = function(req, res){
 };
 
 exports.update = function(req, res){
-  console.log(req.body);
+  Reflection.update(req.body, function(){
+    res.status(200).end();
+  });
 };
 
 exports.vote = function(req, res){

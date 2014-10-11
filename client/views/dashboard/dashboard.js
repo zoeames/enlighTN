@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('DashboardCtrl', ['$scope', 'User', function($scope, User){
+  .controller('DashboardCtrl', ['$scope', 'User', 'Reflection', function($scope, User, Reflection){
     User.show().then(function(response){
       console.log(response.data.user);
       $scope.user = response.data.user;
@@ -43,6 +43,15 @@
       User.update(user).then(function(response){
         toastr.success('Your info has been updated.');
         $scope.toggleEdit();
+      });
+    };
+
+    $scope.editReflection = function(index){
+      $scope.user.reflections[index].date = new Date();
+
+      Reflection.update($scope.user.reflections[index]).then(function(response){
+        toastr.success('Your reflection has been updated.');
+        $scope.toggleReflect(index);
       });
     };
 

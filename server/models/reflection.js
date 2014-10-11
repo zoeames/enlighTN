@@ -8,7 +8,7 @@ function Reflection(id, o){
   this.title      = o.title;
   this.text       = o.text;
   this.locationId = Mongo.ObjectID(o.locId);
-  this.date       = new Date();
+  this.Date       = new Date();
   this.upvote     = o.upvote || [];
 }
 
@@ -24,6 +24,15 @@ Reflection.findById = function(id, cb){
 Reflection.save = function(userId, obj, cb){
   var r = new Reflection(userId, obj);
   Reflection.collection.save(r, cb);
+};
+
+Reflection.update = function(o, cb){
+  var _id  = Mongo.ObjectID(o._id),
+      date = new Date(o.date);
+
+  Reflection.collection.findAndModify({_id:_id}, {}, {$set: {title: o.title, text: o.text, Date: date}}, function(a, b, c){
+    cb();
+  });
 };
 
 Reflection.findAllByUserId = function(authorId, cb){

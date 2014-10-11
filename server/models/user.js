@@ -64,8 +64,10 @@ User.getUserData = function(id, cb){
       Location.mapFav(user.favoriteLocations, function(err, favs){
         user.favoriteLocations = favs;
         Reflection.findAllByUserId(user._id, function(err, reflects){
-          user.reflections = reflects;
-          cb(null, user);
+          Location.mapLoc(reflects, function(err, reflects){
+            user.reflections = reflects;
+            cb(null, user);
+          });
         });
       });
     });

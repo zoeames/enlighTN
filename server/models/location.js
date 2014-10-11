@@ -28,7 +28,13 @@ Location.findById = function(id, cb){
 };
 
 Location.mapFav = function(array, cb){
-  async.map(array, attachLoc, function(err, array){
+  async.map(array, convertLocs, function(err, array){
+    cb(null, array);
+  });
+};
+
+Location.mapLoc = function(array, cb){
+  async.map(array, convertLoc, function(err, array){
     cb(null, array);
   });
 };
@@ -69,7 +75,7 @@ Location.prototype.findReflections = function(cb){
 module.exports = Location;
 
 //helper function
-function attachLoc(id, cb){
+function convertLocs(id, cb){
   var Location = require('./location');
 
   Location.findById(id, function(err, loc){
@@ -79,6 +85,16 @@ function attachLoc(id, cb){
     };
 
     cb(null, loc);
+  });
+}
+
+function convertLoc(obj, cb){
+  var Location = require('./location');
+
+  Location.findById(obj.locationId, function(err, loc){
+    obj.loc = loc.title;
+
+    cb(null, obj);
   });
 }
 
