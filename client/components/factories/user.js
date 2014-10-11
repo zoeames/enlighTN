@@ -20,7 +20,11 @@
       return $http.get('/dashboard');
     }
 
-    return {register:register, login:login, logout:logout, show:show};
+    function update(user){
+      return $http.put('/dashboard/profile', user);
+    }
+
+    return {register:register, login:login, logout:logout, show:show, update:update};
 
   }]);
 })();

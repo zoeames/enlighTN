@@ -42,6 +42,8 @@ exports.show = function(req, res){
 };
 
 exports.update = function(req, res){
-  console.log(req.body);
+  User.update(req.session.userId, req.body, function(){
+    res.status(200).end();
+  });
 };
 
