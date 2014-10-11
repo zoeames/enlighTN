@@ -1,6 +1,7 @@
 'use strict';
 
-var Location = require('../models/location');
+var Location   = require('../models/location'),
+    Reflection = require('../models/reflection');
 
 exports.index = function(req, res){
   Location.all(function(err, locations){
@@ -11,7 +12,9 @@ exports.index = function(req, res){
 exports.show = function(req, res){
   Location.retrieve(req.session.userId, req.params.locationId, function(err, loc, fav){
     loc.findEvents(function(err, occasions){
-      res.send({loc:loc, occasions:occasions, fav:fav});
+      Reflection.findAllByLocationId(req.params.locationId, function(err, reflections){
+        res.send({loc:loc, occasions:occasions, fav:fav, reflections:reflections});
+      });
     });
   });
 };

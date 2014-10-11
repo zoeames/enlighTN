@@ -2,14 +2,13 @@
 
 var Mongo = require('mongodb');
 
-function Reflection(o){
-  if(o._id){this._id = o._id;}
-  this.authorId = Mongo.ObjectID(o.authorId);
-  this.title = o.title;
-  this.text = o.text;
-  this.locationId = Mongo.ObjectID(o.locationId);
-  this.date = new Date(o.date);
-  this.upvote = [];
+function Reflection(id, o){
+  this.authorId   = Mongo.ObjectID(id);
+  this.title      = o.title;
+  this.text       = o.text;
+  this.locationId = Mongo.ObjectID(o.locId);
+  this.date       = new Date();
+  this.upvote     = o.upvote || [];
 }
 
 Object.defineProperty(Reflection, 'collection', {
@@ -21,13 +20,14 @@ Reflection.findById = function(id, cb){
   Reflection.collection.findOne({_id:_id}, cb);
 };
 
-Reflection.save = function(o, cb){
-  var r = new Reflection(o);
+Reflection.save = function(userId, obj, cb){
+  var r = new Reflection(userId, obj);
   Reflection.collection.save(r, cb);
 };
 
-Reflection.findAllByLocationId = function(locationId, cb){
-  Reflection.collection.find({locationId:locationId}).toArray(cb);
+Reflection.findAllByLocationId = function(id, cb){
+  var _id = Mongo.ObjectID(id);
+  Reflection.collection.find({locationId:_id}).toArray(cb);
 };
 
 module.exports = Reflection;

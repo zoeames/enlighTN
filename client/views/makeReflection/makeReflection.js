@@ -2,12 +2,19 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('MakeReflectionCtrl', ['$scope', '$modalInstance', 'loc', function($scope, $modalInstance, loc){
+  .controller('MakeReflectionCtrl', ['$scope', '$modalInstance', 'Reflection', 'loc', function($scope, $modalInstance, Reflection, loc){
 
     $scope.locId = loc;
+    $scope.reflection = {
+      title: 'Wow!',
+      text:  'This place blew my mind'
+    };
 
     $scope.ok = function(){
-      $modalInstance.close('this is your reflection');
+      $scope.reflection.locId = $scope.locId;
+      Reflection.create($scope.reflection).then(function(){
+        $modalInstance.close($scope.reflection);
+      });
     };
 
     $scope.cancel = function(){

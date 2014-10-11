@@ -36,7 +36,6 @@ exports.logout = function(req, res){
 };
 
 exports.show = function(req, res){
-
 };
 
 exports.update = function(req, res){

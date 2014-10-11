@@ -17,12 +17,13 @@
     #slides_control
       div
         carousel.carousel(interval='myInterval')
-          slide.slide(ng-repeat='slide in slides')
-            .reflection(ng-repeat='reflect in slide')
+          slide.slide(ng-repeat='(key, value) in slides')
+            .reflection(ng-repeat='reflect in value')
+              h3 {{reflect.type}}
               img.reflection-badge(src='{{reflect.img}}')
               p.text-center {{reflect.user}}
               h3 {{reflect.title}}
               .think
-                p {{reflect.body}}
+                p {{reflect.blurb}}
               .vote
                 a(href='javascript:void(0)', ng-click='castVote(reflect._id)'): i.fa.fa-fw.fa-5x(ng-class='{\'fa-star\': vote === true, \'fa-star-o\': vote === false}')

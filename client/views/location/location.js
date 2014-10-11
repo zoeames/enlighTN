@@ -48,10 +48,11 @@
     }]];
 
     Location.findById($routeParams.locId).then(function(response){
-      $scope.loc       = response.data.loc;
-      $scope.fav       = response.data.fav;
-      $scope.occasions = response.data.occasions;
-      $scope.title     = $scope.loc.title;
+      $scope.loc         = response.data.loc;
+      $scope.fav         = response.data.fav;
+      $scope.occasions   = response.data.occasions;
+      $scope.reflections = response.data.reflections;
+      $scope.title       = $scope.loc.title;
     });
 
     $scope.favorite = function(){
@@ -78,9 +79,42 @@
       });
 
       modalInstance.result.then(function(newReflection){
+        toastr.success('Your reflections was saved. You can edit it on your dashboard.');
         $scope.newReflection = newReflection;
       });
     };
+
+    $scope.$watch(
+      'reflections',
+      function(newValue, oldValue){
+        var count = 0;
+        $scope.slides = {};
+
+        newValue = _.sortBy(newValue, function(item){return item.upvote.length;}).reverse();
+        newValue = newValue.map(function(item, index){
+          if(index % 3 === 0){count++;}
+
+          switch(index){
+            case 0:
+              item.img  = 'assets/avatars/orange-glasses.png';
+              item.type = 'Curator';
+              break;
+            case 1:
+              item.img  = 'assets/avatars/pink-glasses.png';
+              item.type = 'Patron';
+              break;
+            default:
+              item.img  = 'assets/avatars/blue-glasses.png';
+              item.type = 'Appreciator';
+              break;
+          }
+
+          item.blurb = item.text.substring(0, 170).concat('...');
+          $scope.slides[count] = $scope.slides[count] || [];
+          $scope.slides[count].push(item);
+        });
+      }
+    );
 
   }]);
 })();
