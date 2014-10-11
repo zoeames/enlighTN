@@ -1,6 +1,7 @@
 'use strict';
 
-var Mongo = require('mongodb');
+var Mongo      = require('mongodb'),
+    underscore = require('underscore');
 
 function Reflection(id, o){
   this.authorId   = Mongo.ObjectID(id);
@@ -25,9 +26,41 @@ Reflection.save = function(userId, obj, cb){
   Reflection.collection.save(r, cb);
 };
 
-Reflection.findAllByLocationId = function(id, cb){
-  var _id = Mongo.ObjectID(id);
-  Reflection.collection.find({locationId:_id}).toArray(cb);
+Reflection.findAllByLocationId = function(userId, locId, cb){
+  var _id = Mongo.ObjectID(locId);
+
+  Reflection.collection.find({locationId:_id}).toArray(function(err, reflects){
+    reflects.forEach(isVote.bind(userId));
+    cb(null, reflects);
+  });
+};
+
+Reflection.vote = function(userId, reflectId, cb){
+  Reflection.findById(reflectId, function(err, reflect){
+    isVote = isVote.bind(userId);
+    reflect = isVote(reflect);
+
+    if(reflect.vote === true){
+      reflect.upvote = underscore.without(reflect.upvote, userId);
+    }else{
+      reflect.upvote.push(userId);
+    }
+
+    Reflection.collection.save(reflect, cb);
+  });
 };
 
 module.exports = Reflection;
+
+//private helper function
+function isVote(reflect){
+  console.log(this);
+  if(!underscore.find(reflect.upvote, function(id){
+    return id.toString() === this.toString();
+  }.bind(this))){
+    reflect.vote = false;
+  }else{
+    reflect.vote = true;
+  }
+  return reflect;
+}
