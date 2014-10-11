@@ -4,7 +4,8 @@ var Mongo      = require('mongodb'),
     Occasion   = require('./event'),
     User       = require('./user'),
     Reflection = require('./reflection'),
-    underscore = require('underscore');
+    underscore = require('underscore'),
+    async      = require('async');
 
 function Location(){
 }
@@ -23,6 +24,12 @@ Location.findById = function(id, cb){
     var loc = Object.create(Location.prototype);
     loc = underscore.extend(loc, obj);
     cb(err, loc);
+  });
+};
+
+Location.mapFav = function(array, cb){
+  async.map(array, attachLoc, function(err, array){
+    cb(null, array);
   });
 };
 
@@ -62,6 +69,19 @@ Location.prototype.findReflections = function(cb){
 module.exports = Location;
 
 //helper function
+function attachLoc(id, cb){
+  var Location = require('./location');
+
+  Location.findById(id, function(err, loc){
+    loc = {
+      _id:   loc._id,
+      title: loc.title
+    };
+
+    cb(null, loc);
+  });
+}
+
 function isFav(array, userId){
   if(!underscore.find(array, function(id){
     return id === userId;

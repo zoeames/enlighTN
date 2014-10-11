@@ -2,16 +2,13 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('DashboardCtrl', ['$scope', function($scope){
-    $scope.showReflect = {};
-    $scope.user = {
-      name: 'Stella Bella',
-      email: 'stella@gmail.com'
-    };
-    $scope.reflections = [
-      {date:'12/13/14', title:'Wise, if not slightly pedantic.', body:'A kidney of the match is assumed to be a kittle blow. The literature would have us believe that a brainsick spinach is not but a cancer.'},
-      {date:'12/13/14', title:'Wise, if not slightly pedantic.', body:'A kidney of the match is assumed to be a kittle blow. The literature would have us believe that a brainsick spinach is not but a cancer.'}
-    ];
+  .controller('DashboardCtrl', ['$scope', 'User', function($scope, User){
+    User.show().then(function(response){
+      console.log(response.data.user);
+      $scope.user = response.data.user;
+      $scope.reflections = $scope.user.reflections;
+    });
+
 // Quote Shuffler-------------------------------------------
     $scope.quotes = [
       {body: 'You can\'t just give someone a creativity injection. You have to create an environment for curiosity and a way to encourage people and get the best out of them.', author:'Ken Robinson'},
@@ -27,6 +24,7 @@
       var shuffledQuotes = _.shuffle($scope.quotes),
       quote = _.sample(shuffledQuotes, [1]);
       $scope.quote = quote[0];
+      $scope.showReflect = {};
     };
 // Toggle forms---------------------------------------------
     $scope.toggleEdit = function(){
