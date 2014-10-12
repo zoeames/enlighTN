@@ -1,11 +1,11 @@
 #locations
   h3 {{title}}
-  div.find-me(en-locate)
   .row
     .col-xs-12
       #map(en-map, lat='{{pos.lat}}', lng='{{pos.lng}}', zoom=12)
   .row
     .clearfix
+      div.find-me(en-locate)
       button.btn.btn-default.pull-right.clear-btn(ng-click="tableParams.sorting({})") Clear Sorting
       button.btn.btn-default.pull-right(ng-click="tableParams.filter({})") Clear Filtering
     .wrapper
