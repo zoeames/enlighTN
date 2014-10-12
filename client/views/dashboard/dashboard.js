@@ -4,7 +4,6 @@
   angular.module('enlighTN')
   .controller('DashboardCtrl', ['$scope', 'User', 'Reflection', function($scope, User, Reflection){
     User.show().then(function(response){
-      console.log(response.data.user);
       $scope.user = response.data.user;
       $scope.reflections = $scope.user.reflections;
     });
@@ -26,11 +25,8 @@
       $scope.quote = quote[0];
       $scope.showReflect = {};
     };
-// Toggle forms---------------------------------------------
-    $scope.toggleEdit = function(){
-      $scope.showEdit = !!!$scope.showEdit;
-    };
 
+// Toggle forms---------------------------------------------
     $scope.toggleReflect = function(index){
       $scope.showReflect[index] = !!!$scope.showReflect[index];
     };
