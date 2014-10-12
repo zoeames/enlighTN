@@ -20,24 +20,24 @@ Are you a native to Nashville or visiting? Do you want to explore what the city 
 ```
 User
 ```
-.register
-.login
-.update
-.rsvp for events
-.fav for locations
-.findById
-.getUserData
+- .register
+- .login
+- .update
+- .rsvp for events
+- .fav for locations
+- .findById
+- .getUserData
 
 ```
 Locations
 ```
-.favourite
-.findById
-.find all
-.mapFav
-.mapLoc
-#findEvents
-#findRsvp
+- .favourite
+- .findById
+- .find all
+- .mapFav
+- .mapLoc
+- #findEvents
+- #findRsvp
 ```
 Reflections
 ```
@@ -52,9 +52,9 @@ Reflections
 ```
 Events
 ```
-.findById
-.retrieve
-.rsvp
+- .findById
+- .retrieve
+- .rsvp
 
 ### Database
 ```
