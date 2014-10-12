@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/bchiatt/enlighTN/badge.png)](https://coveralls.io/r/bchiatt/enlighTN)
 
 ### Screenshots
-![Image1](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide06.jpg)
+![Image1](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide06.jpg)
 ![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide07.jpg)
 ![Image3](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide08.jpg)
 ![Image4](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide09.jpg)
