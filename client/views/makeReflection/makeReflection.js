@@ -6,10 +6,10 @@
 
     $scope.locId = loc;
 
-    $scope.ok = function(){
-      $scope.reflection.locId = $scope.locId;
-      Reflection.create($scope.reflection).then(function(){
-        $modalInstance.close($scope.reflection);
+    $scope.ok = function(reflection){
+      reflection.locId = $scope.locId;
+      Reflection.create(reflection).then(function(){
+        $modalInstance.close(reflection);
       });
     };
 
