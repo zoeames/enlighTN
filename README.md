@@ -41,12 +41,12 @@ Locations
 ```
 Reflections
 ```
-.create
-.edit
-.save
-.upvote/downvote
-.FindByUserId
-.findAllByLocId
+- .create
+- .edit
+- .save
+- .upvote/downvote
+- .FindByUserId
+- .findAllByLocId
 .
 
 ```
