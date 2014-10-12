@@ -1,6 +1,6 @@
 'use strict';
 
-var User = require('../models/user');
+var User       = require('../models/user');
 
 exports.register = function(req, res){
   User.register(req.body, function(err, user){
@@ -36,10 +36,14 @@ exports.logout = function(req, res){
 };
 
 exports.show = function(req, res){
-
+  User.getUserData(req.session.userId, function(err, user){
+    res.send({user:user});
+  });
 };
 
 exports.update = function(req, res){
-  console.log(req.body);
+  User.update(req.session.userId, req.body, function(){
+    res.status(200).end();
+  });
 };
 

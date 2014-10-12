@@ -29,13 +29,13 @@ module.exports = function(app, express){
   app.post('/login', users.login);
   app.get('/dashboard', users.show);
   app.put('/dashboard/profile', users.update);
-  app.put('/dashboard/reflection', reflections.update);
+  app.put('/dashboard/reflect', reflections.update);
 
   app.use(security.bounce);
   app.delete('/logout', users.logout);
   app.post('/locations/:locationId/favorite', locations.favorite);
-  app.post('/locations/:locationId/reflect/:reflectId', reflections.upvote);
-  app.post('/locations/:locationId/reflect', reflections.create);
+  app.post('/locations/:locationId/reflect/:reflectId', reflections.vote);
+  app.post('/reflect', reflections.create);
   app.get('/locations/:locationId', locations.show);
   app.get('/locations', locations.index);
   app.post('/events/:eventId/rsvp', events.rsvp);

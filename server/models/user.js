@@ -2,6 +2,9 @@
 
 var bcrypt     = require('bcrypt'),
     Mongo      = require('mongodb'),
+    Occasion   = require('./event'),
+    Location   = require('./location'),
+    Reflection = require('./reflection'),
     underscore = require('underscore');
 
 function User(o){
@@ -41,8 +44,34 @@ User.login = function(o, cb){
 };
 
 User.save = function(o, cb){
-  console.log('Model:', o);
   User.collection.save(o, cb);
+};
+
+User.update = function(id, o, cb){
+  var _id = Mongo.ObjectID(id);
+
+  console.log(_id, o.name, o.email);
+  User.collection.findAndModify({_id:_id}, {}, {$set: {name: o.name, email: o.email}}, function(a, b, c){
+    cb();
+  });
+};
+
+User.getUserData = function(id, cb){
+  User.findById(id, function(err, user){
+    delete user.password;
+    Occasion.mapRsvps(user.RSVP, function(err, RSVP){
+      user.RSVP = RSVP;
+      Location.mapFav(user.favoriteLocations, function(err, favs){
+        user.favoriteLocations = favs;
+        Reflection.findAllByUserId(user._id, function(err, reflects){
+          Location.mapLoc(reflects, function(err, reflects){
+            user.reflections = reflects;
+            cb(null, user);
+          });
+        });
+      });
+    });
+  });
 };
 
 User.favoriteLoc = function(userId, locId, cb){

@@ -2,16 +2,13 @@
   'use strict';
 
   angular.module('enlighTN')
-  .controller('DashboardCtrl', ['$scope', function($scope){
-    $scope.showReflect = {};
-    $scope.user = {
-      name: 'Stella Bella',
-      email: 'stella@gmail.com'
-    };
-    $scope.reflections = [
-      {date:'12/13/14', title:'Wise, if not slightly pedantic.', body:'A kidney of the match is assumed to be a kittle blow. The literature would have us believe that a brainsick spinach is not but a cancer.'},
-      {date:'12/13/14', title:'Wise, if not slightly pedantic.', body:'A kidney of the match is assumed to be a kittle blow. The literature would have us believe that a brainsick spinach is not but a cancer.'}
-    ];
+  .controller('DashboardCtrl', ['$scope', 'User', 'Reflection', function($scope, User, Reflection){
+    User.show().then(function(response){
+      console.log(response.data.user);
+      $scope.user = response.data.user;
+      $scope.reflections = $scope.user.reflections;
+    });
+
 // Quote Shuffler-------------------------------------------
     $scope.quotes = [
       {body: 'You can\'t just give someone a creativity injection. You have to create an environment for curiosity and a way to encourage people and get the best out of them.', author:'Ken Robinson'},
@@ -27,6 +24,7 @@
       var shuffledQuotes = _.shuffle($scope.quotes),
       quote = _.sample(shuffledQuotes, [1]);
       $scope.quote = quote[0];
+      $scope.showReflect = {};
     };
 // Toggle forms---------------------------------------------
     $scope.toggleEdit = function(){
@@ -37,7 +35,26 @@
       $scope.showReflect[index] = !!!$scope.showReflect[index];
     };
 
-    $('.reflect-edit-form').addClass('animated flip');
+    $scope.editProfile = function(){
+      var user = {
+        name: $scope.user.name,
+        email: $scope.user.email
+      };
+      User.update(user).then(function(response){
+        toastr.success('Your info has been updated.');
+        $scope.toggleEdit();
+      });
+    };
+
+    $scope.editReflection = function(index){
+      $scope.user.reflections[index].date = new Date();
+
+      Reflection.update($scope.user.reflections[index]).then(function(response){
+        toastr.success('Your reflection has been updated.');
+        $scope.toggleReflect(index);
+      });
+    };
+
   }]);
 })();
 

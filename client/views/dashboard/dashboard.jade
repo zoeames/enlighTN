@@ -31,24 +31,17 @@
         i.fa.fa-fw.fa-clock-o.fa-5x.icon
       .col-xs-7
         h1 Attending
-        h4 Name of Event
-        h5 Location of Event
-        h6 Date
-        hr
-        h4 Name of Event
-        h5 Location of Event
-        h6 Date
-        hr
+        h4(ng-repeat='event in user.RSVP'): a(href='/#/events/{{event._id}}') {{event.name}}
+          h5 {{event.loc}}
+          h6 {{event.date.date | date: 'MMM d, yyyy'}} at {{event.date.startTime | date: 'h:mma'}}
+          hr
     .col-xs-5.favorites
       .col-xs-3
         i.fa.fa-fw.fa-heart.fa-5x.icon
       .col-xs-7
         h1 Favorites
-        h4 Name of Location
-        hr
-        h4 Name of Location
-        hr
-        h4 Name of Location
+        h4(ng-repeat='loc in user.favoriteLocations'): a(href='/#/locations/{{loc._id}}') {{loc.title}}
+          hr
     .col-xs-1
   .row
     .col-xs-2
@@ -58,9 +51,10 @@
         .reflect-display(ng-hide='showReflect[$index]')
           i.fa.fa-pencil.fa-fw.fa-lg.edit(ng-click='toggleReflect($index)')
           div
-            p.text-right {{reflection.date}}
+            p.text-right {{reflection.Date | date: 'MMM d, yyyy'}}
             h3 {{reflection.title}}
-            h4 {{reflection.body}}
+            h4 {{reflection.loc}}
+            h4 {{reflection.text}}
         .reflect-edit-form.flipInX(ng-show ='showReflect[$index]')
           form.form(role='form', novalidate)
             .form-group
@@ -68,7 +62,7 @@
                 input.form-control.col-xs-12(name='title', type='text', ng-model='reflection.title')
             .form-group
               label(for='body') Body
-                textarea.form-control(name='body', type='text', cols='95', rows='5', ng-model='reflection.body')
+                textarea.form-control(name='body', type='text', cols='95', rows='5', ng-model='reflection.text')
             button.btn.btn-primary(ng-click='editReflection($index)') Save
             button.btn.btn-warning.pull-right(ng-click='toggleReflect($index)') Back
 
