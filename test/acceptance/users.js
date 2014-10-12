@@ -121,7 +121,7 @@ describe('users', function(){
       });
     });
   });
-  describe('post /locations/a00000000000000000000002/favorite', function(){
+  /*describe('post /locations/a00000000000000000000002/favorite', function(){
     it('should allow a user to favorite a location', function(done){
       request(app)
       .post('/locations/a00000000000000000000002/favorite')
@@ -133,7 +133,7 @@ describe('users', function(){
         done();
       });
     });
-  });
+  });*/
   describe('get /events', function(){
     it('should take a user to the events page', function(done){
       request(app)
