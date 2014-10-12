@@ -1,8 +1,13 @@
 .modal-header
-  h1 I'm a Reflection!
+  h2 Tell us what you think!
 .modal-body
-  h3 Write your story here.
-  h3 {{$scope.loc}}
+  form.form(role='form', novalidate)
+    .form-group
+      label(for='title') Title
+        input.form-control.col-xs-12(name='title', type='text', ng-model='reflection.title')
+    .form-group
+      label(for='body') Reflection
+        textarea.form-control(name='text', type='text', cols='95', rows='5', ng-model='reflection.text')
 .modal-footer
-  button.btn.btn-primary(ng-click='ok()') OK
+  button.btn.btn-primary(ng-click='ok()') Save
   button.btn.btn-warning(ng-click='cancel()') Cancel

@@ -5,10 +5,6 @@
   .controller('MakeReflectionCtrl', ['$scope', '$modalInstance', 'Reflection', 'loc', function($scope, $modalInstance, Reflection, loc){
 
     $scope.locId = loc;
-    $scope.reflection = {
-      title: 'Wow!',
-      text:  'This place blew my mind'
-    };
 
     $scope.ok = function(){
       $scope.reflection.locId = $scope.locId;

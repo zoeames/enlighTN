@@ -9,12 +9,12 @@
         p {{quote.author}}
 
     .col-xs-4
+      i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='form = !form')
       .info
-        i.fa.fa-pencil.fa-fw.fa-2x.pull-right.edit(ng-click='toggleEdit()')
-        div(ng-hide='showEdit')
+        div(ng-hide='form', ng-class="{ active: form }")
           h3 {{user.name}}
           h4 {{user.email}}
-        div#editForm(ng-show='showEdit')
+        div#editForm(ng-show='form', ng-class="{ active: form }")
           form.form(role='form', novalidate)
             .form-group
               label(for='name') Name
@@ -58,7 +58,7 @@
         .reflect-edit-form.flipInX(ng-show ='showReflect[$index]')
           form.form(role='form', novalidate)
             .form-group
-              label(for='name') Title
+              label(for='title') Title
                 input.form-control.col-xs-12(name='title', type='text', ng-model='reflection.title')
             .form-group
               label(for='body') Body
