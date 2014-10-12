@@ -72,13 +72,13 @@ Events
 
 ### Features
 - [x] register
-- [x]login
-- [x]update profile
-- [x]rsvp for events
-- [x]geolocate yourself
-- [x]find locations and their relative distances
-- [x]write reflections for events and locations
-- [x]rate events and locations
+- [x] login
+- [x] update profile
+- [x] rsvp for events
+- [x] geolocate yourself
+- [x] find locations and their relative distances
+- [x] write reflections for events and locations
+- [x] rate events and locations
 - [x] RSS feed for local events
 - [x] Twitter feed for local events
 
