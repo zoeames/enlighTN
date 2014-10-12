@@ -5,13 +5,13 @@
 
 ### Screenshots
 ![Image1](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide06.jpg)
-![Image2](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide07.jpg)
-![Image3](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide08.jpg)
-![Image4](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide09.jpg)
-![Image5](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide10.jpg)
-![Image6](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide11.jpg)
-![Image7](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide12.jpg)
-![Image8](https://raw.githubusercontent.com/nss-cohort-2014-06-07/express-template/master/docs/screenshots/Slide13.jpg)
+![Image2](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide07.jpg)
+![Image3](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide08.jpg)
+![Image4](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide09.jpg)
+![Image5](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide10.jpg)
+![Image6](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide11.jpg)
+![Image7](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide12.jpg)
+![Image8](https://raw.githubusercontent.com/bchiatt/enlighTN/master/docs/screenshots/Slide13.jpg)
 
 ### Description
 Are you a native to Nashville or visiting? Do you want to explore what the city has to offer in addition to the prolific music scene? Then this website is for you. Based on the publically available data on all the art and performance art in Nashville from various sources (nashville.data.gov and other sources), this site offers a comprehensive one stop view for all art installations and Metro Art as well as performances and art shows. You can geolocate yourself and find locations near you! All with just a click of a button. This simple yet elegant utility will help you explore Nashville like never before.  
