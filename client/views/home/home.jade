@@ -12,13 +12,15 @@
     .col-xs-1
   .row.trending
     .col-xs-1
-      h2.twitter-header Twitter
-    .col-xs-4.twitter
-    .col-xs-2.middle
-      i.fa.fa-fw.fa-paint-brush.fa-5x.paint-brush
-      h2.rss-header RSS&nbspFeed
-    .col-xs-4.rss-feed
-      kj-parse(feeds='feeds')
+    .col-xs-5.twitter
+      .col-xs-3
+        h2.twitter-header Twitter
+      .col-xs-7
+    .col-xs-5.rss-feed
+      .col-xs-3
+        h2.rss-header RSS&nbspFeed
+      .col-xs-7
+        kj-parse(feeds='feeds')
     .col-xs-1
 
 
