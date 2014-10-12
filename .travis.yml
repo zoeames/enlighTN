@@ -13,7 +13,6 @@ after_script:
   - npm run coveralls
 env:
   global:
-    -DEBUG=1
     - secure: "eo18dmQS7vOSsL35KV/WH6aJCOrXHiIZbYwpOcYxnYbiKat0/0PrObM1KgUqVcFzNI3NBrow+gdPk0CXZwPiR59k6N74RPClBgNUtCwS53+zIxxNz6iysQ2THZADPShPY6bKOByfTxRSG4mLADG2swJq9RAHluCUhzOHa7yLxXU="
     - secure: "fbue4xW/O5Kk4JOpVrsLpbZJIhoVYM/oFgRm9M6vCvw1wVHb3kJe0XBUi8m9rCHbclvJtla1M/1dcRUG9hhrTw+ZjXO0qBNbi24uoPDd0uz2wT5oUkQX+F5OCLGP1G7l/CWpfXrzvUaZkFe9BGieZ5SpQO1qUWNC2q/3XOldAZY="
     - secure: "N+njFqCfkqNfU2LFjp4UbacOkuH2ehKaz3YRKv70xZXuKkD9F+GhJYi+t/3Ud6b3H/K18K8nJkegLbDiSex9InqDv/UhUBKXeMMALUn+P9Nvvj+duIAWaFXpZOSX7IjW7dTFSslht65qA7nU4eRXMmw2Jz4Vs+WQUXO+fM6Hb78="
