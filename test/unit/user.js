@@ -46,4 +46,31 @@ describe('User', function(){
       });
     });
   });
+  describe('.update', function(){
+    it('should update a user profile', function(done){
+      var id = '000000000000000000000001',
+          o = {name: 'Robert Smith', email: 'bobsmith@aol.com'};
+      User.update(id, o, function(err, user, blah){
+        console.log(user);
+        console.log(blah);
+        done();
+      });
+    });
+  });
+  describe('.getUserData', function(){
+    it('should get user data', function(done){
+      User.getUserData('000000000000000000000001', function(err, user){
+        expect(user.name).to.include('Bob Smith');
+        done();
+      });
+    });
+  });
+  describe('.favoriteLoc', function(){
+    it('should favorite a location for a user', function(done){
+      User.favoriteLoc('000000000000000000000001', 'a00000000000000000000074', function(err, user, blah){
+        expect(user).to.equal(1);
+        done();
+      });
+    });
+  });
 });
