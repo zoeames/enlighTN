@@ -97,6 +97,52 @@ describe('users', function(){
       });
     });
   });
+  describe('get /dashboard', function(){
+    it('should take a user to their dashboard', function(done){
+      request(app)
+      .get('/dashboard')
+      .set('cookie', cookie)
+      .end(function(req, res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  });
+  describe('put /dashboard/profile', function(){
+    it('should update a user profile', function(done){
+      request(app)
+      .put('/dashboard/profile')
+      .send('id=000000000000000000000001')
+      .send('name=Robert Smith, email=bobsmith@aol.com')
+      .set('cookie', cookie)
+      .end(function(req, res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  });
+  describe('put /dashboard/reflect', function(){
+    it('should update a reflection', function(done){
+      request(app)
+      .put('/dashboard/reflect')
+      .set('cookie', cookie)
+      .end(function(req, res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  });
+  describe('post /reflect', function(){
+    it('should post a reflection', function(done){
+      request(app)
+      .post('/reflect')
+      .set('cookie', cookie)
+      .end(function(req, res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  });
   describe('get /locations', function(){
     it('should take a user to the locations page', function(done){
       request(app)
@@ -180,6 +226,17 @@ describe('users', function(){
       });
     });
   });
+  describe('post /locations/a00000000000000000000001/reflect/aa0000000000000000000001', function(){
+    it('should allow a user to vote on a reflection', function(done){
+      request(app)
+      .post('/locations/000000000000000000000001/reflect/aa0000000000000000000006')
+      .set('cookie', cookie)
+      .end(function(req, res){
+        expect(res.status).to.equal(200);
+        done();
+      });
+    });
+  })
   describe('delete /logout', function(){
     it('should log a user out', function(done){
       request(app)
