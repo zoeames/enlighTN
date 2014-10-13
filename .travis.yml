@@ -13,7 +13,7 @@ after_script:
   - npm run coveralls
 env:
   global:
-    - secure: "eo18dmQS7vOSsL35KV/WH6aJCOrXHiIZbYwpOcYxnYbiKat0/0PrObM1KgUqVcFzNI3NBrow+gdPk0CXZwPiR59k6N74RPClBgNUtCwS53+zIxxNz6iysQ2THZADPShPY6bKOByfTxRSG4mLADG2swJq9RAHluCUhzOHa7yLxXU="
-    - secure: "fbue4xW/O5Kk4JOpVrsLpbZJIhoVYM/oFgRm9M6vCvw1wVHb3kJe0XBUi8m9rCHbclvJtla1M/1dcRUG9hhrTw+ZjXO0qBNbi24uoPDd0uz2wT5oUkQX+F5OCLGP1G7l/CWpfXrzvUaZkFe9BGieZ5SpQO1qUWNC2q/3XOldAZY="
-    - secure: "N+njFqCfkqNfU2LFjp4UbacOkuH2ehKaz3YRKv70xZXuKkD9F+GhJYi+t/3Ud6b3H/K18K8nJkegLbDiSex9InqDv/UhUBKXeMMALUn+P9Nvvj+duIAWaFXpZOSX7IjW7dTFSslht65qA7nU4eRXMmw2Jz4Vs+WQUXO+fM6Hb78="
-    - secure: "iK+6U4NAFFXpDULT19rpwW8LDwz+DscjlpVw/bGbwz3FO9jhMAntIurC3HGdmVY7lo2XMI+XaoWKFTMGdybrByFgiWACvAOVw+PjcItqbRui+jFQSRgtjamNPnSOTvVfl1vqq45IsRei9Qu3oQRjKcI4GgD7hoilJSqpYgNos0Hw="
+    - secure: "RLqV9cKYw2yhFcXLvWEcSxrNw5K3ezQ3YeOcp/wJYSIOSlLffpdkDOIsn1FCUN1FwKSoLrQtOPOvXJ4LmluIPOXmWGyFlxXpCaPcaJfoDTesmPiCkl7/utg5RO7V+VKmGn/vl7p1kzVW8RE7oE4pINQeO7qJvy8Iguipf1eGxPA="
+    - secure: "HpXL2/1qTzcNLajD4Aulae5/uVSNUj2mQ9/iYaw4vHCOhHTcZRtVfdcEMqrVM/cUBZWvUhlqKD+r3MxxnnwdQx/8f+E6qSOFmROQcltafVSn9gva1G2V0hoGVMf7gZNNDnpEa0MArsqA1b38ll/znwJyDyd6QGqiq10aOE3x81g="
+    - secure: "Klid63pNBO8Rub03b6TgjxA1ITBCOZyyKPsvy+MM3UP3O54UfAvsemeHr//3cVOKi/4uh7I8Bsj5iaSPkURhV9q0NKhCPZu18EIbS5zvQHZ1V3qCAynOkiiRVRld4Q7DaIQForotMUVP3sgMChMBFIh86HTFJ6tjH47aO7W32fg="
+    - secure: "Z2bZURwxAuO0EO/SuK9ZbY5/31OiLr91USf8IYqkuG5Ryp+fhmIJ9tpIAEnnLhOyQSq2Z4qjN84zjn+nzxF70I6ESEiGanM7BvFsOkVNdFMsCfHJfPy/EdKI8Z7LFmB1/XjW6HrK793lTpzYfuqtfceggTmc1tc/SRAFbDP4ME4="
