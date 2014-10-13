@@ -2,7 +2,6 @@
 
 var Mongo      = require('mongodb'),
     Occasion   = require('./event'),
-    User       = require('./user'),
     Reflection = require('./reflection'),
     underscore = require('underscore'),
     async      = require('async');
@@ -47,6 +46,8 @@ Location.retrieve = function(userId, locId, cb){
 };
 
 Location.favorite = function(userId, locId, cb){
+  var User       = require('./user');
+
   Location.findById(locId, function(err, loc){
     var fav = isFav(loc.favorites, userId);
 

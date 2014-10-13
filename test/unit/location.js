@@ -65,9 +65,10 @@ describe('Location', function(){
       });
     });
   });
-  /*describe('.favorite', function(){
+  describe('.favorite', function(){
     it('should favorite a location that has not yet been favorited by the user', function(done){
       Location.favorite('000000000000000000000001','a00000000000000000000001', function(err, loc, fav){
+        expect(fav).to.equal(true);
         expect(loc.favorites).to.have.length(1);
         done();
       });
@@ -80,6 +81,6 @@ describe('Location', function(){
         });
       });
     });
-  });*/
+  });
 //Last braces
 });
