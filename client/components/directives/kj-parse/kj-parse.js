@@ -34,7 +34,6 @@
           var entries = _.map(data.data.responseData.feed.entries, function(el){
             return parseEntry(el);
           });
-          console.log('entries in update model>>', entries);
           resolve(entries);
         });
       });
