@@ -1,4 +1,4 @@
-## name of project
+## enlighTN
 ### Code Badges
 [![Build Status](https://travis-ci.org/bchiatt/enlighTN.svg)](https://travis-ci.org/bchiatt/enlighTN)
 [![Coverage Status](https://coveralls.io/repos/bchiatt/enlighTN/badge.png)](https://coveralls.io/r/bchiatt/enlighTN)
